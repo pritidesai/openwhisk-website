@@ -42,18 +42,76 @@ layout: default
     </div>
 
     <div class="where-to-start">
-        <div class="where-to-start__text_left">
-            <h2 class="where-to-start__heading">Use any language, any service</h2>
+        <div class="where-to-start__text">
+            <h2 class="where-to-start__heading">Runtimes Support</h2>
             <p class="where-to-start__lede">
                 Work with what you know and love. Integrate popular services. Code in your
-                favorite languages. All the pieces connect and are easy to extend.
+                favorite languages. All the pieces connect and are easy to extend. The list
+                supported runtimes:
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">NodeJS</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-swift">Swift</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-java">Java</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-go">Go</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-java">Scala</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-docker">Docker</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-python">Python</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-php">PHP</a>,
+                <a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a>, and
+                <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.
             </p>
         </div>
-        <div>
-            <img class="where-to-start__image" src="{{ site.github.url }}/images/illustration-languages-and-integrations.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
+        <div class="where-to-start__image">
+            <div class="where-to-start__row">
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/Node.js_logo.svg" alt="Node Runtime"/>
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/Swift_logo_with_text.svg" alt="Swift Runtime"/>
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/Java_Logo.svg" alt="Java Runtime"/>
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/gopher-front.svg" alt="Go Lang Runtime"/>
+            </div>
+            <div class="where-to-start__row">
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/Docker_container_engine_logo.svg" alt="Docker Runtime"/>
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/Python-logo-notext.svg" alt="Python Runtime"/>
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/PHP-logo.svg" alt="PHP Runtime"/>
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/scala-logo.svg" alt="Scala Runtime"/>
+            </div>
+            <!--div class="where-to-start__row">
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/Rust_programming_language_black_logo.svg" alt="Rust Lang Runtime"/>
+                <img class="where-to-start__column" src="{{ site.github.url }}/images/Haskell-Logo.svg" alt="Haskell Runtime"/>
+            </div-->
         </div>
     </div>
 
+    <div class="where-to-start">
+        <div>
+            <img class="where-to-start__image" src="{{ site.github.url }}/images/illustration-developers-flexible.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
+        </div>
+        <div class="where-to-start__text">
+            <h2 class="where-to-start__heading">High-level Programming Constructs</h2>
+            <p class="where-to-start__lede">
+                Code in different languages like JavaScript/NodeJS, Swift, Python,
+                Java or run custom logic by packaging code with Docker.
+                Invoke your code synchronously, asynchronously, or on a schedule.
+                Use higher-level programming constructs like sequences to declaratively
+                chain together multiple actions.
+                Use parameter binding to avoid hardcoding service credentials in your code.
+                And also, debug your code in realtime.
+            </p>
+        </div>
+    </div>
+
+    <div class="where-to-start">
+        <div class="where-to-start__text">
+              <h2 class="where-to-start__heading">Scaling Per-Request &amp; Optimal Utilization</h2>
+              <p class="where-to-start__lede">
+                  Run your action ten thousand times in a fraction of a second, or once
+                  a week. Action instances scale to meet demand as needed, then disappear.
+                  Enjoy optimal utilization where you don't pay for idle resources.
+              </p>
+        </div>
+        <div>
+            <img class="main-content__image" src="{{ site.github.url }}/images/illustration-developers-scaling.svg" alt="Apache OpenWhisk scaling and utilization">
+        </div>
+    </div>
+      
     <div class="where-to-start">
         <div>
             <img class="where-to-start__image" src="{{ site.github.url }}/images/illustration-integrators.svg" alt="Apache OpenWhisk benefits for package creators"/>
@@ -89,7 +147,7 @@ layout: default
             <img class="where-to-start__image" src="{{ site.github.url }}/images/apache-openwhisk-action-animation.gif" alt="Get started with Apache OpenWhisk"/>
         </div>
         <div class="where-to-start__text">
-            <h2 class="where-to-start__heading">OpenWhisk CLI</h2>
+            <h2 class="where-to-start__heading">Easy as 1-2-3</h2>
             <p class="where-to-start__lede">
                 With Apache OpenWhisk you can easily create actions, test, connect to other
                 actions or debug them. Use the
