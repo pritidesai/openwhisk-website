@@ -3,7 +3,7 @@
     margin: 0 auto;
     color: $color-blue-dark;
     font-family: $font-family-heading;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: $font-weight-black;
     @supports (display: flex) {
         display: flex;
@@ -24,19 +24,20 @@
         justify-content: flex-start;
     }
     &--title {
-        line-height: 2;
+        line-height: 1;
         text-align: center;
         justify-content: flex-start;
         color: $color-white;
-        font-size: 2rem;
+        font-size: 36px;
     }
     &--subtitle {
         line-height: 2;
         text-align: center;
         justify-content: flex-start;
         color: $color-white;
-        font-weight: $font-weight-default;
-        font-size: 1rem;
+        font-weight: $font-weight-black;
+        //font-size: 20px;
+        text-shadow: none;
     }
     &--get-started {
         line-height: 2;
@@ -86,7 +87,6 @@
             width: 240px;
             margin-right: auto;
             padding: 0.5rem 0.25rem 0.375rem;
-            border-right: 1px solid $color-gray-light;
             line-height: 1.5;
             @media (min-width: 400px) {
                 max-width: initial;
@@ -113,7 +113,7 @@
             // The top level nav item.
             &-link {
                 padding: 0.5rem 0.25rem;
-                line-height: 1.5rem;
+                line-height: 1rem;
                 @media (min-width: $breakpoint-sm) {
                     padding: 0.5rem;
                 }
