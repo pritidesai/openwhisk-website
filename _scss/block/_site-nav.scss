@@ -19,7 +19,7 @@
         text-align: center;
     }
     &--main {
-        line-height: 2;
+        line-height: 1.5;
         text-align: center;
         justify-content: flex-start;
     }
@@ -71,9 +71,10 @@
         display: inline-block;
         margin-top: 0;
         padding: 0.25rem;
-        color: inherit;
+        color: $color-white;
         text-decoration: none;
         vertical-align: middle;
+        height: auto;
         &:first-child {
             margin-left: 0;
         }
@@ -113,20 +114,16 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: flex-start;
-            color: $color-white;
             margin: 0;
-            padding: 0.125rem;
+            padding: 0.125rem 0;
             font-weight: $font-weight-default;
             // The top level nav item.
             &-link {
                 flex: 1 1 auto;
                 padding: 0.5rem 0.25rem;
                 line-height: 1rem;
-                margin: 5px;
                 @media (min-width: $breakpoint-sm) {
-                    padding: 0.75rem;
-                    border: solid 1px $color-white;
-                    border-radius: 15px; 
+                    padding: 0.5rem;
                 }
                 cursor: pointer;
             }
