@@ -5,10 +5,12 @@
     font-family: $font-family-heading;
     font-size: 1rem;
     font-weight: $font-weight-black;
-    @supports (display: flex) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    @media (min-width: $breakpoint-sm) {
+        @supports (display: flex) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
     &--social {
         justify-content: flex-end;
