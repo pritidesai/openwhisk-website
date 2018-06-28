@@ -5,10 +5,12 @@
     font-family: $font-family-heading;
     font-size: 1rem;
     font-weight: $font-weight-black;
-    @supports (display: flex) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    @media (min-width: $breakpoint-sm) {
+        @supports (display: flex) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
     &--social {
         justify-content: flex-end;
@@ -19,7 +21,7 @@
         text-align: center;
     }
     &--main {
-        line-height: 2;
+        line-height: 1.5;
         text-align: center;
         justify-content: flex-start;
     }
@@ -29,13 +31,14 @@
         justify-content: flex-start;
         color: $color-white;
         font-size: 36px;
+        font-weight: 600;
     }
     &--subtitle {
         line-height: 2;
         text-align: center;
         justify-content: flex-start;
         color: $color-white;
-        font-weight: $font-weight-black;
+        font-weight: $font-weight-default;
         //font-size: 20px;
         text-shadow: none;
     }
@@ -45,9 +48,11 @@
         justify-content: flex-start;
         color: $color-white;
         text-decoration: none;
-        border-radius: 5px;
-        border: 2px solid $color-green-light;
-        background-color: $color-green-light;
+        border-radius: 15px;
+        border: 1px solid $color-white;
+        padding: 0.5rem 0.25rem;
+                line-height: 1rem;
+                margin: 5px;
     }
     &--empty-header {
         line-height: 1;
@@ -68,9 +73,10 @@
         display: inline-block;
         margin-top: 0;
         padding: 0.25rem;
-        color: inherit;
+        color: $color-white;
         text-decoration: none;
         vertical-align: middle;
+        height: auto;
         &:first-child {
             margin-left: 0;
         }
@@ -92,6 +98,7 @@
                 max-width: initial;
                 padding-left: 0.75rem;
                 padding-right: 0.75rem;
+                min-width: 240px;
             }
         }
         &--margin-left-auto {
@@ -105,34 +112,22 @@
         }
         // Encapsulates the entire dropdown nav item.
         &--dropdown {
-            position: relative;
-            display: inline-block;
-            color: $color-white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
             margin: 0;
-            padding: 0;
+            padding: 0.125rem 0;
+            font-weight: $font-weight-default;
             // The top level nav item.
             &-link {
+                flex: 1 1 auto;
                 padding: 0.5rem 0.25rem;
                 line-height: 1rem;
                 @media (min-width: $breakpoint-sm) {
                     padding: 0.5rem;
                 }
                 cursor: pointer;
-            }
-            // The widget that contains the array of links.
-            &-container {
-                display: none;
-                position: absolute;
-                min-width: 160px;
-                margin: 0;
-                padding: 0;
-                //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-            // Same as above, but on hover.
-            &:hover &-container {
-                display: block;
-                background-color: $color-white;
             }
             // Each of the dropdown links.
             &-item {
