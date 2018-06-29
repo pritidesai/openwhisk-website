@@ -15,6 +15,9 @@
     &--social {
         justify-content: flex-end;
         padding: 0.125rem 0;
+        @media (max-width: $breakpoint-lg) {
+            display: none;
+        }
     }
     &--footer {
         color: $color-blue-light;
@@ -24,17 +27,19 @@
         line-height: 1.5;
         text-align: center;
         justify-content: flex-start;
+
     }
     &--title {
-        line-height: 1;
         text-align: center;
         justify-content: flex-start;
         color: $color-white;
         font-size: 36px;
-        font-weight: 600;
+        font-weight: 300;
+        padding-left: 100px;
+        padding-right: 100px;
+        font-family: $font-family-heading;
     }
     &--subtitle {
-        line-height: 2;
         text-align: center;
         justify-content: flex-start;
         color: $color-white;
@@ -57,18 +62,6 @@
     &--empty-header {
         line-height: 1;
     }
-    &__group {
-        display: block;
-        margin-top: 0.75rem;
-        vertical-align: bottom;
-        @media (min-width: $breakpoint-sm) {
-            display: inline;
-            margin-top: 0;
-        }
-    }
-    &__group  &__item {
-        width: 28px;
-    }
     &__item {
         display: inline-block;
         margin-top: 0;
@@ -82,9 +75,8 @@
         }
         &--main {
             padding: 0.5rem 0.25rem;
-            line-height: 1.5rem;
-            @media (min-width: $breakpoint-sm) {
-                padding: 0.5rem;
+            @media (max-width: $breakpoint-md) {
+                padding: 0.25rem;
             }
         }
         &--logo {
@@ -106,7 +98,7 @@
         }
         &--hide-on-small {
             display: none;
-            @media (min-width: $breakpoint-md) {
+            @media (min-width: $breakpoint-sm) {
                 display: block;
             }
         }
@@ -119,23 +111,14 @@
             margin: 0;
             padding: 0.125rem 0;
             font-weight: $font-weight-default;
-            // The top level nav item.
             &-link {
                 flex: 1 1 auto;
                 padding: 0.5rem 0.25rem;
                 line-height: 1rem;
                 @media (min-width: $breakpoint-sm) {
-                    padding: 0.5rem;
+                    padding: 0.25rem;
                 }
                 cursor: pointer;
-            }
-            // Each of the dropdown links.
-            &-item {
-                color: $color-blue-dark;
-                text-align: left;
-                padding: 4px 4px 4px 10px;
-                text-decoration: none;
-                display: block;
             }
         }
         &:hover,

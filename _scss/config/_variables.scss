@@ -1,7 +1,7 @@
 /*
  * # Sizing
  */
-$max-width-lg: 1199.98px;
+$max-width-lg: 1025px;
 
 /*
  * # Colors
@@ -24,7 +24,7 @@ $color-blue-black: #162c49;
 /*
  * # Fonts
  */
-$font-family-heading: 'Roboto', sans-serif;
+$font-family-heading: "Roboto", sans-serif;
 $font-family-default: sans-serif;
 $font-weight-default: 300;
 $font-weight-bold: 700;
@@ -33,6 +33,7 @@ $font-weight-black: 900;
 /*
  * # Responsive
  */
-$breakpoint-sm: 480px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1199.98px;
+$breakpoint-sm: 456px;
+$breakpoint-md: 750px;
+$breakpoint-lg: 1025px;
+$breakpoint-ex-lg: 1300px;
