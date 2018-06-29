@@ -52,19 +52,16 @@
         padding: 2rem 0;
         color: $color-blue-dark-text;
         font-family: $font-family-heading;
-        font-size: 1.75rem;
-        line-height: 1.375;
-        text-align: center;
+        font-size: 14px;
+        text-align: left;
         @media (min-width: 600px) {
-            font-size: 1.25rem;
-            text-align: left;
+            font-size: 14px;
         }
         @supports (display: flex) {
             flex: 2;
         }
         @media (min-width: $breakpoint-md) {
-            font-size: 1.75rem;
-            text-align: left;
+            font-size: 14px;
         }
         &--padded {
             @media (min-width: $breakpoint-md) {
