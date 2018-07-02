@@ -33,7 +33,7 @@
 <th style="height: 21px;"><a href="http://www.color-blindness.com/color-name-hue/">Color Name Hue</a></th>
 </tr>
 <tr style="height: 21px;">
-<td style="background-color: #325c80; height: 21px;"></img href="https://placehold.it/15/325c80/000000?text=+)">
+<td style="background-color: #325c80; height: 21px;"><img src="https://placehold.it/15/325c80/000000?text=+)" alt="#325c80">
 <td style="font-family: Lucida Console; height: 21px;">#325c80</td>
 <td style="height: 21px;">&nbsp;50,92,128</td>
 <td style="height: 21px;">Logo Deeper Steel Blue</td>
