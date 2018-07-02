@@ -25,7 +25,7 @@
 <tr>
 <td><img src="apache-openwhisk.svg"></td>
 <td>apache-openwhisk.svg</td>
-<td> 55x50 px. (unscaled)</td>
+<td> 88x80 px. (unscaled)</td>
 </tr>
 </tbody>
 </table>
