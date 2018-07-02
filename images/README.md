@@ -63,7 +63,7 @@
 <td><img src="https://via.placeholder.com/40x40/6eedd8/6eedd8"></td>
 <td style="font-family: Lucida Console; height: 21px;">#6eedd8</td>
 <td style="height: 21px;">110,237,216 </td>
-<td style="height: 21px;">Logo Deeper Medium Turqoise</td>
+<td style="height: 21px;">Logo Deeper Aquamarine</td>
 <td style="height: 21px;">aquamarine2</td>
 <td style="height: 21px;"><a href="http://chir.ag/projects/name-that-color/#6EEDD8">Spray</a></td>
 <td style="height: 21px;">Turquoise Blue</td>
