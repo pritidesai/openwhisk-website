@@ -54,14 +54,9 @@
         font-family: $font-family-heading;
         font-size: 14px;
         text-align: left;
-        @media (min-width: 600px) {
-            font-size: 14px;
-        }
+        font-weight: 400;
         @supports (display: flex) {
             flex: 2;
-        }
-        @media (min-width: $breakpoint-md) {
-            font-size: 14px;
         }
         &--padded {
             @media (min-width: $breakpoint-md) {
@@ -81,5 +76,20 @@
         border-bottom: 1px dotted $color-blue-dark-text;
         line-height: 1;
         text-decoration: none;
+    }
+    &__button {
+        display: inline-block;
+        border-radius: 6px;
+        padding: 0 20px;
+        line-height: 40px;
+        color: $color-white;
+        background-color: $color-blue-dark;
+        text-decoration: none;
+    }
+    &__text {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
     }
 }
