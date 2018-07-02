@@ -21,7 +21,7 @@
 
 ## Logo
 
-<table cellspacing="8" cellpadding="8">
+<table class="logo-colors" cellspacing="8" cellpadding="8">
 <tbody>
 <tr style="height: 21px;">
 <th style="height: 21px;" width="100px">Sample</th>
@@ -33,7 +33,7 @@
 <th style="height: 21px;"><a href="http://www.color-blindness.com/color-name-hue/">Color Name Hue</a></th>
 </tr>
 <tr style="height: 21px;">
-<td style="background-color: #325c80; height: 21px;">&nbsp;</td>
+<td style="background-color: #325c80; height: 21px;">![#325c80](https://placehold.it/15/325c80/000000?text=+)</td>
 <td style="font-family: Lucida Console; height: 21px;">#325c80</td>
 <td style="height: 21px;">&nbsp;50,92,128</td>
 <td style="height: 21px;">Logo Deeper Steel Blue</td>
