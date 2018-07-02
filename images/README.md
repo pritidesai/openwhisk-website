@@ -42,7 +42,7 @@
 <td style="height: 21px;">St Tropaz</td>
 </tr>
 <tr style="height: 21px;">
-<td style="background-color: #5aaafa; height: 21px;">&nbsp;</td>
+<td bgcolor="#5aaafa" style="background-color: #5aaafa; height: 21px;">&nbsp;</td>
 <td style="font-family: Lucida Console; height: 21px;">#5aaafa</td>
 <td style="height: 21px;">&nbsp;210,64,98</td>
 <td style="height: 21px;">Logo Deeper Sky Blue</td>
