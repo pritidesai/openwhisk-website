@@ -23,8 +23,8 @@
 <table class="logo-colors" cellspacing="8">
 <tbody>
 <tr>
-<td><img src="apache-openwhisk.svg"></td>
-<td>apache-openwhisk.svg</td>
+<td><img src="logo/apache-openwhisk-logo-only.svg"></td>
+<td>logo/apache-openwhisk-logo-only.svg</td>
 <td> 88x80 px. (unscaled)</td>
 </tr>
 </tbody>
