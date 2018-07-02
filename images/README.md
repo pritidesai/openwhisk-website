@@ -33,7 +33,7 @@
 <th style="height: 21px;"><a href="http://www.color-blindness.com/color-name-hue/">Color Name Hue</a></th>
 </tr>
 <tr style="height: 21px;">
-<td style="background-color: #325c80; height: 21px;"><img src="https://placehold.it/15/325c80/000000?text=+)" height="100" width="100" alt="#325c80"></td>
+<td><img src="https://via.placeholder.com/40x40/325c80/325c80"></td>
 <td style="font-family: Lucida Console; height: 21px;">#325c80</td>
 <td style="height: 21px;">&nbsp;50,92,128</td>
 <td style="height: 21px;">Logo Deeper Steel Blue</td>
@@ -42,7 +42,7 @@
 <td style="height: 21px;">St Tropaz</td>
 </tr>
 <tr style="height: 21px;">
-<td bgcolor="#5aaafa" style="background-color: #5aaafa; height: 21px;">&nbsp;</td>
+<td><img src="https://via.placeholder.com/40x40/5aaafa/5aaafa"></td>
 <td style="font-family: Lucida Console; height: 21px;">#5aaafa</td>
 <td style="height: 21px;">&nbsp;210,64,98</td>
 <td style="height: 21px;">Logo Deeper Sky Blue</td>
@@ -51,7 +51,7 @@
 <td style="height: 21px;">Maya Blue</td>
 </tr>
 <tr style="height: 21.5px;">
-<td style="background-color: #008571; height: 21.5px;">&nbsp;</td>
+<td><img src="https://via.placeholder.com/40x40/008571/008571"></td>
 <td style="font-family: Lucida Console; height: 21.5px;">#008571</td>
 <td style="height: 21.5px;">&nbsp;0,133,113</td>
 <td style="height: 21.5px;">Logo Deeper Sea Green</td>
@@ -60,7 +60,7 @@
 <td style="height: 21.5px;">Observatory</td>
 </tr>
 <tr style="height: 21px;">
-<td style="background-color: #6eedd8; height: 21px;">&nbsp;</td>
+<td><img src="https://via.placeholder.com/40x40/6eedd8/6eedd8"></td>
 <td style="font-family: Lucida Console; height: 21px;">#6eedd8</td>
 <td style="height: 21px;">110,237,216 </td>
 <td style="height: 21px;">Logo Deeper Medium Turqoise</td>
