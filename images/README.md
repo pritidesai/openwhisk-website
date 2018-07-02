@@ -20,6 +20,7 @@
 # Website design elements
 
 ## Logo
+<img src="apache-openwhisk.svg">
 
 <table class="logo-colors" cellspacing="8" cellpadding="8">
 <tbody>
