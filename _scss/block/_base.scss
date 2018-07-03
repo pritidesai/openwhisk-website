@@ -1,0 +1,62 @@
+@import "reset";
+
+$whisk-nodes-padding-Y: 60px;
+$whisk-nodes-main-margin-bottom: 60px;
+$whisk-nodes-h3-margin-bottom: 30px;
+
+body {
+    background-color: white
+}
+
+section {
+    position: relative;
+    background-color: white;
+}
+
+section, header, footer {
+    main {
+        position: relative;
+        margin: auto;
+    }
+}
+p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#whiskNodes {
+    padding-top: $whisk-nodes-padding-Y;
+    padding-bottom: $whisk-nodes-padding-Y;
+
+    a {
+        color: $color-blue-dark;
+    }
+
+    main {
+        margin-bottom: $whisk-nodes-padding-Y;
+        min-height: 160px;
+    }
+
+    .image-wrapper {
+        max-width: 75%;
+        margin: 0 auto 20px;
+        text-align: center;
+        img {
+            width: 100%;
+            max-width: 160px
+        }
+    }
+
+    main:first-child {
+        .image-wrapper {
+            max-width: 100%;
+            img {
+                max-width: 491px
+            }
+        }
+    }
+
+    h3 {
+        margin-bottom: $whisk-nodes-h3-margin-bottom;
+    }
+}
