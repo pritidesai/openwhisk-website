@@ -1,18 +1,18 @@
 $main-max-width: 1200px;
 
 @media screen and (min-width: 1025px) {
-
+    ul.global-nav {
+        display: inline-block;
+    }
     section, header, footer {
         main {
             max-width: $main-max-width;
         }
     }
-
-    header {
+    header, #whiskHeader h1, #whiskHeader h5 {
         padding-left: 100px;
         padding-right: 100px;
     }
-
     #whiskNodes{
         main {
             position: relative;
