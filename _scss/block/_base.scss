@@ -84,6 +84,15 @@ p {
 	background-color: $color-blue-dark;
 	text-decoration: none;
 }
+#whiskHeader {
+    margin-bottom: 0;
+    padding-bottom: 1px;
+    background-color: $color-blue-dark;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+}
 #whiskNodes {
     padding-top: $whisk-nodes-padding-Y;
     padding-bottom: $whisk-nodes-padding-Y;
