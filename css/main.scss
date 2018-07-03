@@ -2,34 +2,28 @@
 # This has to be here so Jekyll knows to process this as SCSS.
 ---
 
-/*
- * # Configuration & Global Styles
- */
-@import "config/variables";
-//@import "config/reset";
-//@import "config/typography";
+$color-blue-dark: #29558f;
+$breakpoint-sm: 456px;
+$max-width-lg: 1025px;
+$color-white: #fff;
+$font-weight-bold: 700;
+$color-blue-black: #162c49;
+$color-gray-light: #f0f8fd;
+$font-family-heading: "Roboto", sans-serif;
+$font-weight-black: 900;
+$breakpoint-lg: 1025px;
+$color-blue-light: #90e5fd;
+$font-weight-default: 300;
+$breakpoint-md: 750px;
+$color-blue-hover: transparentize($color-blue-dark, 0.94);
 
-/*
- * Utilities
- */
-//@import "util/button";
-//@import "util/embed-container";
-//@import "util/typography";
-
-/*
- * Blocks
- */
-//@import "block/main-content";
-//@import "block/main-cta";
-//@import "block/persona";
-//@import "block/quotes";
 @import "block/site-footer";
 @import "block/site-header";
 @import "block/site-nav";
-//@import "block/site-section";
-//@import "block/where-to-start";
-//@import "block/why-are-we-here";
+
+@import "block/reset";
 @import "block/skin";
+
 @import "block/base";
 @import "block/tablet";
 @import "block/desktop";

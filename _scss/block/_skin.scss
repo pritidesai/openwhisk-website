@@ -8,21 +8,21 @@ $base-font: "Roboto", sans-serif;
 $mono-font: "Roboto Mono", monospace;
 
 *, .button {
-  box-sizing: border-box;
-  font-family: $base-font;
-  background: none;
-  margin: 0;
-  border: 0;
+    box-sizing: border-box;
+    font-family: $base-font;
+    background: none;
+    margin: 0;
+    border: 0;
 }
 
 body {
-  font-family: $base-font;
+    font-family: $base-font;
 }
 
 h1, h2, h5, p {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 h3, h4 {
-  font-weight: 400;
+    font-weight: 400;
 }
