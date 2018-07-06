@@ -47,26 +47,5 @@ $main-max-width: 1200px;
         main {
             padding: 20px 0;
         }
-        nav {
-            overflow: hidden;
-            margin-bottom: 20px;
-            a {
-                width: 16.65%;
-                float: left;
-                font-size: 14px;
-                font-weight: 400;
-                white-space: nowrap;
-            }
-        }
-        .social {
-            padding: 0 30px;
-            max-width: 1200px;
-            div {
-                float: left;
-            }
-            div:last-child {
-                float: right;
-            }
-        }
     }
 }

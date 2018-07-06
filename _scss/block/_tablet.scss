@@ -77,28 +77,6 @@
     footer {
         nav {
             text-align: center;
-            a {
-                width: 30%;
-                padding: 0 20px;
-            }
-        }
-        .social {
-            text-align: center;
-            padding: 0;
-            div {
-                display: inline-block;
-            }
-            div:last-child {
-                display: block;
-                margin: 0;
-            }
-            span {
-                display: inline-block;
-                margin-right: 10px;
-            }
-            input {
-                text-align: left
-            }
         }
     }
 }
