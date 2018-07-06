@@ -122,6 +122,9 @@ header {
 .nav-buttons {
     float: right
 }
+.footer-buttons {
+    float: middle;
+}
 #whiskHeader {
     background-color: $color-blue-dark;
     text-align: center;
@@ -192,7 +195,7 @@ ul.global-nav {
 	display: none;
 	li {
 		display: inline-block;
-		margin-right: 14px;
+        margin-right: 14px;
 		a {
 			color: $color-white;
 			font-weight: 400;
@@ -211,4 +214,48 @@ section {
 		margin: 20px 0;
         line-height: 28px;
     }
+}
+
+footer {
+	width: 100%;
+    background-color: $color-blue-dark;
+    margin: 20px 0;
+	main {
+        padding: 20px 0;
+    }
+	nav {
+		a {
+			width: 100%;
+			text-align: center;
+			display: inline-block;
+			margin: 5px 0;
+			font-size: 14px;
+			font-weight: 400;
+			color: $color-white;
+			text-decoration: none;
+        }
+    }
+	.social {
+		margin: 20px 0;
+		div {
+			text-align: center;
+            margin-bottom: 20px;
+        }
+		div:last-child {
+			margin: 30px 0;
+        }
+		span {
+			display: block;
+            margin-bottom: 8px;
+        }
+		input {
+            text-align: center;
+        }
+    }
+}
+#miceType {
+	clear: both;
+	font-size: 11px;
+	line-height: 18px;
+    color: #aaa;
 }

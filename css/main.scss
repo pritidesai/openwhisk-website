@@ -17,10 +17,6 @@ $font-weight-default: 300;
 $breakpoint-md: 750px;
 $color-blue-hover: transparentize($color-blue-dark, 0.94);
 
-@import "block/site-footer";
-@import "block/site-header";
-@import "block/site-nav";
-
 @import "block/reset";
 @import "block/skin";
 
