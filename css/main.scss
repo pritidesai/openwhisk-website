@@ -2,9 +2,10 @@
 # This has to be here so Jekyll knows to process this as SCSS.
 ---
 
-@import "block/reset";
-@import "block/skin";
+@import "variables";
+@import "reset";
+@import "skin";
 
-@import "block/base";
-@import "block/tablet";
-@import "block/desktop";
+@import "base";
+@import "tablet";
+@import "desktop";
