@@ -8,9 +8,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="26"
-   height="24"
-   viewBox="0 0 41.44452 38.25648"
+   width="55"
+   height="50"
+   viewBox="0 0 41.25 37.5"
    version="1.1"
    id="svg4829"
    sodipodi:docname="apache-openwhisk-logo-only.svg"
@@ -50,9 +50,14 @@
      inkscape:current-layer="Symbols"
      inkscape:pagecheckerboard="true"
      borderlayer="false"
-     viewbox-width="116.3"
-     viewbox-height="21"
-     scale-x="1.59402">
+     viewbox-width="1"
+     viewbox-height="1"
+     scale-x="1.59402"
+     units="px"
+     showborder="true"
+     width="40mm"
+     inkscape:document-units="pt"
+     inkscape:showpageshadow="false">
     <inkscape:grid
        type="xygrid"
        id="grid4835" />
@@ -269,10 +274,10 @@
   <g
      id="Symbols"
      style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
-     transform="translate(0,4.78206)">
+     transform="translate(0,38.282052)">
     <g
        id="Menu"
-       transform="translate(-267.55813,-33.220933)">
+       transform="translate(-267.90463,-67.282138)">
       <g
          id="logo/apache-openwhisk"
          transform="matrix(1.3491753,0,0,1.88912,268,27.019066)">
@@ -280,7 +285,7 @@
            id="Group-23">
           <polygon
              id="Fill-1"
-             points="15.537455,0.002953125 25.270444,17.22644 30.142665,8.6119277 25.27587,-0.00012304688 "
+             points="30.142665,8.6119277 25.27587,-0.00012304688 15.537455,0.002953125 25.270444,17.22644 "
              style="fill:#008571"
              transform="translate(0.1028831,1.175636)" />
           <polygon
@@ -290,7 +295,7 @@
              transform="translate(0.1028831,1.175636)" />
           <polygon
              id="Fill-3"
-             points="4.8203765,19.687808 14.465952,19.684116 4.8258021,2.4612451 0,11.075757 "
+             points="4.8258021,2.4612451 0,11.075757 4.8203765,19.687808 14.465952,19.684116 "
              style="fill:#325c80"
              transform="translate(0.1028831,1.175636)" />
           <polygon
