@@ -15,7 +15,10 @@
    version="1.1"
    id="svg4829"
    sodipodi:docname="apache-openwhisk.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:export-filename="/Users/Matt/openwhisk/release/openwhisk-website/images/logo/apache-openwhisk.png"
+   inkscape:export-xdpi="3000"
+   inkscape:export-ydpi="3000">
   <metadata
      id="metadata4833">
     <rdf:RDF>
@@ -42,11 +45,11 @@
      id="namedview4831"
      showgrid="false"
      showguides="true"
-     inkscape:zoom="5.5989583"
-     inkscape:cx="95.663082"
+     inkscape:zoom="7.8486941"
+     inkscape:cx="53.578682"
      inkscape:cy="11.675494"
-     inkscape:window-x="20"
-     inkscape:window-y="24"
+     inkscape:window-x="37"
+     inkscape:window-y="13"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg4829"
      inkscape:pagecheckerboard="true"
