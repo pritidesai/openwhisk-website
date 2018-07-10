@@ -1,49 +1,56 @@
 ---
 layout: default
 ---
-
-<section class="site-section site-section--gradient">
-    <div class="main-cta">
-        <div class="main-cta__lede">
+<section id="whiskHeader" class="light-text bot-bar">
+    <main>
+        <div>
+            <h1>Open Source Serverless Cloud Platform</h1>
+            <h5>Executes functions in response to events at any scale</h5>
+        </div>
+    </main>
+</section>
+<section id="whiskNodes">
+    <main>
+        <div class="image-wrapper">
+            <img src="{{ site.github.url }}/images/illustration-openwhisk.svg" alt="Illustration: How Apache OpenWhisk Works"/>
+        </div>
+        <div class="content">
             <h4>What is Apache OpenWhisk?</h4>
-            <p class="main-cta__text">
+            <p>
                 Apache OpenWhisk (Incubating) is a 
-                <a class="main-cta__link" href="{{ site.github.url }}/serverless">serverless</a>,
+                <a href="{{ site.github.url }}/serverless">serverless</a>,
                 open source cloud platform that executes functions in response to events at any scale.
                 OpenWhisk handles the infrastructure and servers so you can focus on building amazing things.
             </p>
-            <p class="main-cta__text">
+            <p>
                 OpenWhisk is an open source, distributed serverless computing platform able to execute application
                 logic (Actions) in response to events (Triggers) from external sources (Feeds) or HTTP requests.
                 It provides a programming environment supported by a REST API-based Command Line Interface (CLI)
                 along with tooling to support packaging and catalog services.
             </p>
-            <a class="main-cta__button" href="https://github.com/apache/incubator-openwhisk#quick-start">Create Your Local Playground</a>
+            <a class="button" href="https://github.com/apache/incubator-openwhisk#quick-start">Create Your Local Playground</a>
         </div>
-        <div class="main-cta__graphic main-cta__graphic--stick-to-top">
-            <img class="main-cta__illustration" src="{{ site.github.url }}/images/illustration-openwhisk.svg" alt="Illustration: How Apache OpenWhisk Works"/>
-        </div>
-    </div>
+    </main>
 
-    <div class="where-to-start">
-        <div>
-            <img class="where-to-start__image" src="{{ site.github.url }}/images/illustration-cost-effective.svg" alt="Apache OpenWhisk allows you to focus on your code"/>
+    <main>
+        <div class="image-wrapper">
+            <img src="{{ site.github.url }}/images/illustration-cost-effective.svg" alt="Apache OpenWhisk allows you to focus on your code"/>
         </div>
-        <div class="where-to-start__text">
-            <h2 class="where-to-start__heading">Focus only on your code</h2>
-            <p class="where-to-start__lede">
+        <div class="content">
+            <h4>Focus only on your code</h4>
+            <p>
                 As a developer there's no need to manage the servers that run your code.
                 Apache OpenWhisk operates and scales your application for you.
                 Spend your time innovating, not configuring infrastructure. Plus,
                 you only pay for what your app uses and needs at that moment.
             </p>
         </div>
-    </div>
+    </main>
 
-    <div class="where-to-start">
-        <div class="where-to-start__text">
-            <h2 class="where-to-start__heading">Runtimes Support</h2>
-            <p class="where-to-start__lede">
+    <main>
+        <div class="content">
+            <h2>Runtimes Support</h2>
+            <p>
                 Work with what you know and love. Integrate popular services. Code in your
                 favorite languages. All the pieces connect and are easy to extend. The list
                 supported runtimes:
@@ -59,7 +66,7 @@ layout: default
                 <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.
             </p>
         </div>
-        <div class="where-to-start__image">
+        <!--div class="where-to-start__image">
             <div class="where-to-start__row">
                 <img class="where-to-start__column" src="{{ site.github.url }}/images/Node.js_logo.svg" alt="Node Runtime"/>
                 <img class="where-to-start__column" src="{{ site.github.url }}/images/Swift_logo_with_text.svg" alt="Swift Runtime"/>
@@ -71,21 +78,20 @@ layout: default
                 <img class="where-to-start__column" src="{{ site.github.url }}/images/Python-logo-notext.svg" alt="Python Runtime"/>
                 <img class="where-to-start__column" src="{{ site.github.url }}/images/PHP-logo.svg" alt="PHP Runtime"/>
                 <img class="where-to-start__column" src="{{ site.github.url }}/images/scala-logo.svg" alt="Scala Runtime"/>
-            </div>
+            </div-->
             <!--div class="where-to-start__row">
                 <img class="where-to-start__column" src="{{ site.github.url }}/images/Rust_programming_language_black_logo.svg" alt="Rust Lang Runtime"/>
                 <img class="where-to-start__column" src="{{ site.github.url }}/images/Haskell-Logo.svg" alt="Haskell Runtime"/>
             </div-->
-        </div>
-    </div>
+    </main>
 
-    <div class="where-to-start">
-        <div>
-            <img class="where-to-start__image" src="{{ site.github.url }}/images/illustration-developers-flexible.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
+    <main>
+        <div class="imager-wrapper">
+            <img src="{{ site.github.url }}/images/illustration-developers-flexible.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
         </div>
-        <div class="where-to-start__text">
-            <h2 class="where-to-start__heading">High-level Programming Models &amp; Compositions</h2>
-            <p class="where-to-start__lede">
+        <div class="content">
+            <h4>High-level Programming Models &amp; Compositions</h2>
+            <p>
                 Code in different languages like JavaScript/NodeJS, Swift, Python,
                 Java or run custom logic by packaging code with Docker.
                 Invoke your code synchronously, asynchronously, or on a schedule.
@@ -95,38 +101,39 @@ layout: default
                 And also, debug your code in realtime.
             </p>
         </div>
-    </div>
+    </main>
 
-    <div class="where-to-start">
-        <div class="where-to-start__text">
-              <h2 class="where-to-start__heading">Scaling Per-Request &amp; Optimal Utilization</h2>
-              <p class="where-to-start__lede">
+    <main>
+        <div class="content">
+              <h4>Scaling Per-Request &amp; Optimal Utilization</h4>
+              <p>
                   Run your action ten thousand times in a fraction of a second, or once
                   a week. Action instances scale to meet demand as needed, then disappear.
                   Enjoy optimal utilization where you don't pay for idle resources.
               </p>
         </div>
-        <div>
-            <img class="main-content__image" src="{{ site.github.url }}/images/illustration-developers-scaling.svg" alt="Apache OpenWhisk scaling and utilization">
+        <div class="image_wrapper">
+            <img src="{{ site.github.url }}/images/illustration-developers-scaling.svg" alt="Apache OpenWhisk scaling and utilization">
         </div>
-    </div>
+    </main>
       
-    <div class="where-to-start">
-        <div>
-            <img class="where-to-start__image" src="{{ site.github.url }}/images/illustration-integrators.svg" alt="Apache OpenWhisk benefits for package creators"/>
+    <main>
+        <div class="image-wrapper">
+            <src="{{ site.github.url }}/images/illustration-integrators.svg" alt="Apache OpenWhisk benefits for package creators"/>
         </div>
-        <div class="where-to-start__text">
-            <h2 class="where-to-start__heading">Plug your service into Apache OpenWhisk</h2>
-            <p class="where-to-start__lede">
+        <div class="content">
+            <h4>Plug your service into Apache OpenWhisk</h4>
+            <p>
                 Apache OpenWhisk makes it simple for thousands of developers to
                 integrate with your service. Make it easy for developers to perform
                 actions when something happens in your service, or to send data into
                 your service when things happen somewhere else.
             </p>
         </div>
-    </div>
+    </main>
+</section>
 
-    <div class="where-to-start">
+    <!--div class="where-to-start">
         <div class="where-to-start__text">
             <h2 class="where-to-start__heading">Easy as 1-2-3</h2>
             <p class="where-to-start__lede">
@@ -174,4 +181,4 @@ layout: default
       </div>
     </blockquote>
   </div>
-</section>
+</section-->

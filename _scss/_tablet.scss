@@ -1,0 +1,82 @@
+@media screen and (min-width: 750px) {
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    h4 {
+        font-size: 24px;
+        line-height: 40px;
+    }
+    ul.global-nav {
+        display: inline-block;
+    }
+    #whiskNodes {
+        h3 {
+            text-align: left;
+            margin-bottom: 18px;
+        }
+        main {
+            position: relative;
+            clear: both;
+            display: table;
+
+            .content {
+                display: table-cell;
+                position: relative;
+                vertical-align: middle;
+            }
+            .image-wrapper {
+                position: absolute;
+                top: 50%;
+                max-width: 25%;
+                max-height: 100%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(odd) {
+                padding-right: 210px;
+                .image-wrapper {
+                    right: 0;
+                }
+            }
+            &:nth-child(even) {
+                padding-left: 210px;
+                .image-wrapper {
+                    left: 0;
+                }
+            }
+            &:nth-child(1) {
+                padding-right: 0;
+                h3, p {
+                    text-align: center
+                }
+                .image-wrapper {
+                    position: relative;
+                    display: block;
+                    float: none;
+                    max-width: 100%;
+                    transform: none;
+                }
+                .content {
+                    display: block
+                }
+            }
+            img {
+                width: 100%
+            }
+        }
+    }
+    footer {
+        nav {
+            text-align: center;
+        }
+    }
+}
