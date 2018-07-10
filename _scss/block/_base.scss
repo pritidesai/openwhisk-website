@@ -30,7 +30,7 @@ $logo-width: 180px;
 
 $nav-buttons-margin-left: 30px;
 
-$hamburger-size: 50px;
+$menu-size: 50px;
 
 
 // main nav
@@ -241,4 +241,38 @@ footer {
 	font-size: 11px;
 	line-height: 18px;
     color: #aaa;
+}
+#menu {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	background: none;
+	div, &:before, &:after {
+		position: absolute;
+		left: 15%;
+		width: 70%;
+		height: 2px;
+		background-color: $color-blue-dark;
+		transition: 0.3s;
+        content: "";
+    }
+	div {
+        top: calc(50% - 1px)
+    }
+
+	&:before {
+        top: 24%
+    }
+
+	&:after {
+        bottom: 24%
+    }
+
+	&:hover {
+		div, &:before, &:after {
+            background-color: $color-white;
+        }
+    }
 }

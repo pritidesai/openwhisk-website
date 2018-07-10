@@ -1,6 +1,9 @@
 $main-max-width: 1200px;
 
 @media screen and (min-width: 1025px) {
+    #menu {
+        display: none;
+    }
     ul.global-nav {
         display: inline-block;
     }
@@ -48,4 +51,10 @@ $main-max-width: 1200px;
             padding: 20px 0;
         }
     }
+}
+@media screen and (min-width: 1300px) {
+
+}
+
+@media screen and (min-width: 456px) {
 }

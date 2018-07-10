@@ -1,6 +1,6 @@
 <header>
     <a class="logo" href="/"></a>
-    <div class="nav-buttons">
+    <div class="nav-buttons" data-auto-burger="primary">
         <ul class="global-nav">
             <li>
                 <a href="{{ site.github.url }}/about.html">Documentation</a>
@@ -50,5 +50,6 @@
                 </a>
             </li>
         </ul>
+        <button id="menu" onclick="whisk.toggleMenu()"><div></div></button>
     </div>
 </header>
