@@ -2,32 +2,34 @@ h1 {
     font-size: $h1-font-size;
     line-height: $h1-line-height;
 }
-  
+
 h2 {
     font-size: $h2-font-size;
     line-height: $h2-line-height;
 }
-  
+
 h3 {
     font-size: $h3-font-size;
     line-height: $h3-line-height;
 }
-  
+
 h4 {
     font-size: $h4-font-size;
     line-height: $h4-line-height;
 }
-  
+
 h5 {
     font-size: $h5-font-size;
     line-height: $h5-line-height;
 }
-  
+
 p {
     font-size: $p-font-size;
     line-height: $p-line-height;
+    margin-top: 0px;
+    margin-bottom: 12px;
 }
-  
+
 section, header, #vendorStrip {
     padding-left: $full-width-paddingX;
     padding-right: $full-width-paddingX;
@@ -36,11 +38,11 @@ section, header, #vendorStrip {
         max-width: $main-max-width;
     }
 }
-  
+
 header {
     height: $header-height;
 }
-  
+
 .nav-buttons {
     height: $header-height;
     line-height: $header-height;
@@ -48,12 +50,12 @@ header {
          margin-left: $nav-buttons-margin-left;
     }
 }
-  
+
 #menu {
     width: $menu-size;
     height: $menu-size;
 }
-  
+
 #mainNav {
     padding: $main-nav-padding;
     h5 {
@@ -77,17 +79,17 @@ header {
       font-size: $main-nav-left-button-font-size;
     }
 }
-  
+
 .open-nav, .y-enough {
     #tryKubernetes {
         margin-left: $nav-buttons-margin-left;
     }
 }
-  
+
 #whiskHeader {
     padding-top: $hero-padding-top;
 }
-  
+
 #docs {
     #whiskHeader {
         h1, h5 {
@@ -96,10 +98,9 @@ header {
         }
     }
 }
-  
+
 #vendorStrip {
     height: $vendor-strip-height;
     line-height: $vendor-strip-height;
     font-size: $vendor-strip-font-size;
 }
-  
