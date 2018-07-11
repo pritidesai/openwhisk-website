@@ -85,7 +85,7 @@ header {
 }
   
 #whiskHeader {
-    padding-top: $hero-padding-top;
+    padding-top: $whisk-header-padding-top;
 }
   
 #docs {
@@ -97,9 +97,4 @@ header {
     }
 }
   
-#vendorStrip {
-    height: $vendor-strip-height;
-    line-height: $vendor-strip-height;
-    font-size: $vendor-strip-font-size;
-}
   
