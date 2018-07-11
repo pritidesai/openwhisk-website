@@ -30,18 +30,16 @@ $main-max-width: 1200px;
             &:nth-child(1) {
                 max-width: 1000px;
                 padding-right: 475px;
-                h3, p {
-                    text-align: left;
-                }
                 .image-wrapper {
                     position: absolute;
                     max-width: 48%;
                     transform: translateY(-50%);
+                    // this width affects the image when side-by-side with text
                     img {
-                        max-width: 425px;
+                        max-width: 900px;
                     }
                 }
-            } 
+            }
         }
     }
     footer {
