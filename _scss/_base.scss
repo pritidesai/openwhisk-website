@@ -266,3 +266,40 @@ footer {
         }
     }
 }
+#whiskDoc {
+	position: relative;
+	//padding: 50px 20px 20px 20px;
+	overflow: hidden;
+	font-size: 14px;
+    color: $color-blue-dark;
+	& > div {
+        height: 100%;
+        text-align: center;
+    }
+    h1 {
+        padding-top: 3% !important;
+        padding-bottom: 1.5% !important;
+        padding-left: 3% !important;
+        padding-right: 3% !important;
+        text-align: center !important;
+        font-size: 22pt !important;
+        font-weight: normal;
+    }
+    .button {
+        margin: 1%;
+    }
+}
+
+#usersDoc, #developersDoc, #contributorsDoc {
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    color: $color-blue-dark;
+    padding-top: 100px;
+    h2, h4, p, a {
+        text-align: left;
+    }
+    ul {
+        list-style-type:circle;
+    }
+}
