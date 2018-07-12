@@ -271,3 +271,23 @@ footer {
         }
     }
 }
+#whiskDoc {
+	position: relative;
+	//padding: 50px 20px 20px 20px;
+	overflow: hidden;
+	font-size: 14px;
+	& > div {
+        height: 100%;
+    }
+    h1 {
+
+        padding-top: 3% !important;
+        padding-bottom: 1.5% !important;
+        padding-left: 3% !important;
+        padding-right: 3% !important;
+        text-align: center !important;
+        font-size: 22pt !important;
+        font-weight: normal;
+        color: $color-blue-dark;
+    }
+}
