@@ -6,7 +6,7 @@ Apache OpenWhisk is a serverless, open source cloud platform that executes funct
 
 There are several technical capabilities and business factors coming together to make this approach very compelling from both an application development and deployment cost perspective.
 
-Key benefits of a serverless architecture include automatic scale up and down in response to current load and the associated cost model that charges only for milliseconds of compute time used when running. 
+Key benefits of a serverless architecture include automatic scale up and down in response to current load and the associated cost model that charges only for milliseconds of compute time used when running.
 
 > “The most important benefit to me [...] is the reduced feedback loop of creating new application components - I’m a huge fan of ‘lean’ approaches, largely because I think there is a lot of value in getting technology in front of an end user as soon as possible to get early feedback, and the reduced time-to-market that comes with Serverless fits right in with this philosophy.”
 >
@@ -19,7 +19,7 @@ In the Apache OpenWhisk programming model, the developer focuses solely on the u
 Beyond automatic scale and granular cost model which tie business operations directly to resources consumed, platforms like OpenWhisk address many of the operations-focused [12 Factor](https://12factor.net/) best practices on behalf of the developer, making it easier to build and deploy cloud native applications like microservices.
 
 > “Serverless will fundamentally change how we build business around technology and how you code.”
-> 
+>
 > **– Simon Wardley, [_Why the fuss about serverless?_](https://hackernoon.com/why-the-fuss-about-serverless-4370b1596da0#.9onv2dko9)**
 
 Another trend driving this new model of development is the emergence of many more non-web workloads that require the benefits of cloud computing (for example, elasticity, scale, and cost reduction). These IoT, cognitive, batch, and data-driven use cases join HTTP and REST based applications that have long taken advantage of IaaS and PaaS capabilities.
