@@ -3,6 +3,24 @@ layout: events
 title: Apache OpenWhisk Events
 lede: Presentations at conferences, meetups, and other events.
 ---
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
 
 The Apache Software Foundation does not endorse listed events. [Get in touch with us to suggest event listings](/social).
 
@@ -200,7 +218,7 @@ Wednesday, 9:00 AM-9:45 AM; Meet the Experts Forum # 1; Kalonji Bankole (IBM)</l
 <li><strong>9002: Event-driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the basics now!</strong><br/>
 Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
 </ul>
-</details> 
+</details>
 
 - [**JS Remote Conf**](https://devchat.tv/conferences/js-remote-conf-2017), March 15th-16th 2017, Virtual<br/>James Thomas will give a talk on OpenWhisk and Serverless
 - [**ForwardJS**](https://forwardjs.com/), March 1st 2017, San Francisco, USA<br/>Raymond Camden will give a talk on OpenWhisk
@@ -219,7 +237,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 - [**GOTO Berlin**](https://gotocon.com/berlin-2016/), November 14th-15th 2016, Berlin, Germany<br/>Andreas Nauerz & Simon Moser gave a talk on OpenWhisk
 - [**CloudNativeCon 2016**](https://cnkc16.sched.org/event/8K4c), November 8th 2016, Seattle, USA<br/>Daniel Krook highlighted OpenWhisk in his keynote
 - [**ContainerDays NYC 2016**](http://dynamicinfradays.org/events/2016-nyc/), November 3rd-4th 2016, New York, USA<br/>Rodric Rabbah and Philippe Suter gave a talk on OpenWhisk
-  
+
 ### October 2016
 
 - [**ServerlessConf London**](http://london.serverlessconf.io/), October 26th-28th 2016, London, UK<br/>Andreas Nauerz et al gave a talk on OpenWhisk
@@ -232,7 +250,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 
 ### September 2016
 
-- [**ServerlessConf Tokyo**](http://tokyo.serverlessconf.io/), September 30th–October 1st 2016, Tokyo, Japan<br/>Andreas Nauerz & Markus Thömmes gave a talk on OpenWhisk  
+- [**ServerlessConf Tokyo**](http://tokyo.serverlessconf.io/), September 30th–October 1st 2016, Tokyo, Japan<br/>Andreas Nauerz & Markus Thömmes gave a talk on OpenWhisk
 - [**Voxxed Days**](https://belgrade.voxxeddays.com/), September 28th-30th 2016, Belgrade, Serbia<br/>James Thomas gave a talk on OpenWhisk
 - [**CloudFoundry Summit**](https://www.cloudfoundry.org/community/summits/program/about/?summitId=11993/), September 26th-28th 2016, Frankfurt, Germany<br/>Andreas Nauerz & Andrei Yurkovich gave a talk on OpenWhisk
 - [**Codemotion Warsaw**](http://warsaw2016.codemotionworld.com/), September 15th-16th 2016, Warsaw, Poland<br/>Andreas Nauerz gave a talk on OpenWhisk
@@ -250,7 +268,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 ### June 2016
 
 - [**Bluemix Developers in Cambridge Meetup**](http://www.meetup.com/Bluemix-Developers-in-Cambridge/events/231783149/), June 23rd 2016, Cambridge, USA<br/>Vatche Ishakia gave a talk on OpenWhisk
-- [**Silicon Valley Cloud Foundry User Group Meetup**](http://www.meetup.com/CloudFoundry/events/231791789/), June 14th 2016, Sunnyvale, USA<br/>Animesh Singh & Altoros gave a talk on OpenWhisk  
+- [**Silicon Valley Cloud Foundry User Group Meetup**](http://www.meetup.com/CloudFoundry/events/231791789/), June 14th 2016, Sunnyvale, USA<br/>Animesh Singh & Altoros gave a talk on OpenWhisk
 
 ### May 2016
 
@@ -259,7 +277,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 - [**Cloud Foundry Unconference**](http://www.meetup.com/CloudFoundry/events/227086817/), May 22nd 2016, Santa Clara, USA<br/>Animesh Singh gave a talk on OpenWhisk
 - [**OSCON Austin**](http://conferences.oreilly.com/oscon/open-source-us), May 18th-19th 2016, Austin, USA<br/>Daniel Krook gave a talk on OpenWhisk
 - [**Hursley Summit**](https://www-950.ibm.com/events/wwe/grp/grp004.nsf/v17_events?openform&lp=2016_hursley_landing_page&locale=en_US), May 16th-18th 2016, Hursley, UK<br/>Andreas Nauerz gave a talk on OpenWhisk
-- [**Codemotion Amsterdam**](http://amsterdam2016.codemotionworld.com/), May 9th-12th 2016, Amsterdam, Netherlands<br/>Andreas Nauerz gave a talk on OpenWhisk  
+- [**Codemotion Amsterdam**](http://amsterdam2016.codemotionworld.com/), May 9th-12th 2016, Amsterdam, Netherlands<br/>Andreas Nauerz gave a talk on OpenWhisk
 
 ### April 2016
 
