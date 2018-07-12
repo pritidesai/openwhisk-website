@@ -278,6 +278,7 @@ footer {
 	font-size: 14px;
 	& > div {
         height: 100%;
+        text-align: center;
     }
     h1 {
 
@@ -289,5 +290,8 @@ footer {
         font-size: 22pt !important;
         font-weight: normal;
         color: $color-blue-dark;
+    }
+    .button {
+        margin: 1%;
     }
 }
