@@ -168,7 +168,7 @@ header {
             margin-bottom: 30px;
         }
     }
-}            
+}
 #whiskNodes {
     padding-top: $whisk-nodes-padding-Y;
     padding-bottom: $whisk-nodes-padding-Y;
@@ -180,17 +180,16 @@ header {
     .image-wrapper {
         max-width: 75%;
         margin: 0 auto 20px;
-        text-align: center;
         img {
             width: 100%;
-            max-width: 160px
+            max-width: 50%
         }
     }
     main:first-child {
         .image-wrapper {
             max-width: 100%;
             img {
-                max-width: 491px
+                max-width: 90%
             }
         }
     }
