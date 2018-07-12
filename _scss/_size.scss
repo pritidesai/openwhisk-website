@@ -29,8 +29,8 @@ p {
     margin-top: 0px;
     margin-bottom: 12px;
 }
-
-section, header, #vendorStrip {
+  
+section, header {
     padding-left: $full-width-paddingX;
     padding-right: $full-width-paddingX;
     main {
@@ -87,7 +87,7 @@ header {
 }
 
 #whiskHeader {
-    padding-top: $hero-padding-top;
+    padding-top: $whisk-header-padding-top;
 }
 
 #docs {
@@ -97,10 +97,4 @@ header {
             padding-right: $full-width-paddingX;
         }
     }
-}
-
-#vendorStrip {
-    height: $vendor-strip-height;
-    line-height: $vendor-strip-height;
-    font-size: $vendor-strip-font-size;
 }
