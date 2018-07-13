@@ -119,14 +119,6 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><img src="https://via.placeholder.com/40x40/233c5c/233c5c" alt="" /></td>
-<td style="font-family: Lucida Console;">#233c5c</td>
-<td>&nbsp;</td>
-<td>$color-blue-dark-text</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
 <td><img src="https://via.placeholder.com/40x40/0b1828/0b1828" alt="" /></td>
 <td style="font-family: Lucida Console;">#0b1828</td>
 <td>&nbsp;</td>
@@ -161,11 +153,22 @@
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
+<!--
+-- Text
+-->
 <tr>
 <td><img src="https://via.placeholder.com/40x40/f0f2f5/f0f2f5" alt="" /></td>
 <td style="font-family: Lucida Console;">#f0f2f5</td>
 <td>&nbsp;</td>
 <td>$color-blue-gray-light-text</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><img src="https://via.placeholder.com/40x40/233c5c/233c5c" alt="" /></td>
+<td style="font-family: Lucida Console;">#233c5c</td>
+<td>&nbsp;</td>
+<td>$color-blue-dark-text</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
