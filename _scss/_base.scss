@@ -301,10 +301,10 @@ footer {
     font-size: 14px;
     color: $color-blue-dark;
     padding-top: 100px;
-    h2, h4, p, a {
+    h2, h4, p  {
         text-align: left;
     }
-    ul {
-        list-style-type:circle;
+    .button {
+        margin: 1%;
     }
 }
