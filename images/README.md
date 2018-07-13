@@ -95,14 +95,6 @@
 -- Blues
 -->
 <tr>
-<td><img src="https://via.placeholder.com/40x40/dcf0ff/dcf0ff" alt="" /></td>
-<td style="font-family: Lucida Console;">#dcf0ff</td>
-<td>&nbsp;</td>
-<td>$color-blue-ultralight</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
 <td><img src="https://via.placeholder.com/40x40/ebf1f9/ebf1f9" alt="" /></td>
 <td style="font-family: Lucida Console;">#ebf1f9</td>
 <td>&nbsp;</td>
