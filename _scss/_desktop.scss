@@ -12,7 +12,7 @@ $main-max-width: 1200px;
             max-width: $main-max-width;
         }
     }
-    #whiskHeader h1, #whiskHeader h5 {
+    header, #whiskHeader h1, #whiskHeader h5, #whiskDoc, #usersDoc, #developersDoc, #contributorsDoc {
         //padding-left: 100px;
         //padding-right: 100px;
     }
