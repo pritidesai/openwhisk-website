@@ -173,26 +173,10 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><img src="https://via.placeholder.com/40x40/162c49/162c49" alt="" /></td>
-<td style="font-family: Lucida Console;">#162c49</td>
+<td><img src="https://via.placeholder.com/40x40/0b1828/0b1828" alt="" /></td>
+<td style="font-family: Lucida Console;">#0b1828</td>
 <td>&nbsp;</td>
 <td>$color-blue-black</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><img src="https://via.placeholder.com/40x40/ccdaff/ccdaff" alt="" /></td>
-<td style="font-family: Lucida Console;">#ccdaff</td>
-<td>&nbsp;</td>
-<td>$color-gradient-start</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><img src="https://via.placeholder.com/40x40/00fff7/00fff7" alt="" /></td>
-<td style="font-family: Lucida Console;">#00fff7</td>
-<td>&nbsp;</td>
-<td>$color-gradient-end</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
