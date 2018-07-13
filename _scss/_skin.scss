@@ -33,7 +33,7 @@ $mono-font: "Roboto Mono", monospace;
     text-shadow: 0 1px 0 #fafafa; }
 
 .button:hover {
-    background: $color-blue-light;
+    background: $color-blue-gray-medium;
     border: solid 1px #c2c2c2;
     border-bottom: solid 3px #b2b1b1;
     box-shadow: inset 0 0 0 1px #efefef; }
@@ -49,9 +49,9 @@ body {
 }
 
 h1, h2, h5, p {
-    font-weight: 300;
+    font-weight: 600;
 }
 
 h3, h4 {
-    font-weight: 400;
+    font-weight: 600;
 }
