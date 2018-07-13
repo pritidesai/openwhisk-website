@@ -126,6 +126,14 @@
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
+<tr>
+<td><img src="https://via.placeholder.com/40x40/0b1828/0b1828" alt="" /></td>
+<td style="font-family: Lucida Console;">#0b1828</td>
+<td>&nbsp;</td>
+<td>$color-blue-black</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
 <!--
 -- Gray-blues
 -->
@@ -169,14 +177,6 @@
 <td style="font-family: Lucida Console;">#6eedd8</td>
 <td>&nbsp;</td>
 <td>$color-green-light</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><img src="https://via.placeholder.com/40x40/0b1828/0b1828" alt="" /></td>
-<td style="font-family: Lucida Console;">#0b1828</td>
-<td>&nbsp;</td>
-<td>$color-blue-black</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
