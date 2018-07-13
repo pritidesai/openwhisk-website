@@ -91,8 +91,11 @@
 <th>Description</th>
 <th>Closest <a href="http://people.csail.mit.edu/jaffer/Color/rgb.txt">Unix</a></th>
 </tr>
+<!--
+-- Blues
+-->
 <tr>
-<td><img src="https://via.placeholder.com/40x40/325c80/325c80" alt="" /></td>
+<td><img src="https://via.placeholder.com/40x40/dcf0ff/dcf0ff" alt="" /></td>
 <td style="font-family: Lucida Console;">#dcf0ff</td>
 <td>&nbsp;</td>
 <td>$color-blue-ultralight</td>
@@ -100,16 +103,16 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><img src="https://via.placeholder.com/40x40/90e5fd/90e5fd" alt="" /></td>
-<td style="font-family: Lucida Console;">#90e5fd</td>
+<td><img src="https://via.placeholder.com/40x40/ebf1f9/ebf1f9" alt="" /></td>
+<td style="font-family: Lucida Console;">#ebf1f9</td>
 <td>&nbsp;</td>
 <td>$color-blue-light</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><img src="https://via.placeholder.com/40x40/5aaafa/5aaafa" alt="" /></td>
-<td style="font-family: Lucida Console;">#5aaafa</td>
+<td><img src="https://via.placeholder.com/40x40/88addd/88addd" alt="" /></td>
+<td style="font-family: Lucida Console;">#88addd</td>
 <td>&nbsp;</td>
 <td>$color-blue-medium</td>
 <td>&nbsp;</td>
@@ -117,7 +120,7 @@
 </tr>
 <tr>
 <td><img src="https://via.placeholder.com/40x40/29558f/29558f" alt="" /></td>
-<td style="font-family: Lucida Console;">29558f</td>
+<td style="font-family: Lucida Console;">#29558f</td>
 <td>&nbsp;</td>
 <td>$color-blue-dark</td>
 <td>&nbsp;</td>
@@ -125,44 +128,50 @@
 </tr>
 <tr>
 <td><img src="https://via.placeholder.com/40x40/29558f/29558f" alt="" /></td>
-<td style="font-family: Lucida Console;">29648f</td>
+<td style="font-family: Lucida Console;">#29648f</td>
 <td>&nbsp;</td>
 <td>$color-blue-dark-text</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
+<!--
+-- Gray-blues
+-->
 <tr>
-<td><img src="https://via.placeholder.com/40x40/f0f8fd/f0f8fd" alt="" /></td>
-<td style="font-family: Lucida Console;">#f0f8fd</td>
+<td><img src="https://via.placeholder.com/40x40/eff2f5/eff2f5" alt="" /></td>
+<td style="font-family: Lucida Console;">#eff2f5</td>
 <td>&nbsp;</td>
-<td>$color-gray-light</td>
+<td>$color-blue-gray-light</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><img src="https://via.placeholder.com/40x40/3b667d/3b667d" alt="" /></td>
-<td style="font-family: Lucida Console;">#3b667d</td>
+<td><img src="https://via.placeholder.com/40x40/afbdcf/afbdcf" alt="" /></td>
+<td style="font-family: Lucida Console;">#afbdcf</td>
 <td>&nbsp;</td>
-<td>$color-gray-medium</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><img src="https://via.placeholder.com/40x40/152934/152934" alt="" /></td>
-<td style="font-family: Lucida Console;">#152934</td>
-<td>&nbsp;</td>
-<td>$color-gray-dark</td>
+<td>$color-blue-gray-medium</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><img src="https://via.placeholder.com/40x40/9da6ab/9da6ab" alt="" /></td>
-<td style="font-family: Lucida Console;">#9da6ab</td>
+<td><img src="https://via.placeholder.com/40x40/455973/455973" alt="" /></td>
+<td style="font-family: Lucida Console;">#455973</td>
 <td>&nbsp;</td>
-<td>$color-gray-light-text</td>
+<td>$color-blue-gray-dark</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
+<tr>
+<td><img src="https://via.placeholder.com/40x40/f0f2f5/f0f2f5" alt="" /></td>
+<td style="font-family: Lucida Console;">#f0f2f5</td>
+<td>&nbsp;</td>
+<td>$color-blue-gray-light-text</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<!--
+-- Others
+-->
 <tr>
 <td><img src="https://via.placeholder.com/40x40/6eedd8/6eedd8" alt="" /></td>
 <td style="font-family: Lucida Console;">#6eedd8</td>
