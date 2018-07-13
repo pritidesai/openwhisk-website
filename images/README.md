@@ -127,8 +127,8 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><img src="https://via.placeholder.com/40x40/29558f/29558f" alt="" /></td>
-<td style="font-family: Lucida Console;">#29648f</td>
+<td><img src="https://via.placeholder.com/40x40/233c5c/233c5c" alt="" /></td>
+<td style="font-family: Lucida Console;">#233c5c</td>
 <td>&nbsp;</td>
 <td>$color-blue-dark-text</td>
 <td>&nbsp;</td>
