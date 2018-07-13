@@ -172,16 +172,5 @@
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<!--
--- Others
--->
-<tr>
-<td><img src="https://via.placeholder.com/40x40/6eedd8/6eedd8" alt="" /></td>
-<td style="font-family: Lucida Console;">#6eedd8</td>
-<td>&nbsp;</td>
-<td>$color-green-light</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
 </tbody>
 </table>
