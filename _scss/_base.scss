@@ -168,19 +168,20 @@ header {
     color: $color-blue-dark;
 
     main {
+        background: $color-bg-base-main;
         margin-bottom: $whisk-nodes-padding-Y;
-        min-height: 160px;
-        background: OldLace;
+        min-height: 200px;
+        display: table;
     }
     .content {
-        background: pink;
+        background: $color-bg-base-content;
     }
     .image-wrapper {
-        background: green;
-        //margin: 10px 10px;
+        background: $color-bg-base-image-wrapper;
+        display:table-header-group;
         img {
-//            max-width: 500px;
             width: 90%;
+            height: 90%;
         }
     }
     main:first-child {
@@ -192,11 +193,12 @@ header {
         }
     }
     img{
+        background: $color-bg-base-img;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
-        background: yellow;
+        //width: 50%;
+        max-height: 200px;
     }
     h3 {
         margin-bottom: $whisk-nodes-h3-margin-bottom;

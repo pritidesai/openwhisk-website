@@ -23,9 +23,9 @@ $main-max-width: 1200px;
     }
     #whiskNodes{
         main {
+            background: $color-bg-desktop-main;
             position: relative;
 //            max-width: 830px;
-            background: Lavender;
 //            &:nth-child(1) {
 //                max-width: 1000px;
 //                padding-right: 475px;

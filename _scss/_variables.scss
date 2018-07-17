@@ -28,6 +28,28 @@
  $color-logo-deeper-aquamarine: #6eedd8;
 
  /*
+  * # Layout Colors
+  */
+  /*
+ $color-bg-base-main: white;
+ $color-bg-base-image-wrapper: white;
+ $color-bg-base-content: white;
+ $color-bg-base-img: white;
+ $color-bg-tablet-main: white;
+ $color-bg-desktop-main: white;
+*/
+
+ /*
+  * # Layout Colors (DEBUG)
+  */
+ $color-bg-base-main: OldLace;
+ $color-bg-base-image-wrapper: green;
+ $color-bg-base-content: Lavender;
+ $color-bg-base-img: yellow;
+ $color-bg-tablet-main: red;
+ $color-bg-desktop-main: Azure;
+
+ /*
   * # Fonts
   */
  $font-family-heading: "Roboto", sans-serif;
@@ -43,3 +65,4 @@
  $breakpoint-md: 750px;
  $breakpoint-lg: 1025px;
  $breakpoint-ex-lg: 1300px;
+

@@ -26,22 +26,22 @@
             margin-bottom: 18px;
         }
         main {
+            background: $color-bg-tablet-main;
             position: relative;
             clear: both;
             display: table;
-            background: red;
 
             .content {
                 display: table-cell;
                 position: relative;
                 vertical-align: middle;
                 align: center;
-                width: 50%;
+                width: 60%;
             }
             .image-wrapper {
                 position: absolute;
                 //top: 50%;
-                width: 50%;
+                width: 40%;
 
 //                transform: translateY(50%);
             }
