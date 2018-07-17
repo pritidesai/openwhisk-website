@@ -181,8 +181,8 @@ header {
         background: $color-bg-base-image-wrapper;
         display:table-header-group;
         img {
-            width: 90%;
-            height: 90%;
+            width: 100%;
+            height: 100%;
         }
     }
     img{
@@ -190,7 +190,8 @@ header {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        max-height: 200px;
+        max-height: 220px;
+        max-width: 556px;
     }
     h3 {
         margin-bottom: $whisk-nodes-h3-margin-bottom;

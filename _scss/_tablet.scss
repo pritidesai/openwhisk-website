@@ -1,4 +1,4 @@
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     p {
         font-size: 16px;
         line-height: 24px;
@@ -33,15 +33,17 @@
 
             .content {
                 display: table-cell;
-                margin: 10px 10px 10px 10px;
+                // Margins do not work on table-cell types, must use border
+                padding: 5px;
+                border: $color-bg-tablet-content-border;
                 position: relative;
                 vertical-align: middle;
                 align: center;
-                width: 60%;
+                width: 50%;
             }
             .image-wrapper {
                 position: absolute;
-                width: 40%;
+                width: 50%;
             }
 //            &:nth-child(odd) {
 //              padding-right: 210px;
@@ -63,7 +65,7 @@
 //                }
 //            }
 //            img {
-//                //max-height: 200px;
+//                max-height: 200px;
 //            }
         }
     }

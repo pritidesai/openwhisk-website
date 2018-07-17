@@ -37,9 +37,7 @@ layout: default
             <p>
                 The OpenWhisk platform supports a programming model in which developers write functional logic (called <span style="font-weight:bold">Actions</span>), in any supported programming language, that can be dynamically scheduled and run in response to associated events (via <span style="font-weight:bold">Triggers</span>) from external sources (<span style="font-weight:bold">Feeds</span>) or from HTTP requests. The project includes a REST API-based Command Line Interface (CLI) along with other tooling to support packaging, catalog services and many popular container deployment options.
             </p>
-            <div class="content">
-                <a class="button" href="https://github.com/apache/incubator-openwhisk#quick-start">Create Your Local Playground</a>
-            </div>
+            <a class="button" href="https://github.com/apache/incubator-openwhisk#quick-start">Create Your Local Playground</a>
         </div>
         <div class="image-wrapper">
             <img src="{{ site.github.url }}/images/elements/OW-Abstract Architecture Diagram.png" alt="Events trigger the Apache OpenWhisk platform to run Actions or functions in various supported languages."/>
@@ -74,16 +72,36 @@ layout: default
                 <a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a>, and
                 <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.  If you are using NodeJS and need libraries the "out-of-the-box" runtimes do not have, then package your own using ZIP actions and the <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker runtime</a> or create and customize your own runtime environment using our <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker SDK</a>.
             </p>
-                <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Create Your First Action</a>
+            <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Create Your First Action</a>
         </div>
         <div class="image-wrapper">
                 <img src="{{ site.github.url }}/images/Node.js_logo.svg" alt="Node Runtime"/>
         </div>
     </main>
+
     <main>
         <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-developers-flexible.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
+            <img src="{{ site.github.url }}/images/illustration-integrators.svg" alt="Apache OpenWhisk benefits for package creators"/>
         </div>
+        <div class="content">
+            <h4>Feed providers / Catalog (integrations, packages)</h4>
+            <p>
+                With Apache OpenWhisk you can easily create actions, test, connect to other
+                actions or debug them. Use the
+                <a class="where-to-start__link" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">
+                Apache OpenWhisk CLI</a>,
+                target your Apache OpenWhisk instance, and run your first action in seconds.
+            </p>
+            <p>
+                Apache OpenWhisk makes it simple for thousands of developers to
+                integrate with your service. Make it easy for developers to perform
+                actions when something happens in your service, or to send data into
+                your service when things happen somewhere else.
+            </p>
+        </div>
+    </main>
+
+    <main>
         <div class="content">
             <h4>High-level Programming Models &amp; Compositions</h2>
             <p>
@@ -95,6 +113,9 @@ layout: default
                 Use parameter binding to avoid hardcoding service credentials in your code.
                 And also, debug your code in realtime.
             </p>
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ site.github.url }}/images/illustration-developers-flexible.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
         </div>
     </main>
 
@@ -113,38 +134,6 @@ layout: default
     </main>
 
     <main>
-        <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-integrators.svg" alt="Apache OpenWhisk benefits for package creators"/>
-        </div>
-        <div class="content">
-            <h4>Plug your service into Apache OpenWhisk</h4>
-            <p>
-                Apache OpenWhisk makes it simple for thousands of developers to
-                integrate with your service. Make it easy for developers to perform
-                actions when something happens in your service, or to send data into
-                your service when things happen somewhere else.
-            </p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper">
-            <p style="color:red">TBD</p>
-        </div>
-        <div class="content">
-            <h4>Easy as 1-2-3</h4>
-            <p>
-                With Apache OpenWhisk you can easily create actions, test, connect to other
-                actions or debug them. Use the
-                <a class="where-to-start__link" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">
-                Apache OpenWhisk CLI</a>,
-                target your Apache OpenWhisk instance, and run your first action in seconds.
-            </p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-contributors.svg" alt="Apache OpenWhisk benefits for open source contributors"/>
-        </div>
         <div class="content">
             <h4>Join a vibrant open source community</h4>
             <p>
@@ -154,23 +143,8 @@ layout: default
                 make Apache OpenWhisk even better.
             </p>
         </div>
+        <div class="image-wrapper">
+            <img src="{{ site.github.url }}/images/illustration-contributors.svg" alt="Apache OpenWhisk benefits for open source contributors"/>
+        </div>
     </main>
 </section>
-
-<!--section class="site-section">
-  <div class="quotes quotes--compact">
-    <blockquote id="quote1" class="quotes__quote">
-      <div class="quotes__text quotes__text--compact">
-        <p>
-          “Thanks to serverless computing we can go even further. The new world
-          needs to be asynchronous and elastic by design, and OpenWhisk provides
-          the features that we need.”
-        </p>
-        <p class="quotes__attribution quotes__attribution--compact">
-          – Luis Enriquez,
-            Head of Platform Engineering &amp; Architecture at Santander Group
-        </p>
-      </div>
-    </blockquote>
-  </div>
-</section-->
