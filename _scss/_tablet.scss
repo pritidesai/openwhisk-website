@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
     p {
         font-size: 16px;
         line-height: 24px;
@@ -34,15 +34,15 @@
             .content {
                 display: table-cell;
                 // Margins do not work on table-cell types, must use border
-                padding: 5px;
                 border: $color-bg-tablet-content-border;
                 position: relative;
-                vertical-align: middle;
+                //vertical-align: middle;
                 align: center;
                 width: 50%;
             }
             .image-wrapper {
                 position: absolute;
+                border: $color-bg-tablet-image-wrapper-border;
                 width: 50%;
             }
 //            &:nth-child(odd) {

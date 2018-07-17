@@ -19,7 +19,7 @@ $p-font-size: 14px;
 $p-line-height: 22px;
 
 // header
-$full-width-paddingX: 20px;
+$full-width-paddingX: 10px;
 
 $main-width: 100%;
 $main-max-width: 100%;
@@ -32,14 +32,13 @@ $nav-buttons-margin-left: 30px;
 
 $menu-size: 50px;
 
-
 // main nav
 $main-nav-padding: 140px 0 30px;
 $main-nav-h5-margin-bottom: 1em;
 $main-nav-h3-margin-bottom: 0.6em;
 $nav-box-width: 20%;
 $nav-box-sibling-margin-left: calc(20% / 3);
-$main-nav-main-sibling-margin-top: 60px;
+// main-nav-main-sibling-margin-top: 60px;
 $main-nav-left-button-size: 50px;
 $main-nav-left-button-font-size: 18px;
 
@@ -48,8 +47,8 @@ $whisk-header-padding-top: 80px;
 
 @import "size";
 
-$whisk-nodes-padding-Y: 60px;
-$whisk-nodes-main-margin-bottom: 60px;
+// Adjust this value to control spacing between <main> content sections
+$whisk-nodes-padding-Y: 50px;
 $whisk-nodes-h3-margin-bottom: 30px;
 
 body {
@@ -152,16 +151,19 @@ header {
 #home #whiskHeader::after {
     display: none;
 }
+
 #home {
 	#whiskHeader {
+        // TODO: explore the value of these styles for spacing
 		margin-bottom: 0;
 		padding-bottom: 1px;
 		main {
 			padding: 0 10px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
     }
 }
+
 #whiskNodes {
     padding-top: $whisk-nodes-padding-Y;
     padding-bottom: $whisk-nodes-padding-Y;
@@ -176,6 +178,7 @@ header {
     .content {
         background: $color-bg-base-content;
         margin: 10px 10px 10px 10px;
+        height: 100%;
     }
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
@@ -190,6 +193,8 @@ header {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        // These values prevent uneven scaling of images sizes based upon max. sizes
+        // of the image-wrapper container
         max-height: 220px;
         max-width: 556px;
     }
@@ -233,12 +238,14 @@ footer {
         padding: 20px 0;
     }
 }
+
 #miceType {
 	clear: both;
 	font-size: 11px;
 	line-height: 18px;
     color: #aaa;
 }
+
 #menu {
 	display: inline-block;
 	position: relative;
@@ -273,6 +280,7 @@ footer {
         }
     }
 }
+
 #whiskDoc {
 	position: relative;
 	//padding: 50px 20px 20px 20px;

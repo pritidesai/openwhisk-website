@@ -35,7 +35,7 @@ layout: default
                 Apache OpenWhisk (Incubating) is an open source, distributed <a href="{{ site.github.url }}/serverless" style="font-weight:bold">Serverless</a> platform that executes functions (<span style="font-family:Times New Roman,Georgia,Serif">fx</span>) in response to events at any scale. OpenWhisk manages the infrastructure, servers and scaling using Docker containers so you can focus on building amazing and efficient applications.
             </p>
             <p>
-                The OpenWhisk platform supports a programming model in which developers write functional logic (called <span style="font-weight:bold">Actions</span>), in any supported programming language, that can be dynamically scheduled and run in response to associated events (via <span style="font-weight:bold">Triggers</span>) from external sources (<span style="font-weight:bold">Feeds</span>) or from HTTP requests. The project includes a REST API-based Command Line Interface (CLI) along with other tooling to support packaging, catalog services and many popular container deployment options.
+                The OpenWhisk platform supports a programming model in which developers write functional logic (called <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md"><span style="font-weight:bold">Actions</span></a>), in any supported programming language, that can be dynamically scheduled and run in response to associated events (via <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md"><span style="font-weight:bold">Triggers</span></a>) from external sources (<a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/feeds.md"><span style="font-weight:bold">Feeds</span></a>) or from HTTP requests. The project includes a REST API-based Command Line Interface (CLI) along with other tooling to support packaging, catalog services and many popular container deployment options.
             </p>
             <a class="button" href="https://github.com/apache/incubator-openwhisk#quick-start">Create Your Local Playground</a>
         </div>
@@ -59,6 +59,7 @@ layout: default
     <main>
         <div class="content">
             <h4>Write functions in any language</h4>
+            <!-- Possible text addition: "bundle larger or complex dependencies, and tailor the runtime environment to suite your needs."" -->
             <p>
                 Work with what you know and love. Code in your favorite languages such as
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">NodeJS</a>,
@@ -66,11 +67,8 @@ layout: default
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-java">Java</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-go">Go</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-java">Scala</a>,
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-docker">Docker</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-python">Python</a>,
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-php">PHP</a>,
-                <a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a>, and
-                <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.  If you are using NodeJS and need libraries the "out-of-the-box" runtimes do not have, then package your own using ZIP actions and the <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker runtime</a> or create and customize your own runtime environment using our <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker SDK</a>.
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-php">PHP</a>.  If you need languages or libraries the current "out-of-the-box" runtimes do not support, you can create and customize your own runtime using Zip Actions and the <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker runtime</a> and the <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker SDK</a>.  Some examples of how to support other languages using Docker Actions include <a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a>, and <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.
             </p>
             <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Create Your First Action</a>
         </div>
@@ -121,7 +119,7 @@ layout: default
 
     <main>
         <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-developers-scaling.svg" alt="Apache OpenWhisk scaling and utilization">
+            <img src="{{ site.github.url }}/images/" alt="Apache OpenWhisk scaling and utilization">
         </div>
         <div class="content">
               <h4>Scaling Per-Request &amp; Optimal Utilization</h4>
@@ -144,7 +142,7 @@ layout: default
             </p>
         </div>
         <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-contributors.svg" alt="Apache OpenWhisk benefits for open source contributors"/>
+            <img style="height=200px;width:200px" src="{{ site.github.url }}/images/logo/SupportApache-small.png" alt="Apache OpenWhisk benefits for open source contributors"/>
         </div>
     </main>
 </section>

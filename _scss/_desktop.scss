@@ -1,6 +1,6 @@
-$main-max-width: 1200px;
+$main-max-width: 1280px;
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1000px) {
     #menu {
         display: none;
     }
@@ -24,11 +24,9 @@ $main-max-width: 1200px;
             position: relative;
 
             .content {
-                //margin: 10px 10px 10px 10px;
                 width: 60%;
             }
             .image-wrapper {
-                position: absolute;
                 width: 40%;
             }
         }
