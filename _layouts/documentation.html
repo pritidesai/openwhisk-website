@@ -11,16 +11,6 @@ layout: default
     <div id="content">
         <h1>OpenWhisk Documentation</h1>
             <p>
-                OpenWhisk is an event-driven compute platform also referred to as Serverless computing or
-                as Function as a Service (FaaS) that runs code in response to events or direct invocations.
-                The following figure shows the high-level OpenWhisk architecture.
-            </p>
-            <div id="whiskNodes">
-                <main :first-child>
-                    <img class="image-wrapper" src="{{ site.github.url }}/images/doc/OpenWhisk.png" alt="OpenWhisk Architecture"/>
-                </main>
-            </div>
-            <p>
                 OpenWhisk documentation is categrorized in three seperate sections based on the following three roles:
             </p>
             <p>
@@ -35,41 +25,61 @@ layout: default
         <h2>OpenWhisk Users:</h2>
         <div>
         <h4>Operators:</h4>
-        <p>
-            OpenWhisk supports many different types of deployment models.
-            The easiest way to start deploying OpenWhisk is to get Docker installed on Mac, Windows or Linux.
-            This does not give you a production deployment but gives you enough of the pieces to start writing functions and seeing them executing.
-        </p>
-        <p style="text-align: center">
-            <a class="button" href="https://github.com/apache/incubator-openwhisk#quick-start">OpenWhisk Deployment using Docker-Compose</a>
-        </p>
-        <p>
-            Another path to quickly start deploying OpenWhisk is to install it on a Kubernetes cluster.
-            OpenWhisk can be installed on Minikube, or on a managed Kubernetes cluster provisioned from a public cloud provider,
-            or on a Kubernetes cluster you manage yourself.
-        </p>
-        <p style="text-align: center">
-            <a class="button" href="https://github.com/apache/incubator-openwhisk#kubernetes-setup">OpenWhisk Deployment using Kubernetes</a>
-        </p>
-        <p>
-            A Vagrant machine is also available to run OpenWhisk on Mac, Windows PC or GNU/Linux.
-            Downloading and install VirtualBox and Vagrant for your operating system and architecture.
-        </p>
-        <p style="text-align: center">
-            <a class="button" href="https://github.com/apache/incubator-openwhisk#vagrant-setup">OpenWhisk Deployment using Vagrant</a>
-        </p>
+        <ul>
+            <li>
+                <a href="https://github.com/apache/incubator-openwhisk#quick-start">Deployment using Docker-Compose</a>
+            </li>
+            <li>
+                <a href="https://github.com/apache/incubator-openwhisk#kubernetes-setup">Deployment using Kubernetes</a>
+            </li>
+            <li>
+                <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">Deployment using Vagrant</a>
+            </li>
+        </ul>
         <h4>End Users:</h4>
-            <p>
-                <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Write an Action</a>
-                <a class="button" href="https://github.com/apache/incubator-openwhisk-cli/blob/master/README.md">CLI</a>
-                <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">REST API</a>
-                <a class="button" href="https://github.com/apache/incubator-openwhisk-wskdeploy">Whisk Deploy</a>
-            </p>
+            <ul>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Write an Action</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/README.md">OpenWhisk Command Line Interface (CLI)</a>
+                </li>
+                <li>
+                   <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk REST API</a>
+                </li>
+                <li>
+                    <a href="https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json">OpenWhisk API V1 Swagger</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-wskdeploy">Whisk Deploy</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/README.md">API Gateway</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/README.md">OpenWhisk Catalog</a>
+                </li>
+            </ul>
+
     </div>
 </section>
 <section id="developersDoc">
     <div id="content">
         <h2>OpenWhisk Developers</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md">OpenWhisk Client for JavaScript</a>
+            </li>
+            <li>
+                <a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">OpenWhisk Client for Go</a>
+            </li>
+            <li>
+                <a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">OpenWhisk Client for Swift</a>
+            </li>
+            <li>
+                <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">OpenWhisk Client for Python</a>
+            </li>
+        </ul>
         <p>
                 Function (incl. packages)
                 Integrators (database, log, plug-ins, etc.)
