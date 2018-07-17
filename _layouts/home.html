@@ -29,76 +29,77 @@ layout: default
 </section>
 <section id="whiskNodes">
     <main>
-        <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/elements/OW-Abstract Diagram.png" alt="Events trigger the Apache OpenWhisk platform to run Actions or functions in various supported languages."/>
-        </div>
         <div class="content">
             <h4>What is Apache OpenWhisk?</h4>
             <p>
                 Apache OpenWhisk (Incubating) is an open source, distributed <a href="{{ site.github.url }}/serverless" style="font-weight:bold">Serverless</a> platform that executes functions (<span style="font-family:Times New Roman,Georgia,Serif">fx</span>) in response to events at any scale. OpenWhisk manages the infrastructure, servers and scaling using Docker containers so you can focus on building amazing and efficient applications.
             </p>
             <p>
-                The OpenWhisk platform supports a programming model in which developers write functional logic (called <span style="font-weight:bold">Actions</span>), in any supported programming language, that can be dynamically scheduled and run in response to associated events (via <span style="font-weight:bold">Triggers</span>) from external sources (<span style="font-weight:bold">Feeds</span>) or from HTTP requests. The project includes a REST API-based Command Line Interface (CLI) along with other tooling to support packaging, catalog services and many popular container deployment options.
+                The OpenWhisk platform supports a programming model in which developers write functional logic (called <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md"><span style="font-weight:bold">Actions</span></a>), in any supported programming language, that can be dynamically scheduled and run in response to associated events (via <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md"><span style="font-weight:bold">Triggers</span></a>) from external sources (<a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/feeds.md"><span style="font-weight:bold">Feeds</span></a>) or from HTTP requests. The project includes a REST API-based Command Line Interface (CLI) along with other tooling to support packaging, catalog services and many popular container deployment options.
             </p>
-            <div class="content">
-                <a class="button" href="https://github.com/apache/incubator-openwhisk#quick-start">Create Your Local Playground</a>
-            </div>
+            <a class="button" href="https://github.com/apache/incubator-openwhisk#quick-start">Create Your Local Playground</a>
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ site.github.url }}/images/elements/OW-Abstract Architecture Diagram.png" alt="Events trigger the Apache OpenWhisk platform to run Actions or functions in various supported languages."/>
         </div>
     </main>
 
     <main>
         <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-cost-effective.svg" alt="Apache OpenWhisk allows you to focus on your code"/>
+            <img src="{{ site.github.url }}/images/deployments/OW-Deployments.png" alt="Apache OpenWhisk can deploy on your favorite Cloud container framework."/>
         </div>
         <div class="content">
-            <h4>Focus only on your code</h4>
+            <h4>Deploys anywhere</h4>
             <p>
-                As a developer there's no need to manage the servers that run your code.
-                Apache OpenWhisk operates and scales your application for you.
-                Spend your time innovating, not configuring infrastructure. Plus,
-                you only pay for what your app uses and needs at that moment.
+                Since Apache OpenWhisk builds its components using containers it easily supports many deployment options both locally and within Cloud infrastructures. Options include many of today's popular Container frameworks such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Kubernetes</a>, <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Mesos</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">Compose</a>.  Recent contributions even include deployment options such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/docs/minikube.md">Minikube</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">OpenShift</a>.
             </p>
-           <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Create Your First Action</a>
         </div>
     </main>
 
     <main>
-        <div class="image-wrapper">
-                <img src="{{ site.github.url }}/images/Node.js_logo.svg" alt="Node Runtime"/>
-                <!--img src="{{ site.github.url }}/images/Swift_logo_with_text.svg" alt="Swift Runtime"/>
-                <img src="{{ site.github.url }}/images/Java_Logo.svg" alt="Java Runtime"/>
-                <img src="{{ site.github.url }}/images/gopher-front.svg" alt="Go Lang Runtime"/>
-                <img src="{{ site.github.url }}/images/Docker_container_engine_logo.svg" alt="Docker Runtime"/>
-                <img src="{{ site.github.url }}/images/Python-logo-notext.svg" alt="Python Runtime"/>
-                <img src="{{ site.github.url }}/images/PHP-logo.svg" alt="PHP Runtime"/>
-                <img src="{{ site.github.url }}/images/scala-logo.svg" alt="Scala Runtime"/>
-                <img src="{{ site.github.url }}/images/Rust_programming_language_black_logo.svg" alt="Rust Lang Runtime"/>
-                <img src="{{ site.github.url }}/images/Haskell-Logo.svg" alt="Haskell Runtime"/-->
-        </div>
         <div class="content">
-            <h4>Runtimes Support</h4>
+            <h4>Write functions in any language</h4>
+            <!-- Possible text addition: "bundle larger or complex dependencies, and tailor the runtime environment to suite your needs."" -->
             <p>
-                Work with what you know and love. Integrate popular services. Code in your
-                favorite languages. All the pieces connect and are easy to extend. The list
-                supported runtimes:
+                Work with what you know and love. Code in your favorite languages such as
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">NodeJS</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-swift">Swift</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-java">Java</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-go">Go</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-java">Scala</a>,
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-docker">Docker</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-python">Python</a>,
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-php">PHP</a>,
-                <a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a>, and
-                <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-php">PHP</a>.  If you need languages or libraries the current "out-of-the-box" runtimes do not support, you can create and customize your own runtime using Zip Actions and the <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker runtime</a> and the <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker SDK</a>.  Some examples of how to support other languages using Docker Actions include <a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a>, and <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.
             </p>
+            <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Create Your First Action</a>
+        </div>
+        <div class="image-wrapper">
+                <img src="{{ site.github.url }}/images/Node.js_logo.svg" alt="Node Runtime"/>
         </div>
     </main>
 
     <main>
         <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-developers-flexible.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
+            <img src="{{ site.github.url }}/images/illustration-integrators.svg" alt="Apache OpenWhisk benefits for package creators"/>
         </div>
+        <div class="content">
+            <h4>Feed providers / Catalog (integrations, packages)</h4>
+            <p>
+                With Apache OpenWhisk you can easily create actions, test, connect to other
+                actions or debug them. Use the
+                <a class="where-to-start__link" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">
+                Apache OpenWhisk CLI</a>,
+                target your Apache OpenWhisk instance, and run your first action in seconds.
+            </p>
+            <p>
+                Apache OpenWhisk makes it simple for thousands of developers to
+                integrate with your service. Make it easy for developers to perform
+                actions when something happens in your service, or to send data into
+                your service when things happen somewhere else.
+            </p>
+        </div>
+    </main>
+
+    <main>
         <div class="content">
             <h4>High-level Programming Models &amp; Compositions</h2>
             <p>
@@ -111,11 +112,14 @@ layout: default
                 And also, debug your code in realtime.
             </p>
         </div>
+        <div class="image-wrapper">
+            <img src="{{ site.github.url }}/images/illustration-developers-flexible.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
+        </div>
     </main>
 
     <main>
         <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-developers-scaling.svg" alt="Apache OpenWhisk scaling and utilization">
+            <img src="{{ site.github.url }}/images/" alt="Apache OpenWhisk scaling and utilization">
         </div>
         <div class="content">
               <h4>Scaling Per-Request &amp; Optimal Utilization</h4>
@@ -128,38 +132,6 @@ layout: default
     </main>
 
     <main>
-        <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-integrators.svg" alt="Apache OpenWhisk benefits for package creators"/>
-        </div>
-        <div class="content">
-            <h4>Plug your service into Apache OpenWhisk</h4>
-            <p>
-                Apache OpenWhisk makes it simple for thousands of developers to
-                integrate with your service. Make it easy for developers to perform
-                actions when something happens in your service, or to send data into
-                your service when things happen somewhere else.
-            </p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper">
-            <p style="color:red">TBD</p>
-        </div>
-        <div class="content">
-            <h4>Easy as 1-2-3</h4>
-            <p>
-                With Apache OpenWhisk you can easily create actions, test, connect to other
-                actions or debug them. Use the
-                <a class="where-to-start__link" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">
-                Apache OpenWhisk CLI</a>,
-                target your Apache OpenWhisk instance, and run your first action in seconds.
-            </p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-contributors.svg" alt="Apache OpenWhisk benefits for open source contributors"/>
-        </div>
         <div class="content">
             <h4>Join a vibrant open source community</h4>
             <p>
@@ -169,23 +141,8 @@ layout: default
                 make Apache OpenWhisk even better.
             </p>
         </div>
+        <div class="image-wrapper">
+            <img style="height=200px;width:200px" src="{{ site.github.url }}/images/logo/SupportApache-small.png" alt="Apache OpenWhisk benefits for open source contributors"/>
+        </div>
     </main>
 </section>
-
-<!--section class="site-section">
-  <div class="quotes quotes--compact">
-    <blockquote id="quote1" class="quotes__quote">
-      <div class="quotes__text quotes__text--compact">
-        <p>
-          “Thanks to serverless computing we can go even further. The new world
-          needs to be asynchronous and elastic by design, and OpenWhisk provides
-          the features that we need.”
-        </p>
-        <p class="quotes__attribution quotes__attribution--compact">
-          – Luis Enriquez,
-            Head of Platform Engineering &amp; Architecture at Santander Group
-        </p>
-      </div>
-    </blockquote>
-  </div>
-</section-->

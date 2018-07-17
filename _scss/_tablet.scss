@@ -1,4 +1,4 @@
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
     p {
         font-size: 16px;
         line-height: 24px;
@@ -19,56 +19,54 @@
     ul.global-nav {
         display: inline-block;
     }
+
     #whiskNodes {
         h3 {
             text-align: left;
             margin-bottom: 18px;
         }
         main {
+            background: $color-bg-tablet-main;
             position: relative;
             clear: both;
             display: table;
 
             .content {
                 display: table-cell;
+                // Margins do not work on table-cell types, must use border
+                border: $color-bg-tablet-content-border;
                 position: relative;
-                vertical-align: middle;
+                //vertical-align: middle;
+                align: center;
+                width: 50%;
             }
             .image-wrapper {
                 position: absolute;
-                top: 50%;
-                max-width: 25%;
-                max-height: 100%;
-                transform: translateY(-50%);
+                border: $color-bg-tablet-image-wrapper-border;
+                width: 50%;
             }
-            &:nth-child(odd) {
-                padding-right: 210px;
-                .image-wrapper {
-                    right: 0;
-                }
-            }
-            &:nth-child(even) {
-                padding-left: 210px;
-                .image-wrapper {
-                    left: 0;
-                }
-            }
-            &:nth-child(1) {
-                padding-right: 0;
-                .image-wrapper {
-                    position: relative;
-                    display: block;
-                    float: none;
-                    max-width: 100%;
-                    transform: none;
-                }
-                .content {
-                    display: block
-                }
-            }
-            img {
-                width: 100%
-            }
+//            &:nth-child(odd) {
+//              padding-right: 210px;
+//                .image-wrapper {
+//                    right: 0;
+//                }
+//            }
+//            &:nth-child(even) {
+//                padding-left: 210px;
+//                .image-wrapper {
+//                    left: 0;
+//                }
+//            }
+//            &:nth-child(1) {
+//                padding-right: 0;
+//                .image-wrapper {
+//                }
+//                .content {
+//                }
+//            }
+//            img {
+//                max-height: 200px;
+//            }
         }
     }
     footer {
