@@ -47,26 +47,22 @@ layout: default
     </main>
 
     <main>
+        <div class="image-wrapper">
+            <img src="{{ site.github.url }}/images/deployments/OW-Deployments.png" alt="Apache OpenWhisk can deploy on your favorite Cloud container framework."/>
+        </div>
         <div class="content">
             <h4>Deploys anywhere</h4>
             <p>
                 Since Apache OpenWhisk builds its components using containers it easily supports many deployment options both locally and within Cloud infrastructures. Options include many of today's popular Container frameworks such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Kubernetes</a>, <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Mesos</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">Compose</a>.  Recent contributions even include deployment options such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/docs/minikube.md">Minikube</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">OpenShift</a>.
             </p>
         </div>
-        <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/deployments/OW-Deployments.png" alt="Apache OpenWhisk can deploy on your favorite Cloud container framework."/>
-        </div>
     </main>
+
     <main>
-        <div class="image-wrapper">
-                <img src="{{ site.github.url }}/images/Node.js_logo.svg" alt="Node Runtime"/>
-        </div>
         <div class="content">
             <h4>Write functions in any language</h4>
             <p>
-                Work with what you know and love. Integrate popular services. Code in your
-                favorite languages. All the pieces connect and are easy to extend. The list
-                supported runtimes:
+                Work with what you know and love. Code in your favorite languages such as
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">NodeJS</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-swift">Swift</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-java">Java</a>,
@@ -76,9 +72,12 @@ layout: default
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-python">Python</a>,
                 <a href="https://github.com/apache/incubator-openwhisk-runtime-php">PHP</a>,
                 <a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a>, and
-                <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.
+                <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.  If you need libraries the "out-of-the-box" runtimes then using the <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker runtime</a> or create and customize your own runtime environment using our <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker SDK</a>.
             </p>
                 <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Create Your First Action</a>
+        </div>
+        <div class="image-wrapper">
+                <img src="{{ site.github.url }}/images/Node.js_logo.svg" alt="Node Runtime"/>
         </div>
     </main>
     <main>
