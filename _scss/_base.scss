@@ -175,6 +175,7 @@ header {
     }
     .content {
         background: $color-bg-base-content;
+        margin: 10px 10px 10px 10px;
     }
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
@@ -184,20 +185,11 @@ header {
             height: 90%;
         }
     }
-    main:first-child {
-        .image-wrapper {
-//            max-width: 800px;
-//            img {
-//                position: absolute;
-//            }
-        }
-    }
     img{
         background: $color-bg-base-img;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        //width: 50%;
         max-height: 200px;
     }
     h3 {
