@@ -30,7 +30,7 @@ layout: default
 <section id="whiskNodes">
     <main>
         <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/elements/OW-Abstract Diagram.png" alt="Events trigger the Apache OpenWhisk platform to run Actions or functions in various supported languages."/>
+            <img src="{{ site.github.url }}/images/elements/OW-Abstract Architecture Diagram.png" alt="Events trigger the Apache OpenWhisk platform to run Actions or functions in various supported languages."/>
         </div>
         <div class="content">
             <h4>What is Apache OpenWhisk?</h4>
@@ -47,36 +47,22 @@ layout: default
     </main>
 
     <main>
-        <div class="image-wrapper">
-            <img src="{{ site.github.url }}/images/illustration-cost-effective.svg" alt="Apache OpenWhisk allows you to focus on your code"/>
-        </div>
         <div class="content">
-            <h4>Focus only on your code</h4>
+            <h4>Deploys anywhere</h4>
             <p>
-                As a developer there's no need to manage the servers that run your code.
-                Apache OpenWhisk operates and scales your application for you.
-                Spend your time innovating, not configuring infrastructure. Plus,
-                you only pay for what your app uses and needs at that moment.
+                Since Apache OpenWhisk builds its components using containers it easily supports many deployment options both locally and within Cloud infrastructures including many of today's popular Container frameworks such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Kubernetes</a>, <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Mesos</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">Compose</a>.  Recent contributions even include deployment options such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/docs/minikube.md">Minikube</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">OpenShift</a>.
             </p>
-           <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Create Your First Action</a>
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ site.github.url }}/images/deployments/OW-Deployments.png" alt="Apache OpenWhisk can deploy on your favorite Cloud container framework."/>
         </div>
     </main>
-
     <main>
         <div class="image-wrapper">
                 <img src="{{ site.github.url }}/images/Node.js_logo.svg" alt="Node Runtime"/>
-                <!--img src="{{ site.github.url }}/images/Swift_logo_with_text.svg" alt="Swift Runtime"/>
-                <img src="{{ site.github.url }}/images/Java_Logo.svg" alt="Java Runtime"/>
-                <img src="{{ site.github.url }}/images/gopher-front.svg" alt="Go Lang Runtime"/>
-                <img src="{{ site.github.url }}/images/Docker_container_engine_logo.svg" alt="Docker Runtime"/>
-                <img src="{{ site.github.url }}/images/Python-logo-notext.svg" alt="Python Runtime"/>
-                <img src="{{ site.github.url }}/images/PHP-logo.svg" alt="PHP Runtime"/>
-                <img src="{{ site.github.url }}/images/scala-logo.svg" alt="Scala Runtime"/>
-                <img src="{{ site.github.url }}/images/Rust_programming_language_black_logo.svg" alt="Rust Lang Runtime"/>
-                <img src="{{ site.github.url }}/images/Haskell-Logo.svg" alt="Haskell Runtime"/-->
         </div>
         <div class="content">
-            <h4>Runtimes Support</h4>
+            <h4>Write funcions in any language</h4>
             <p>
                 Work with what you know and love. Integrate popular services. Code in your
                 favorite languages. All the pieces connect and are easy to extend. The list
@@ -92,9 +78,9 @@ layout: default
                 <a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a>, and
                 <a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a>.
             </p>
+                <a class="button" href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Create Your First Action</a>
         </div>
     </main>
-
     <main>
         <div class="image-wrapper">
             <img src="{{ site.github.url }}/images/illustration-developers-flexible.svg" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>

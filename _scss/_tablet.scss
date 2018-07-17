@@ -19,6 +19,7 @@
     ul.global-nav {
         display: inline-block;
     }
+
     #whiskNodes {
         h3 {
             text-align: left;
@@ -28,46 +29,49 @@
             position: relative;
             clear: both;
             display: table;
+            background: red;
 
             .content {
                 display: table-cell;
                 position: relative;
                 vertical-align: middle;
+                align: center;
+                width: 50%;
             }
             .image-wrapper {
                 position: absolute;
-                top: 50%;
-                max-width: 25%;
-                max-height: 100%;
-                transform: translateY(-50%);
+                //top: 50%;
+                width: 50%;
+
+//                transform: translateY(50%);
             }
             &:nth-child(odd) {
-                padding-right: 210px;
+//              padding-right: 210px;
                 .image-wrapper {
-                    right: 0;
+//                    right: 0;
                 }
             }
             &:nth-child(even) {
-                padding-left: 210px;
+//                padding-left: 210px;
                 .image-wrapper {
-                    left: 0;
+//                    left: 0;
                 }
             }
-            &:nth-child(1) {
-                padding-right: 0;
-                .image-wrapper {
-                    position: relative;
-                    display: block;
-                    float: none;
-                    max-width: 100%;
-                    transform: none;
-                }
-                .content {
-                    display: block
-                }
-            }
+//            &:nth-child(1) {
+//                padding-right: 0;
+//                .image-wrapper {
+//                    position: relative;
+//                    display: block;
+//                    float: none;
+//                    max-width: 100%;
+//                    transform: none;
+//                }
+//                .content {
+//                    display: block
+//                }
+//            }
             img {
-                width: 100%
+                //max-height: 200px;
             }
         }
     }

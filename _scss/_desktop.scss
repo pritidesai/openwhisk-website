@@ -13,33 +13,32 @@ $main-max-width: 1200px;
         }
     }
     header, #whiskHeader h1, #whiskHeader h5, #whiskDoc, #usersDoc, #developersDoc, #contributorsDoc {
-        //padding-left: 100px;
-        //padding-right: 100px;
     }
     #home {
         section, header, footer {
           main {
-            max-width: 1000px;
+            max-width: 100%;
           }
         }
     }
     #whiskNodes{
         main {
             position: relative;
-            max-width: 830px;
-            &:nth-child(1) {
-                max-width: 1000px;
-                padding-right: 475px;
-                .image-wrapper {
-                    position: absolute;
-                    max-width: 48%;
-                    transform: translateY(-50%);
-                    // this width affects the image when side-by-side with text
-                    img {
-                        max-width: 900px;
-                    }
-                }
-            }
+//            max-width: 830px;
+            background: Lavender;
+//            &:nth-child(1) {
+//                max-width: 1000px;
+//                padding-right: 475px;
+//                .image-wrapper {
+//                    position: absolute;
+//                    max-width: 48%;
+//                    transform: translateY(-50%);
+//                    // this width affects the image when side-by-side with text
+//                    img {
+//                        max-width: 48%;
+//                    }
+//                }
+//            }
         }
     }
     footer {
