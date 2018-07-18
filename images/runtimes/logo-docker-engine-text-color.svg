@@ -12,8 +12,11 @@
    width="610"
    height="145"
    id="svg2"
-   sodipodi:docname="Docker_container_engine_logo.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+   sodipodi:docname="logo-docker-engine-text-color.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:export-filename="/Users/Matt/openwhisk/release/openwhisk-website/images/runtimes/logo-docker-engine-text-color.png"
+   inkscape:export-xdpi="72"
+   inkscape:export-ydpi="72">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -23,13 +26,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="831"
-     inkscape:window-height="538"
+     inkscape:window-width="958"
+     inkscape:window-height="599"
      id="namedview28"
      showgrid="false"
      inkscape:pagecheckerboard="true"
      inkscape:zoom="0.53114754"
-     inkscape:cx="566.1514"
+     inkscape:cx="241.38288"
      inkscape:cy="72.5"
      inkscape:window-x="112"
      inkscape:window-y="34"
@@ -43,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
