@@ -307,23 +307,20 @@ footer {
     }
 }
 
-#usersDoc, #developersDoc, #contributorsDoc {
+#doc {
     position: relative;
     overflow: hidden;
-    font-size: 14px;
-    color: $color-blue-dark;
+    text-align: center;
     padding-top: 10px;
-    h2, h4, p  {
+    h2, h4, ul, li  {
         text-align: left;
-    }
-    .button {
-        margin: 1%;
     }
     ul, li {
         padding-left: 20px;
-        padding-top: 10px;
         padding-bottom: 10px;
-        list-style: square;
-        font-size: 18px;
+        list-style: disc;
+    }
+    a {
+        font-weight: bold;
     }
 }
