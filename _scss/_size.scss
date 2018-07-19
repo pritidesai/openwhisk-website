@@ -39,52 +39,55 @@ section, header {
     }
 }
 
-header {
-    height: $header-height;
-}
+//header {
+//    height: $header-height;
+//}
 
-.nav-buttons {
-    height: $header-height;
-    line-height: $header-height;
-    .button + * {
-         margin-left: $nav-buttons-margin-left;
-    }
-}
+//.nav-buttons {
+//    // XXX
+//    display: block;
+//    height: $header-height;
+//    line-height: $header-height;
+//    .button + * {
+//         margin-left: $nav-buttons-margin-left;
+//    }
+//}
 
-#menu {
-    width: $menu-size;
-    height: $menu-size;
-}
+//#menu {
+//    width: $menu-size;
+//    height: $menu-size;
+//}
 
-#mainNav {
-    padding: $main-nav-padding;
-    h5 {
-      margin-bottom: $main-nav-h5-margin-bottom;
-    }
-    h3 {
-      margin-bottom: $main-nav-h3-margin-bottom;
-    }
-    .nav-box {
-      width: $nav-box-width;
-    }
-    .nav-box + .nav-box {
-      margin-left: $nav-box-sibling-margin-left;
-    }
-    main + main {
-      //margin-top: $main-nav-main-sibling-margin-top;
-    }
-    .left .button {
-      height: $main-nav-left-button-size;
-      line-height: $main-nav-left-button-size;
-      font-size: $main-nav-left-button-font-size;
-    }
-}
+//#mainNav {
+//    padding: $main-nav-padding;
+//    h5 {
+//      margin-bottom: $main-nav-h5-margin-bottom;
+//    }
+//    h3 {
+//      margin-bottom: $main-nav-h3-margin-bottom;
+//    }
+//    .nav-box {
+//      width: $nav-box-width;
+//    }
+//    .nav-box + .nav-box {
+//      margin-left: $nav-box-sibling-margin-left;
+//    }
+//    main + main {
+//      //margin-top: $main-nav-main-sibling-margin-top;
+//    }
+//    .left .button {
+//      height: $main-nav-left-button-size;
+//      line-height: $main-nav-left-button-size;
+//      font-size: $main-nav-left-button-font-size;
+//    }
+//}
 
-.open-nav, .y-enough {
-    #tryKubernetes {
-        margin-left: $nav-buttons-margin-left;
-    }
-}
+//// XXX KUBERNETES???
+//.open-nav, .y-enough {
+//    #tryKubernetes {
+//        margin-left: $nav-buttons-margin-left;
+//    }
+//}
 
 #whiskHeader {
     padding-top: $whisk-header-padding-top;

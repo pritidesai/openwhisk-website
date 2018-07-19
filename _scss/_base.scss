@@ -20,30 +20,26 @@ $p-line-height: 22px;
 
 // header
 $full-width-paddingX: 10px;
-
 $main-width: 100%;
 $main-max-width: 100%;
-
-$header-height: 80px;
-
-$logo-width: 180px;
-
-$nav-buttons-margin-left: 30px;
-
-$menu-size: 50px;
+//$header-height: 60px;
+//$logo-width: 180px;
+//$nav-buttons-margin-left: 30px;
+//$menu-size: 50px;
 
 // main nav
-$main-nav-padding: 140px 0 30px;
-$main-nav-h5-margin-bottom: 1em;
-$main-nav-h3-margin-bottom: 0.6em;
-$nav-box-width: 20%;
-$nav-box-sibling-margin-left: calc(20% / 3);
+//$main-nav-padding: 140px 0 30px;
+//$main-nav-h5-margin-bottom: 1em;
+//$main-nav-h3-margin-bottom: 0.6em;
+//$nav-box-width: 20%;
+//$nav-box-sibling-margin-left: calc(20% / 3);
+
 // TODO: explore the affect of this value, used in _size.scss
 //$main-nav-main-sibling-margin-top: 60px;
-$main-nav-left-button-size: 50px;
-$main-nav-left-button-font-size: 18px;
+//$main-nav-left-button-size: 50px;
+//$main-nav-left-button-font-size: 18px;
 
-// hero
+// hero - allow for a fixed top banner
 $whisk-header-padding-top: 80px;
 
 @import "size";
@@ -91,39 +87,37 @@ p {
     font-weight: 600;
 }
 
-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 8888;
-	background-color: $color-blue-dark;
-	box-shadow: 0 0 0 transparent;
-	overflow: hidden;
-	transition: 0.3s;
-	text-align: center;
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  //height: $header-height;
+  padding: 0px 0px;
+  background: #dedede;
+  z-index: 8888;
+  display: table
+	//background-color: $color-blue-dark;
+	//transition: 0.3s;
 }
 
 .logo {
 	position: relative;
-	float: left;
-	display: block;
-	width: 180px;
-	height: 88px;
-	top: 0;
-	left: 0;
-	transform: none;
+	//float: left;
+	width: 330px;
+	height: 50px;
+    background: blue;
 	background-image: url(/images/apache-openwhisk.svg);
 	background-size: contain;
-	background-position: center center;
+	background-position: left center;
     background-repeat: no-repeat;
+    display: inline-block;
 }
-.nav-buttons {
-    float: right
-}
+
 .footer-buttons {
     float: middle;
 }
+
 #whiskHeader {
     background-color: $color-blue-dark;
     color: $color-white;
@@ -149,6 +143,7 @@ header {
         }
     }
 }
+
 #home #whiskHeader::after {
     display: none;
 }
@@ -205,20 +200,6 @@ header {
     }
 }
 
-ul.global-nav {
-	display: none;
-	li {
-		display: inline-block;
-        margin-right: 14px;
-		a {
-			color: $color-white;
-			font-weight: 600;
-			padding: 0;
-			position: relative;
-        }
-    }
-}
-
 section {
     background-color: $color-white;
 }
@@ -248,40 +229,40 @@ footer {
     color: #aaa;
 }
 
-#menu {
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-	padding: 0;
-	border: 0;
-	background: none;
-	div, &:before, &:after {
-		position: absolute;
-		left: 15%;
-		width: 70%;
-		height: 2px;
-		background-color: $color-blue-dark;
-		transition: 0.3s;
-        content: "";
-    }
-	div {
-        top: calc(50% - 1px)
-    }
-
-	&:before {
-        top: 24%
-    }
-
-	&:after {
-        bottom: 24%
-    }
-
-	&:hover {
-		div, &:before, &:after {
-            background-color: $color-white;
-        }
-    }
-}
+//#menu {
+//	display: inline-block;
+//	position: relative;
+//	vertical-align: middle;
+//	padding: 0;
+//	border: 0;
+//	background: none;
+//	div, &:before, &:after {
+//		position: absolute;
+//		left: 15%;
+//		width: 70%;
+//		height: 2px;
+//		background-color: $color-blue-dark;
+//		transition: 0.3s;
+//        content: "";
+//    }
+//	div {
+//        top: calc(50% - 1px)
+//    }
+//
+//	&:before {
+//        top: 24%
+//    }
+//
+//	&:after {
+//        bottom: 24%
+//    }
+//
+//	&:hover {
+//		div, &:before, &:after {
+//            background-color: $color-white;
+//        }
+//    }
+//}
 
 #whiskDoc {
 	position: relative;
@@ -307,20 +288,23 @@ footer {
     }
 }
 
-#doc {
+#usersDoc, #developersDoc, #contributorsDoc {
     position: relative;
     overflow: hidden;
-    text-align: center;
+    font-size: 14px;
+    color: $color-blue-dark;
     padding-top: 10px;
-    h2, h4, ul, li  {
+    h2, h4, p  {
         text-align: left;
+    }
+    .button {
+        margin: 1%;
     }
     ul, li {
         padding-left: 20px;
+        padding-top: 10px;
         padding-bottom: 10px;
-        list-style: disc;
-    }
-    a {
-        font-weight: bold;
+        list-style: square;
+        font-size: 18px;
     }
 }
