@@ -101,9 +101,37 @@ p {
 	//transition: 0.3s;
 }
 
+.header-menu {
+    display: table-cell;
+    background: lightgreen;
+    vertical-align: top;
+        width: 33%;
+}
+
+.header-menu2 {
+    display: table-cell;
+    background: lightblue;
+    vertical-align: middle;
+    //width: 33%;
+}
+
+.header-button-menu {
+    display: table-cell;
+    background: magenta;
+    //width: 33%;
+}
+
+.header-button-menu-row {
+    //display: block;
+}
+
+.header-button-icon {
+    display: inline;
+}
+
 .logo {
+    display: table-cell;
 	position: relative;
-	//float: left;
 	width: 330px;
 	height: 50px;
     background: blue;
@@ -111,7 +139,6 @@ p {
 	background-size: contain;
 	background-position: left center;
     background-repeat: no-repeat;
-    display: inline-block;
 }
 
 .footer-buttons {
@@ -228,41 +255,6 @@ footer {
 	line-height: 18px;
     color: #aaa;
 }
-
-//#menu {
-//	display: inline-block;
-//	position: relative;
-//	vertical-align: middle;
-//	padding: 0;
-//	border: 0;
-//	background: none;
-//	div, &:before, &:after {
-//		position: absolute;
-//		left: 15%;
-//		width: 70%;
-//		height: 2px;
-//		background-color: $color-blue-dark;
-//		transition: 0.3s;
-//        content: "";
-//    }
-//	div {
-//        top: calc(50% - 1px)
-//    }
-//
-//	&:before {
-//        top: 24%
-//    }
-//
-//	&:after {
-//        bottom: 24%
-//    }
-//
-//	&:hover {
-//		div, &:before, &:after {
-//            background-color: $color-white;
-//        }
-//    }
-//}
 
 #whiskDoc {
 	position: relative;
