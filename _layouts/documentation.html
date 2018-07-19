@@ -7,126 +7,185 @@ layout: default
         </div>
     </main>
 </section>
-<section id="whiskDoc">
-    <div id="content">
-        <h1>OpenWhisk Documentation</h1>
-            <p>
-                OpenWhisk documentation is categrorized in three seperate sections based on the following three roles:
-            </p>
-            <p>
-                <a class="button" href="{{ site.github.url }}#usersDoc">Users</a>
-                <a class="button" href="{{ site.github.url }}#developersDoc">Developers</a>
-                <a class="button" href="{{ site.github.url }}#contributorsDoc">Contributors</a>
-            </p>
-    </div>
-</section>
-<section id="usersDoc">
-    <div id="content">
-        <h2>OpenWhisk Users:</h2>
-        <div>
-        <h4>Operators:</h4>
-        <ul>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk#quick-start">Deployment using Docker-Compose</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deployment using Kubernetes</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Deployment using Mesos</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">Deployment using Openshift</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">Deployment using Vagrant</a>
-            </li>
-        </ul>
-        <h4>End Users:</h4>
+<section id="whiskNodes">
+    <main id="doc">
+        <div class="content">
+            <h1>OpenWhisk Documentation</h1>
+                <p>
+                    OpenWhisk documentation is categrorized in three seperate sections based on the following three roles:
+                </p>
+                <p>
+                    <a class="button" href="{{ site.github.url }}#usersDoc">Users</a>
+                    <a class="button" href="{{ site.github.url }}#developersDoc">Developers</a>
+                    <a class="button" href="{{ site.github.url }}#contributorsDoc">Contributors</a>
+                </p>
+        </div>
+    </main>
+    <main name="usersDoc" id="doc">
+        <div class="content">
+            <h2>OpenWhisk Users:</h2>
+            <h4>Operators:</h4>
             <ul>
                 <li>
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">Write an Action</a>
+                    <strong>Compose:</strong>
+                    The easiest way to start using OpenWhisk locally is to use Docker Compose. GitHub repo
+                    <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">incubator-openwhisk-devtools</a>
+                    shows how to setup OpenWhisk with Docker Compose.
                 </li>
                 <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/README.md">OpenWhisk Command Line Interface (CLI)</a>
+                    <strong>Kubernetes:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">incubator-openwhisk-deploy-kube</a>
+                    has instructions on how to deploy OpenWhisk on a Kubernetes cluster.
                 </li>
                 <li>
-                   <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk REST API</a>
+                    <strong>Mesos:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">incubator-openwhisk-deploy-mesos</a>
+                    can be used to deploy OpenWhisk to a Mesos cluster.
                 </li>
                 <li>
-                    <a href="https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json">OpenWhisk API V1 Swagger</a>
+                    <strong>OpenShift:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">incubator-openwhisk-deploy-openshift</a>
+                    repository contains the necessary templates and compatible docker images for deploying OpenWhisk on OpenShift.
                 </li>
                 <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-wskdeploy">Whisk Deploy</a>
+                    <strong>Ansible:</strong>
+                    If you want to deploy OpenWhisk locally using Ansible,
+                    you first need to install Ansible on your development environment and follow instructions from
+                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md">README.md</a>
+                    in main OpenWhisk repo.
                 </li>
                 <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/README.md">API Gateway</a>
+                    <strong>Vagrant:</strong>
+                    A vagrant machine is also available to run OpenWhisk locally.
+                    <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">incubator-openwhisk</a>
+                    has a seperate section with instructions on deploying OpenWhisk using Vagrant.
+                </li>
+            </ul>
+            <h4>End Users:</h4>
+                <ul>
+                    <li>
+                        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">How to write an action?</a>
+                    </li>
+                    <li>
+                        <strong>OpenWhisk CLI:</strong>
+                        With Apache OpenWhisk you can easily create and run actions, or connect to other actions. Use the
+                        <a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/README.md">OpenWhisk Command Line Interface (CLI)</a>,
+                        target your Apache OpenWhisk instance, and run your first action in seconds. 
+                    </li>
+                    <li>
+                       <strong>OpenWhisk REST API</strong>
+                        After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
+                        For more details about the APIs for actions, activations, packages, rules, and triggers, see the
+                       <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
+                       documentation.
+                    </li>
+                    <li>
+                        <strong>OpenWhisk API V1 Swagger:</strong>
+                        <a href="https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json">Here</a>
+                        is the swagger file for OpenWhisk API V1.
+                    </li>
+                    <li>
+                        <strong>Whisk Deploy:</strong>
+                        <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
+                        is an utility to help deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command.
+                    </li>
+                    <li>
+                        <strong>API Gateway:</strong>
+                        OpenWhisk supports
+                        <a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/README.md">API Gateway</a>
+                        based on OpenResty and Nginx.
+                    </li>
+                    <li>
+                        <strong>OpenWhisk Catalog:</strong>
+                        <a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/README.md">OpenWhisk Catalog</a>
+                        maintains the package catalog of openwhisk. OpenWhisk package catalog gives you an easy way to enhance your app with useful capabilities,
+                        and to access external services in the ecosystem. 
+                    </li>
+                </ul>
+
+        </div>
+    </main>
+    <main name="developersDoc" id="doc">
+        <div class="content" name="developersDoc">
+            <h2>OpenWhisk Developers</h2>
+            <p>
+                <img src="{{ site.github.url }}/images/apache-openwhisk-action-animation.gif" alt="Get started with Apache OpenWhisk"/>
+            </p>
+            <h4>OpenWhisk Clients:</h4>
+            <ul>
+                <li>
+                    <strong>JavaScript:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md" style="font-weight:bold">incubator-openwhisk-client-js</a>
+                    is the JavaScript client library which Provides a wrapper around the OpenWhisk APIs.
                 </li>
                 <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/README.md">OpenWhisk Catalog</a>
+                    <strong>Go:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">incubator-openwhisk-client-go</a>
+                    is a Go client library to access OpenWhisk API.
+                </li>
+                <li>
+                    <strong>Swift:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">incubator-openwhisk-client-swift</a>
+                    is a Swift based client SDK for OpenWhisk which can be used to connect to OpenWhisk.
+                    It partially implements the OpenWhisk REST API and allows you to invoke actions and fire triggers.
+                </li>
+                <li>
+                    <strong>Python:</strong>
+                    There is no official Python client for OpenWhisk at the moment. However, 
+                    <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">incubator-openwhisk-client-python</a>
+                    shows an example of how OpenWhisk REST API can be used directly from Python.
+                </li>
+            </ul>
+            <h4>OpenWhisk Runtimes</h4>
+            <ul>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">Nodejs</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a>
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a>
                 </li>
             </ul>
 
-    </div>
-</section>
-<section id="developersDoc">
-    <div id="content">
-        <h2>OpenWhisk Developers</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md">OpenWhisk Client for JavaScript</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">OpenWhisk Client for Go</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">OpenWhisk Client for Swift</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">OpenWhisk Client for Python</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">OpenWhisk Docker Runtime</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">OpenWhisk Go Runtime</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">OpenWhisk Java Runtime</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">OpenWhisk Nodejs Runtime</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">OpenWhisk PHP Runtime</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">OpenWhisk Python Runtime</a>
-            </li>
-            <li>
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">OpenWhisk Swift Runtime</a>
-            </li>
-        </ul>
-        <!--p>
-                Function (incl. packages)
-                Integrators (database, log, plug-ins, etc.)
-                Runtime
-                SDK -> new runtimes
-                Backend
-                Controller (Load balancer, Invoker, Kafka, etc.)
-                Tooling
-                eskdeploy CLI/clients/etc.
-        </p-->
-    </div>
-</section>
-<section id="contributorsDoc">
-    <div id="content">
-        <h2>OpenWhisk Contributors</h2>
-        <!--p>
-                includes testing, reviewing PRs, etc.
-                how to become a Contributor (reference CWIKI, duplicate info as needed)
-                how to become a Committer (reference CWIKI, duplicate info as needed)
-                Link to Community (i.e., "dev" list, Slack, GitHub issues.
-        </p-->
-    </div>
+            <div style="overflow:scroll; height:400px;">
+                {% remote_markdown https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md %}
+            </div>
+
+            <!--p>
+                    Function (incl. packages)
+                    Integrators (database, log, plug-ins, etc.)
+                    Runtime
+                    SDK -> new runtimes
+                    Backend
+                    Controller (Load balancer, Invoker, Kafka, etc.)
+                    Tooling
+                    eskdeploy CLI/clients/etc.
+            </p-->
+        </div>
+    </main>
+    <main id="doc">
+        <div class="content" name="contributorsDoc">
+            <h2>OpenWhisk Contributors</h2>
+            <!--p>
+                    includes testing, reviewing PRs, etc.
+                    how to become a Contributor (reference CWIKI, duplicate info as needed)
+                    how to become a Committer (reference CWIKI, duplicate info as needed)
+                    Link to Community (i.e., "dev" list, Slack, GitHub issues.
+            </p-->
+        </div>
+    </main>
 </section>
