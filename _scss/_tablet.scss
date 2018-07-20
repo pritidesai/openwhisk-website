@@ -1,4 +1,4 @@
-@media screen and (min-width: 800px) {
+@media screen and (min-width: $media-size-tablet-start) {
     p {
         font-size: 16px;
         line-height: 24px;
