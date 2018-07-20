@@ -1,6 +1,7 @@
+// Max width of all content, overrides 100% in _base.scss
 $main-max-width: 1280px;
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: $media-size-desktop-start) {
     #menu {
         display: none;
     }
