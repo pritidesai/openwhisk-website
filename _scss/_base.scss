@@ -104,8 +104,9 @@ p {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.5px;
+
     // TODO: explore turning text links into buttons as well
-    //border: 0px solid cyan;
+    //border: 2px solid cyan;
     //border-radius: 4px;
   }
 }
@@ -147,20 +148,22 @@ p {
     display: table-cell;
     background: $color-header-bg-section-menu-icons;
     width: 33%;
+    vertical-align: middle;
+
     // XXX - min-width had no effect for some reason...
     //min-width: 280px;
-    vertical-align: middle;
 }
 
 .header-row-text-links {
     display: inline;
+
+    // TODO: would like to have row be in middle of the section
+    // and the following did not work:
     //height: 40px;
     //line-height: 40px
 }
 
 .header-row-social-icons {
-    //display: table-cell;
-    // NOTE: if we use table-cell, use 'min-width' property to preserve size.
     display: flex;
     flex-direction: row-reverse;
     padding-left: 10px;  // has some affect... for flex
@@ -173,10 +176,15 @@ p {
     border: 1px solid $color-header-icon-border;
     border-radius: 4px;
     align: center;
-    valign: middle;
-    height: 30px;
-    width: 30px;
+    height: 36px;
+    width: 36px;
     margin-right: 4px;
+}
+
+.header-icon-image {
+   background: $color-header-icon-bg-image;
+   width: 26px;
+   padding: 0px;
 }
 
 .footer-buttons {
