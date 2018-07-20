@@ -11,63 +11,45 @@ layout: default
     <main id="doc">
         <div class="content">
             <h1>OpenWhisk Documentation</h1>
-                <p>
-                    OpenWhisk documentation is categrorized in three seperate sections based on the following three roles:
-                </p>
-                <p>
-                    <a class="button" href="{{ site.github.url }}#usersDoc">Users</a>
-                    <a class="button" href="{{ site.github.url }}#developersDoc">Developers</a>
-                    <a class="button" href="{{ site.github.url }}#contributorsDoc">Contributors</a>
-                </p>
+            <p>
+                <strong>What is OpenWhisk?</strong>
+                OpenWhisk is a cloud-first distributed event-based programming service.
+                It provides a programming model to upload event handlers to a cloud service,
+                and register the handlers to respond to various events.
+            </p>
         </div>
     </main>
-    <main name="usersDoc" id="doc">
+    <main id="doc">
         <div class="content">
-            <h2>OpenWhisk Users:</h2>
-            <h4>Operators:</h4>
+            <h2>OpenWhisk Deployment Options</h2>
+            <p>
+                The following deployment guides support different installation methods for core OpenWhisk components. 
+                Please choose one of the following deployment methods based on your platform:
+            </p>
             <ul>
-                <li>
-                    <strong>Compose:</strong>
-                    The easiest way to start using OpenWhisk locally is to use Docker Compose. GitHub repo
-                    <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">incubator-openwhisk-devtools</a>
-                    shows how to setup OpenWhisk with Docker Compose.
-                </li>
-                <li>
-                    <strong>Kubernetes:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">incubator-openwhisk-deploy-kube</a>
-                    has instructions on how to deploy OpenWhisk on a Kubernetes cluster.
-                </li>
-                <li>
-                    <strong>Mesos:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">incubator-openwhisk-deploy-mesos</a>
-                    can be used to deploy OpenWhisk to a Mesos cluster.
-                </li>
-                <li>
-                    <strong>OpenShift:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">incubator-openwhisk-deploy-openshift</a>
-                    repository contains the necessary templates and compatible docker images for deploying OpenWhisk on OpenShift.
-                </li>
-                <li>
-                    <strong>Ansible:</strong>
-                    If you want to deploy OpenWhisk locally using Ansible,
-                    you first need to install Ansible on your development environment and follow instructions from
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md">README.md</a>
-                    in main OpenWhisk repo.
-                </li>
-                <li>
-                    <strong>Vagrant:</strong>
-                    A vagrant machine is also available to run OpenWhisk locally.
-                    <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">incubator-openwhisk</a>
-                    has a seperate section with instructions on deploying OpenWhisk using Vagrant.
-                </li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">Setup OpenWhisk with Docker Compose</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Deploy OpenWhisk to a Mesos Cluster</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">Deploy OpenWhisk on OpenShift</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md">Deploying OpenWhisk using Ansible</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">Deploying OpenWhisk using Vagrant</a></li>
             </ul>
-            <h4>End Users:</h4>
+            <p>
+                There are many different deployment methods available but we recommend
+                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a>
+                as its the most easy and quickest way of getting OpenWhisk deployed.
+            </p>
+        </div>
+    </main>
+    <main id="doc">
+        <div class="content">
+            <h2>Using OpenWhisk</h2>
                 <ul>
-                    <li>
+                    <!--li>
                         <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">How to write an action?</a>
-                    </li>
+                    </li-->
                     <li>
-                        <strong>OpenWhisk CLI:</strong>
+                        <strong>Configure the wsk CLI</strong>
                         With Apache OpenWhisk you can easily create and run actions, or connect to other actions. Use the
                         <a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/README.md">OpenWhisk Command Line Interface (CLI)</a>,
                         target your Apache OpenWhisk instance, and run your first action in seconds. 
@@ -79,17 +61,17 @@ layout: default
                        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
                        documentation.
                     </li>
-                    <li>
+                    <!--li>
                         <strong>OpenWhisk API V1 Swagger:</strong>
                         <a href="https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json">Here</a>
                         is the swagger file for OpenWhisk API V1.
-                    </li>
+                    </li-->
                     <li>
                         <strong>Whisk Deploy:</strong>
                         <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
                         is an utility to help deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command.
                     </li>
-                    <li>
+                    <!--li>
                         <strong>API Gateway:</strong>
                         OpenWhisk supports
                         <a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/README.md">API Gateway</a>
@@ -100,67 +82,67 @@ layout: default
                         <a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/README.md">OpenWhisk Catalog</a>
                         maintains the package catalog of openwhisk. OpenWhisk package catalog gives you an easy way to enhance your app with useful capabilities,
                         and to access external services in the ecosystem. 
-                    </li>
+                    </li-->
                 </ul>
 
         </div>
     </main>
-    <main name="developersDoc" id="doc">
-        <div class="content" name="developersDoc">
-            <h2>OpenWhisk Developers</h2>
+    <main id="doc">
+        <div class="content">
+            <h2>Creating and Invoking Actions</h2>
             <p>
-                <img src="{{ site.github.url }}/images/apache-openwhisk-action-animation.gif" alt="Get started with Apache OpenWhisk"/>
+                <strong>What is an OpenWhisk action?</strong>
+                Actions are stateless functions(code snippets) that run on the OpenWhisk platform.
+                Actions encapsulates application logic to be executed in response to events.
+                You can find more details on specifics of an action in main OpenWhisk GitHub repo at
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">incubator-openwhisk</a>.
             </p>
-            <h4>OpenWhisk Clients:</h4>
+            <p>
+                <strong>Which programming language can OpenWhisk action be created in?</strong>
+                An action may be created from a function programmed using any of the supported languages
+                and runtimes, or from a binary-compatible executable, or even executables packages as Docker containers.
+                Here is the list of supported programming languages by OpenWhisk, you can follow language-specific tutorials
+                to find out how to write an action in your favorite language:
+            </p>
             <ul>
-                <li>
-                    <strong>JavaScript:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md" style="font-weight:bold">incubator-openwhisk-client-js</a>
-                    is the JavaScript client library which Provides a wrapper around the OpenWhisk APIs.
-                </li>
-                <li>
-                    <strong>Go:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">incubator-openwhisk-client-go</a>
-                    is a Go client library to access OpenWhisk API.
-                </li>
-                <li>
-                    <strong>Swift:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">incubator-openwhisk-client-swift</a>
-                    is a Swift based client SDK for OpenWhisk which can be used to connect to OpenWhisk.
-                    It partially implements the OpenWhisk REST API and allows you to invoke actions and fire triggers.
-                </li>
-                <li>
-                    <strong>Python:</strong>
-                    There is no official Python client for OpenWhisk at the moment. However, 
-                    <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">incubator-openwhisk-client-python</a>
-                    shows an example of how OpenWhisk REST API can be used directly from Python.
-                </li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">Nodejs</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a></li>
             </ul>
-            <h4>OpenWhisk Runtimes</h4>
-            <ul>
-                <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a>
-                </li>
-                <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a>
-                </li>
-                <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a>
-                </li>
-                <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">Nodejs</a>
-                </li>
-                <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a>
-                </li>
-                <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a>
-                </li>
-                <li>
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a>
-                </li>
-            </ul>
-            <h4>OpenWhisk Packages:</h4>
+            <p>
+                While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
+                invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
+                specified in Using OpenWhisk section supports action management on OpenWhisk platform. 
+            </p>
+            <p>
+                <strong>What if your preferred language/runtime is not supported by OpenWhisk?</strong>
+                If your favorite language is not listed above, you may find the Docker action or native binary path more suitable.
+                Or, you can create a new runtime of your choice by reaching out to other whiskers on dev mailing list at
+                <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
+            </p>
+            <p>
+                <strong>After you create an action, how can you invoke that action?</strong>
+                You can invoke actions manually using OpenWhisk CLI or fire a trigger with which your action is associated with.
+                If you are not faimiliar with triggers, we are looking into triggers in next section.
+            </p>
+            <p>
+                <strong>Can an application logic be divided into multiple actions? </strong>
+                Multiple actions from different languages may be composed together to create a longer processing pipeline called a
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
+                Sequence can be treated as an action in terms of it creation and invocation.
+            </p>
+            <p>Please read
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">OpenWhisk Actions</a>
+            for further details.</p>
+        </div>
+    </main>
+    <main>
+        <div>
+            <h2>OpenWhisk Packages:</h2>
             <ul>
                 <li>
                     <strong>Using the Alarm Package:</strong>
@@ -255,6 +237,31 @@ layout: default
                     Tooling
                     eskdeploy CLI/clients/etc.
             </p-->
+            <h4>OpenWhisk Clients:</h4>
+            <ul>
+                <li>
+                    <strong>JavaScript:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md" style="font-weight:bold">incubator-openwhisk-client-js</a>
+                    is the JavaScript client library which Provides a wrapper around the OpenWhisk APIs.
+                </li>
+                <li>
+                    <strong>Go:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">incubator-openwhisk-client-go</a>
+                    is a Go client library to access OpenWhisk API.
+                </li>
+                <li>
+                    <strong>Swift:</strong>
+                    <a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">incubator-openwhisk-client-swift</a>
+                    is a Swift based client SDK for OpenWhisk which can be used to connect to OpenWhisk.
+                    It partially implements the OpenWhisk REST API and allows you to invoke actions and fire triggers.
+                </li>
+                <li>
+                    <strong>Python:</strong>
+                    There is no official Python client for OpenWhisk at the moment. However, 
+                    <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">incubator-openwhisk-client-python</a>
+                    shows an example of how OpenWhisk REST API can be used directly from Python.
+                </li>
+            </ul>
         </div>
     </main>
     <main id="doc">
