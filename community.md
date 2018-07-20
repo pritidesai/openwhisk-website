@@ -1,6 +1,5 @@
 ---
 title: Community
-layout: community
 ---
 <!--
 #
@@ -21,4 +20,6 @@ layout: community
 #
 -->
 
-This text is not used. To update content, make changes in `_layouts/community.html`
+# OpenWhisk Community
+
+This is the markdown file with details on OpenWhisk community efforts.
