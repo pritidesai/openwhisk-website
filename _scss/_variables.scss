@@ -41,6 +41,14 @@
  //$color-bg-tablet-image-wrapper-border: 8px solid $color-logo-deeper-aquamarine;
  $color-bg-tablet-image-wrapper-border: 8px solid white;
  $color-bg-desktop-main: white;
+
+ $color-header-bg: $color-blue-dark;
+ $color-header-bg-section-logo: transparent;
+ $color-header-bg-section-menu-text: transparent;
+ $color-header-bg-section-menu-icons: transparent;
+ $color-header-fg: white;
+ $color-header-icon-bg: $color-blue-gray-dark;
+ $color-header-icon-border: white;
 */
 
  /*
@@ -54,6 +62,14 @@
  $color-bg-tablet-content-border: 11px solid orange;
  $color-bg-tablet-image-wrapper-border: 11px solid $color-logo-deeper-aquamarine;
  $color-bg-desktop-main: darkviolet;
+
+ $color-header-bg: gold;
+ $color-header-bg-section-logo: darkred;
+ $color-header-bg-section-menu-text: forestgreen;
+ $color-header-bg-section-menu-icons: midnightblue;
+ $color-header-fg: white;
+ $color-header-icon-bg: slategray;
+ $color-header-icon-border: pink;
 
  /*
   * # Fonts
