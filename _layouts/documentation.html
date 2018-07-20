@@ -101,10 +101,23 @@ layout: default
                 <strong>Which programming language can OpenWhisk action be created in?</strong>
                 An action may be created from a function programmed using any of the supported languages
                 and runtimes, or from a binary-compatible executable, or even executables packages as Docker containers.
-                Here is the list of supported programming languages by OpenWhisk, you can follow language-specific tutorials
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
+                is the list of supported programming languages by OpenWhisk, you can follow language-specific tutorials
                 to find out how to write an action in your favorite language:
             </p>
             <ul>
+                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions:</a></li>
+                <emsp><emsp>
+                    <p><strong>Create a file named hello.js:</strong></p>
+                    <p><code>function main() {
+                            return { msg: 'Hello world' };
+                        }</code></p>
+                </emsp></emsp>
+                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a></li>
+                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a></li>
+
+            </ul>
+            <!--ul>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">Nodejs</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a></li>
@@ -112,7 +125,7 @@ layout: default
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a></li>
-            </ul>
+            </ul-->
             <p>
                 While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
                 invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
