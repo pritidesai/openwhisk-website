@@ -308,10 +308,15 @@ footer {
     ul, li {
         padding-left: 20px;
         padding-bottom: 10px;
+        padding-top: 10px;
         list-style: disc;
     }
     a {
         font-weight: bold;
+    }
+    .code {
+        color: $color-white;
+        background: $color-header-icon-bg;
     }
 }
 
