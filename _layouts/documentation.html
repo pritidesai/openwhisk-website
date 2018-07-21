@@ -23,7 +23,7 @@ layout: default
         <div class="content">
             <h2>OpenWhisk Deployment Options</h2>
             <p>
-                The following deployment guides support different installation methods for core OpenWhisk components. 
+                The following deployment guides support different installation methods for core OpenWhisk components.
                 Please choose one of the following deployment methods based on your platform:
             </p>
             <ul>
@@ -52,7 +52,7 @@ layout: default
                         <strong>Configure the wsk CLI</strong>
                         With Apache OpenWhisk you can easily create and run actions, or connect to other actions. Use the
                         <a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/README.md">OpenWhisk Command Line Interface (CLI)</a>,
-                        target your Apache OpenWhisk instance, and run your first action in seconds. 
+                        target your Apache OpenWhisk instance, and run your first action in seconds.
                     </li>
                     <li>
                        <strong>OpenWhisk REST API</strong>
@@ -101,10 +101,103 @@ layout: default
                 <strong>Which programming language can OpenWhisk action be created in?</strong>
                 An action may be created from a function programmed using any of the supported languages
                 and runtimes, or from a binary-compatible executable, or even executables packages as Docker containers.
-                Here is the list of supported programming languages by OpenWhisk, you can follow language-specific tutorials
-                to find out how to write an action in your favorite language:
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
+                is the list of supported programming languages by OpenWhisk, you can follow language-specific tutorials
+                to find out how to write an action in your favorite language. Let's look at how to write an Hello World function
+                in different languages.
             </p>
             <ul>
+                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions:</a></li>
+                <ul>
+                    <li style="list-style: circle">Create a file named hello.js:</li>
+                    <div class="code"><pre><code>
+                    function main() {
+                        return { msg: 'Hello World' };
+                    }
+                    </code></pre></div>
+                    <li style="list-style: circle">Create an action called hello using hello.js:</li>
+                    <div class="code"><pre><code>
+                    wsk action create hello hello.js
+                    ok: created action hello
+                    </code></pre></div>
+                    <li style="list-style: circle">Invoke an action hello:</li>
+                    <div class="code"><pre><code>
+                    wsk action invoke hello --blocking --result
+                    {
+                        msg: 'Hello World'
+                    }
+                    </code></pre></div>
+                </ul>
+                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-python.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a></li>
+                <ul style="list-style: circle">
+                    <li style="list-style: circle">Create a file named hello.py:</li>
+                    <div class="code"><pre><code>
+                    def main(args):
+                        name = args.get("name", "Stranger")
+                        greeting = "Hello " + name + "!"
+                        print(greeting)
+                        return {"greeting": greeting}
+                    </code></pre></div>
+                    <li style="list-style: circle">Create an action called hello using hello.py:</li>
+                    <div class="code"><pre><code>
+                    wsk action create hello hello.py
+                    ok: created action hello
+                    </code></pre></div>
+                    <li style="list-style: circle">Invoke an action hello:</li>
+                    <div class="code"><pre><code>
+                    wsk action invoke hello --blocking --result --param name World
+                    {
+                        "greeting": "Hello World!"
+                    }
+                    </code></pre></div>
+                </ul>
+                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a></li>
+                <ul style="list-style: circle">
+                    <li>Create a file named hello.go:</li>
+                    <div class="code"><pre><code>
+                    package main
+
+                    import "encoding/json"
+                    import "fmt"
+                    import "os"
+
+                    func main() {
+                        //program receives one argument: the JSON object as a string
+                        arg := os.Args[1]
+
+                        // unmarshal the string to a JSON object
+                        var obj map[string]interface{}
+                        json.Unmarshal([]byte(arg), &obj)
+
+                        // can optionally log to stdout (or stderr)
+                        fmt.Println("hello Go action")
+
+                        name, ok := obj["name"].(string)
+                        if !ok { name = "Stranger" }
+
+                        // last line of stdout is the result JSON object as a string
+                        msg := map[string]string{"msg": ("Hello, " + name + "!")}
+                        res, _ := json.Marshal(msg)
+                        fmt.Println(string(res))
+                    }
+                    </code></pre></div>
+                    <li>Create an executable called exec using hello.go:</li>
+                    <div class="code"><pre><code>
+                    GOOS=linux GOARCH=amd64 go build -o exec
+                    zip exec.zip exec
+                    wsk action create hello --native exec.zip
+                    </code></pre></div>
+                    <li>Invoke an action hello:</li>
+                    <div class="code"><pre><code>
+                    wsk action invoke helloGo -r -p name gopher
+                    {
+                        "msg": "Hello, gopher!"
+                    }
+                    </code></pre></div>
+                </ul>
+
+            </ul>
+            <!--ul>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">Nodejs</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a></li>
@@ -112,11 +205,11 @@ layout: default
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a></li>
-            </ul>
+            </ul-->
             <p>
                 While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
                 invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
-                specified in Using OpenWhisk section supports action management on OpenWhisk platform. 
+                specified in Using OpenWhisk section supports action management on OpenWhisk platform.
             </p>
             <p>
                 <strong>What if your preferred language/runtime is not supported by OpenWhisk?</strong>
@@ -147,7 +240,7 @@ layout: default
                 <li>
                     <strong>Using the Alarm Package:</strong>
                     <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
-                    is an Apache OpenWhisk alarm package that can be used to create periodic, time-based alarms. 
+                    is an Apache OpenWhisk alarm package that can be used to create periodic, time-based alarms.
                 </li>
                 <li>
                     <strong>Using the Cloudant Package:</strong>
@@ -257,7 +350,7 @@ layout: default
                 </li>
                 <li>
                     <strong>Python:</strong>
-                    There is no official Python client for OpenWhisk at the moment. However, 
+                    There is no official Python client for OpenWhisk at the moment. However,
                     <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">incubator-openwhisk-client-python</a>
                     shows an example of how OpenWhisk REST API can be used directly from Python.
                 </li>
