@@ -1,5 +1,6 @@
 ---
 title: Community
+layout: community
 ---
 <!--
 #
@@ -22,4 +23,6 @@ title: Community
 
 # OpenWhisk Community
 
-This is the markdown file with details on OpenWhisk community efforts.
+This markdown is not used.
+
+To update content, make changes in `_layouts/community.html`.
