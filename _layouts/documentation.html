@@ -153,7 +153,7 @@ layout: default
                 </ul>
                 <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a></li>
                 <ul style="list-style: circle">
-                    <li>Create a file named hello.go:</li>
+                    <li style="list-style: circle">Create a file named hello.go:</li>
                     <div class="code"><pre><code>
                     package main
 
@@ -181,13 +181,13 @@ layout: default
                         fmt.Println(string(res))
                     }
                     </code></pre></div>
-                    <li>Create an executable called exec using hello.go:</li>
+                    <li style="list-style: circle">Create an executable called exec using hello.go:</li>
                     <div class="code"><pre><code>
                     GOOS=linux GOARCH=amd64 go build -o exec
                     zip exec.zip exec
                     wsk action create hello --native exec.zip
                     </code></pre></div>
-                    <li>Invoke an action hello:</li>
+                    <li style="list-style: circle">Invoke an action hello:</li>
                     <div class="code"><pre><code>
                     wsk action invoke helloGo -r -p name gopher
                     {
@@ -228,7 +228,7 @@ layout: default
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md">here</a>.
                 Please reach out to other whiskers on dev mailing list at
                 <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
-                once you have followed the guide on creating new language/runtimes.
+                once you have followed the guide on creating a new language/runtimes. 
             </p>
             <p>
                 <strong>After you create an action, how can you invoke that action?</strong>
@@ -246,10 +246,87 @@ layout: default
             for further details.</p>
         </div>
     </main>
-    <main>
-        <div>
-            <h2>OpenWhisk Packages:</h2>
+    <main id="doc">
+        <div class="content">
+            <h2>Managing Actions with OpenWhisk Packages:</h2>
+            <p>
+                <strong>What is a package?</strong> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
+                OpenWhisk comes with a list of packages 
+                You can get more details on OpenWhisk packages
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">here</a>.
+            </p>
+            <p>
+                <strong>Does OpenWhisk comes with any pre-installed packages?</strong>
+                OpenWhisk comes with a list of pre-installed public packages which can be used by anyone.
+                OpenWhisk has created a dedicated shared namespace <strong>/whisk.system</strong> for all the public packages.
+            </p>
+            <p>
+                <strong>Which all packages are available under /whisk.system?</strong>
+                You can get a list of packages available in shared namespace by using wsk CLI:
+            </p>
             <ul>
+                <li>Get a list of packages:</li>
+                <div class="code"><pre><code>
+                wsk package list /whisk.system
+                </code></pre></div>
+                <li>Get a list of entities in a package:</li>
+                <div class="code"><pre><code>
+                wsk package get --summary /whisk.system/&lt;package-name&gt;
+                </code></pre></div>
+            </ul>
+            <p>
+                <strong>How do I invoke an action from a public package?</strong>
+                There are two way to invoke an action from a package,
+                (1) Invoking an action directly from a package
+                (2) Creating a package binding and then invoking an action in the binding. 
+            </p>
+            <ul>
+                <li>Invoking an action from a public package:</li>
+                <ul>
+                    <li style="list-style: circle">Get a description of the /whisk.system/samples/greeting action:</li>
+                    <div class="code"><pre><code>
+                wsk action get --summary /whisk.system/samples/greeting
+                    action /whisk.system/samples/greeting: Returns a friendly greeting
+                        (parameters: name, place)
+                    </code></pre></div>
+                    <li style="list-style: circle">Invoking action in a package:</li>
+                    <div class="code"><pre><code>
+                wsk action invoke --result /whisk.system/samples/greeting
+                {
+                    "payload": "Hello, stranger from somewhere!"
+                }
+                    </code></pre></div>
+                    <li style="list-style: circle">Invoke the action with parameters:</li>
+                    <div class="code"><pre><code>
+                wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont
+                {
+                    "payload": "Hello, Bernie from Vermont!"
+                }
+                    </code></pre></div>
+                </ul>
+                <li>Creating package binding and invoking action from the binding:</li>
+                <ul>
+                    <li style="list-style: circle">Creating and using package bindings:</li>
+                    <div class="code"><pre><code>
+                wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
+                ok: created binding valhallaSamples
+                    </code></pre></div>
+                    <li style="list-style: circle">Invoke an action in the package binding:</li>
+                    <div class="code"><pre><code>
+                wsk action invoke --result valhallaSamples/greeting --param name Odin
+                {
+                    "payload": "Hello, Odin from Valhalla!"
+                }
+                    </code></pre></div>
+                </ul>
+            </ul>
+            <p>
+                <strong>Where do I get more information on packages?</strong>
+                Please read
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">OpenWhisk Packages</a>
+                for further details.
+            </p>
+            <!--ul>
                 <li>
                     <strong>Using the Alarm Package:</strong>
                     <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
@@ -286,7 +363,16 @@ layout: default
                     <a href="https://github.com/apache/incubator-openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
                     includes actions that interact with JIRA software software development tool used for issue tracking, and project management functions.
                 </li>
-            </ul>
+            </ul-->
+        </div>
+    </main>
+    <main id="doc">
+        <div class="content">
+
+        </div>
+    </main>
+    <main id="doc">
+        <div class="content">
             <h4>Sample OpenWhisk Applications:</h4>
             <ul>
                 <li>
