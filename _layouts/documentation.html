@@ -10,18 +10,45 @@ layout: default
 <section id="whiskNodes">
     <main id="doc">
         <div class="content">
-            <h1>OpenWhisk Documentation</h1>
+            <h1 id="index">OpenWhisk Documentation</h1>
             <p>
                 <strong>What is OpenWhisk?</strong>
                 OpenWhisk is a cloud-first distributed event-based programming service.
                 It provides a programming model to upload event handlers to a cloud service,
                 and register the handlers to respond to various events.
             </p>
+            <p>
+                <strong>How is the OpenWhisk documentation organized on this page?</strong>
+                OpenWhisk documentation is organized into three sections based on three seperate roles:
+            </p>
+            <ul>
+                <li><a href="#operators">Operators</a></li>
+                <li><a href="#developers">Developers</a></li>
+                <li><a href="#contributors">Contributors</a></li>
+            </ul>
+            <p>
+                <strong>What is the definition of Operators?</strong>
+                <a href="#operators">Operators</a> are defined as the group of users
+                deploying, configurting, and hosting the Apache OpenWhisk Function-as-a-Service platform
+                for development and/or production.
+            </p>
+            <p>
+                <strong>What is the definition of Developers?</strong>
+                <a href="#developers">Developers</a> are also defined as end users
+                developing functions/actions, creating packages, feeds, and feed provider services along with supported tooling.
+            </p>
+            <p>
+                <strong>What is the definition of Contributors?</strong>
+                <a href="#contributors">Contributors</a> are backend/platform developers
+                designing and developing backend architectural components that comprise the
+                OpenWhisk platform.
+            </p>
         </div>
     </main>
     <main id="doc">
         <div class="content">
-            <h2>OpenWhisk Deployment Options</h2>
+            <h2 id="operators">Operators</h2>
+            <h4>OpenWhisk Deployment Options</h4>
             <p>
                 The following deployment guides support different installation methods for core OpenWhisk components.
                 Please choose one of the following deployment methods based on your platform:
@@ -43,33 +70,107 @@ layout: default
     </main>
     <main id="doc">
         <div class="content">
-            <h2>Using OpenWhisk</h2>
+            <h2 id="developers">Developers</h2>
+            The OpenWhisk project and programming model supports different kinds of developers that may wish
+            to user different runtimes and tooling. Here is the developer index to find the information you may need.
+            <h4>Developer Index</h4>
+            <div id="toc_container">
+                <p class="toc_title">Index</p>
+                <ul class="toc_list">
+                    <li><a href="#pre-requisites">Pre-requisites</a></li>
+                    <li><a href="#using-openwhisk">Using OpenWhisk</a></li>
+                    <ul>
+                        <li><a href="#wsk-cli">Configuring wsk CLI</a></li>
+                        <li><a href="#wskdeploy">Deployment Tool - wskdeploy</a></li>
+                        <li><a href="#rest-api">OpenWhisk REST API</a></li>
+                        <li><a href="#openwhisk-clients">OpenWhisk Clients</a></li>
+                        <ul>
+                            <li><a href="#javascript-client">JavaScript Client</a></li>
+                            <li><a href="#go-client">Go Client</a></li>
+                            <li><a href="#swift-client">Swift Client</a></li>
+                            <li><a href="#python-client">Python Client</a></li>
+                        </ul>
+                    </ul>
+                    <li><a href="#actions">Actions</a></li>
+                    <ul>
+                        <li><a href="#nodejs">NodeJS</a></li>
+                        <ul>
+                            <li><a href="#nodejs-actions">Creating and Invoking Sample Action</a></li>
+                            <li><a href="#nodejs-runtime">Runtime</a></li>
+                            <li><a href="#nodejs-other-resources">Other Resources</a></li>
+                        </ul>
+                        <li>Python</li>
+                        <ul>
+                            <li>Creating and Invoking Sample Action</li>
+                            <li>Runtime</li>
+                            <li>Other Resources</li>
+                        </ul>
+                        <li>Docker</li>
+                        <ul>
+                            <li>Zip Action</li>
+                            <li>SDK (Writing Your Own Runtime)</li>
+                            <li>Other Resources</li>
+                        </ul>
+                        <li>Go</li>
+                        <ul>
+                            <li>Creating and Invoking Action</li>
+                            <li>Runtime</li>
+                            <li>Other Resources</li>
+                        </ul>
+                        <li>Java</li>
+                        <ul>
+                            <li>Creating and Invoking Action</li>
+                            <li>Runtime</li>
+                            <li>Other Resources</li>
+                        </ul>
+                        <li>PHP</li>
+                        <ul>
+                            <li>Creating and Invoking Action</li>
+                            <li>Runtime</li>
+                            <li>Other Resources</li>
+                        </ul>
+                        <li>Swift</li>
+                        <ul>
+                            <li>Creating and Invoking Action</li>
+                            <li>Runtime</li>
+                            <li>Other Resources</li>
+                        </ul>
+                    </ul>
+                    <li>Managing Actions with OpenWhisk Packages</li>
+                    <li>Connecting Actions to Event Sources</li>
+                    <li>Exposing APIs from Actions</li>
+                    <li>Using OpenWhisk Enabled Services</a></li>
+                </ul>
+            </div>
+            <h4 id="pre-requisites">Pre-requisites</h4>
+            <p>pre-requisite goes</p>
+            <h4 id="using-openwhisk">Using OpenWhisk</h4>
                 <ul>
                     <!--li>
                         <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">How to write an action?</a>
                     </li-->
-                    <li>
+                    <li id="wsk-cli">
                         <strong>Configure the wsk CLI</strong>
                         With Apache OpenWhisk you can easily create and run actions, or connect to other actions. Use the
                         <a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/README.md">OpenWhisk Command Line Interface (CLI)</a>,
                         target your Apache OpenWhisk instance, and run your first action in seconds.
-                    </li>
-                    <li>
-                       <strong>OpenWhisk REST API</strong>
-                        After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
-                        For more details about the APIs for actions, activations, packages, rules, and triggers, see the
-                       <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
-                       documentation.
                     </li>
                     <!--li>
                         <strong>OpenWhisk API V1 Swagger:</strong>
                         <a href="https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json">Here</a>
                         is the swagger file for OpenWhisk API V1.
                     </li-->
-                    <li>
+                    <li id="wskdeploy">
                         <strong>Whisk Deploy:</strong>
                         <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
                         is an utility to help deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command.
+                    </li>
+                    <li id="rest-api">
+                       <strong>OpenWhisk REST API</strong>
+                        After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
+                        For more details about the APIs for actions, activations, packages, rules, and triggers, see the
+                       <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
+                       documentation.
                     </li>
                     <!--li>
                         <strong>API Gateway:</strong>
@@ -83,13 +184,34 @@ layout: default
                         maintains the package catalog of openwhisk. OpenWhisk package catalog gives you an easy way to enhance your app with useful capabilities,
                         and to access external services in the ecosystem. 
                     </li-->
+                    <li id="openwhisk-clients"><strong>OpenWhisk Clients:</strong></li>
+                    <ul>
+                        <li id="javascript-client">
+                            <strong>JavaScript Client:</strong>
+                            <a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md" style="font-weight:bold">incubator-openwhisk-client-js</a>
+                            is the JavaScript client library which Provides a wrapper around the OpenWhisk APIs.
+                        </li>
+                         <li id="go-client">
+                            <strong>Go Client:</strong>
+                            <a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">incubator-openwhisk-client-go</a>
+                            is a Go client library to access OpenWhisk API.
+                        </li>
+                        <li id="swift-client">
+                            <strong>Swift Client:</strong>
+                            <a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">incubator-openwhisk-client-swift</a>
+                            is a Swift based client SDK for OpenWhisk which can be used to connect to OpenWhisk.
+                            It partially implements the OpenWhisk REST API and allows you to invoke actions and fire triggers.
+                        </li>
+                        <li id="python-client">
+                            <strong>Python Client:</strong>
+                            There is no official Python client for OpenWhisk at the moment. However,
+                            <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">incubator-openwhisk-client-python</a>
+                            shows an example of how OpenWhisk REST API can be used directly from Python.
+                        </li>
+                    </ul>
                 </ul>
 
-        </div>
-    </main>
-    <main id="doc">
-        <div class="content">
-            <h2>Creating and Invoking Actions</h2>
+            <h4 id="actions">Actions</h4>
             <p>
                 <strong>What is an OpenWhisk action?</strong>
                 Actions are stateless functions(code snippets) that run on the OpenWhisk platform.
@@ -106,37 +228,44 @@ layout: default
                 to find out how to write an action in your favorite language. Let's look at how to write an Hello World function
                 in different languages.
             </p>
+            <h4 id="nodejs">NodeJs</h4>
+            <h5 id="nodejs-actions"><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions:</a></h5>
             <ul>
-                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions:</a></li>
-                <ul>
-                    <li style="list-style: circle">Create a file named hello.js:</li>
-                    <div class="code"><pre><code>
-                    function main() {
-                        return { msg: 'Hello World' };
-                    }
-                    </code></pre></div>
-                    <li style="list-style: circle">Create an action called hello using hello.js:</li>
-                    <div class="code"><pre><code>
-                    wsk action create hello hello.js
-                    ok: created action hello
-                    </code></pre></div>
-                    <li style="list-style: circle">Invoke an action hello:</li>
-                    <div class="code"><pre><code>
-                    wsk action invoke hello --blocking --result
-                    {
-                        msg: 'Hello World'
-                    }
-                    </code></pre></div>
-                </ul>
+                <li style="list-style: circle">Create a file named hello.js:</li>
+                <div class="code"><pre><code>
+{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-wskdeploy/master/tests/src/integration/helloworld/actions/hello.js %}
+                </code></pre></div>
+                <li style="list-style: circle">Create an action called hello using hello.js:</li>
+                <div class="code"><pre><code>
+wsk action create hello hello.js
+ok: created action hello
+                </code></pre></div>
+                <li style="list-style: circle">Invoke an action hello:</li>
+                <div class="code"><pre><code>
+wsk action invoke hello --blocking --result
+{
+    msg: 'Hello World'
+}
+                </code></pre></div>
+            </ul>
+            <h5 id="nodejs-runtime">Runtime</h5>
+            <p>If you wish to learn more about the runtime that runs these actions along with
+                the libraries that are supported or "built-in" by default, please visit
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">NodeJS Runtime Repository</a>.
+            </p>
+            <h5 id="nodejs-other-resources">Other Resources</h5>
+            <ul>
+                <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
+                <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
+                <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
+            </ul>
+            <h4 id="python">Python</h4>
+            <ul>
                 <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-python.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a></li>
                 <ul style="list-style: circle">
                     <li style="list-style: circle">Create a file named hello.py:</li>
                     <div class="code"><pre><code>
-                    def main(args):
-                        name = args.get("name", "Stranger")
-                        greeting = "Hello " + name + "!"
-                        print(greeting)
-                        return {"greeting": greeting}
+{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-wskdeploy/master/tests/src/integration/helloworld/actions/hello.py %}
                     </code></pre></div>
                     <li style="list-style: circle">Create an action called hello using hello.py:</li>
                     <div class="code"><pre><code>
@@ -207,7 +336,6 @@ layout: default
                 <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-swift.md#creating-and-invoking-swift-actions">Swift</a></li>
             </ul>
             <!--ul>
-                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">Nodejs</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a></li>
@@ -248,7 +376,7 @@ layout: default
     </main>
     <main id="doc">
         <div class="content">
-            <h2>Managing Actions with OpenWhisk Packages:</h2>
+            <h2>Managing Actions with OpenWhisk Packages</h2>
             <p>
                 <strong>What is a package?</strong> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
                 OpenWhisk comes with a list of packages 
@@ -368,7 +496,40 @@ layout: default
     </main>
     <main id="doc">
         <div class="content">
+            <h2>Connecting Actions to Event Sources</h2>
+            <p>
+                <strong>Why do I need to connect actions to event sources?</strong>
+                OpenWhisk is based on event-driven architecture in which actions/functions should be connected
+                to external/internal event sources such as message queues, database changes, webhooks, etc. When these
+                events happen, functions/actions are automatically invoked without explicitly invoking them
+                unlike we saw before in <a href="#creating-and-invoking-actions">Creating And Invoking Actions</a>.
+                Now, events from these internal/external event sources are channeled through a trigger.
+            </p>
+            <p>
+                <strong>What is a trigger?</strong>
+                Triggers are the class of events like published messages, document uploads to a website, GitHub commits, etc that are emitted by event sources. 
+            </p>
+            <p>
+                <strong>How to create and fire triggers?</strong>
+                <ul>
+                    <li >Create a trigger to send user location updates:</li>
+                    <div class="code"><pre><code>
+                    wsk trigger create locationUpdate
+                    </code></pre></div>
+                    <li>Check you have created the trigger by listing the set of triggers:</li>
+                    <div class="code"><pre><code>
+                    wsk trigger list
+                    triggers
+                    /someNamespace/locationUpdate                            private
+                    </code></pre></div>
+                </ul>
 
+            </p>
+            <p>
+                Please read
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md#creating-triggers-and-rules">Creating Triggers and Rules</a>
+                for further details.
+            </p>
         </div>
     </main>
     <main id="doc">
@@ -428,42 +589,6 @@ layout: default
                     Controller (Load balancer, Invoker, Kafka, etc.)
                     Tooling
                     eskdeploy CLI/clients/etc.
-            </p-->
-            <h4>OpenWhisk Clients:</h4>
-            <ul>
-                <li>
-                    <strong>JavaScript:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md" style="font-weight:bold">incubator-openwhisk-client-js</a>
-                    is the JavaScript client library which Provides a wrapper around the OpenWhisk APIs.
-                </li>
-                <li>
-                    <strong>Go:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">incubator-openwhisk-client-go</a>
-                    is a Go client library to access OpenWhisk API.
-                </li>
-                <li>
-                    <strong>Swift:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">incubator-openwhisk-client-swift</a>
-                    is a Swift based client SDK for OpenWhisk which can be used to connect to OpenWhisk.
-                    It partially implements the OpenWhisk REST API and allows you to invoke actions and fire triggers.
-                </li>
-                <li>
-                    <strong>Python:</strong>
-                    There is no official Python client for OpenWhisk at the moment. However,
-                    <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">incubator-openwhisk-client-python</a>
-                    shows an example of how OpenWhisk REST API can be used directly from Python.
-                </li>
-            </ul>
-        </div>
-    </main>
-    <main id="doc">
-        <div class="content" name="contributorsDoc">
-            <h2>OpenWhisk Contributors</h2>
-            <!--p>
-                    includes testing, reviewing PRs, etc.
-                    how to become a Contributor (reference CWIKI, duplicate info as needed)
-                    how to become a Committer (reference CWIKI, duplicate info as needed)
-                    Link to Community (i.e., "dev" list, Slack, GitHub issues.
             </p-->
         </div>
     </main>

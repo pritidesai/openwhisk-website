@@ -291,6 +291,26 @@ footer {
     a {
         font-weight: bold;
     }
+    .code {
+        color: $color-white;
+        background: $color-header-icon-bg;
+        padding-left: 5px;
+        width: auto;
+    }
+}
+
+#toc_container {
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
 }
 
 .main-content__columns{

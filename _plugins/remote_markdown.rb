@@ -16,7 +16,7 @@ module Jekyll
       check_protocol(text)
       uri = URI(text)
 
-      check_extension(uri.path)
+      #check_extension(uri.path)
 
       res = Net::HTTP.get_response(uri)
       fail 'resource unavailable' unless res.is_a?(Net::HTTPSuccess)
