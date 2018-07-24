@@ -293,3 +293,29 @@ footer {
     }
 }
 
+.main-content__columns{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-bottom:-3.25rem;
+}
+
+.main-content__column--3-across{
+    max-width:30%;min-width:261px
+}
+
+.main-content__column--gray-light{
+    background-color:#f0f8fd
+}
+
+.main-content__columns--reverse {
+    flex-direction:row-reverse;
+}
+
+.main-content__columns--vertical-center{
+    align-items:center;
+}
+
+.main-content__column+.main-content__column{
+    margin-top:2rem
+}
