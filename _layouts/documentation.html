@@ -89,7 +89,7 @@ layout: default
     </main>
     <main id="doc">
         <div class="content">
-            <h2>Creating and Invoking Actions</h2>
+            <h2 id="creating-and-invoking-actions">Creating and Invoking Actions</h2>
             <p>
                 <strong>What is an OpenWhisk action?</strong>
                 Actions are stateless functions(code snippets) that run on the OpenWhisk platform.
@@ -248,7 +248,7 @@ layout: default
     </main>
     <main id="doc">
         <div class="content">
-            <h2>Managing Actions with OpenWhisk Packages:</h2>
+            <h2>Managing Actions with OpenWhisk Packages</h2>
             <p>
                 <strong>What is a package?</strong> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
                 OpenWhisk comes with a list of packages 
@@ -368,7 +368,40 @@ layout: default
     </main>
     <main id="doc">
         <div class="content">
+            <h2>Connecting Actions to Event Sources</h2>
+            <p>
+                <strong>Why do I need to connect actions to event sources?</strong>
+                OpenWhisk is based on event-driven architecture in which actions/functions should be connected
+                to external/internal event sources such as message queues, database changes, webhooks, etc. When these
+                events happen, functions/actions are automatically invoked without explicitly invoking them
+                unlike we saw before in <a href="#creating-and-invoking-actions">Creating And Invoking Actions</a>.
+                Now, events from these internal/external event sources are channeled through a trigger.
+            </p>
+            <p>
+                <strong>What is a trigger?</strong>
+                Triggers are the class of events like published messages, document uploads to a website, GitHub commits, etc that are emitted by event sources. 
+            </p>
+            <p>
+                <strong>How to create and fire triggers?</strong>
+                <ul>
+                    <li >Create a trigger to send user location updates:</li>
+                    <div class="code"><pre><code>
+                    wsk trigger create locationUpdate
+                    </code></pre></div>
+                    <li>Check you have created the trigger by listing the set of triggers:</li>
+                    <div class="code"><pre><code>
+                    wsk trigger list
+                    triggers
+                    /someNamespace/locationUpdate                            private
+                    </code></pre></div>
+                </ul>
 
+            </p>
+            <p>
+                Please read
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md#creating-triggers-and-rules">Creating Triggers and Rules</a>
+                for further details.
+            </p>
         </div>
     </main>
     <main id="doc">
@@ -454,17 +487,6 @@ layout: default
                     shows an example of how OpenWhisk REST API can be used directly from Python.
                 </li>
             </ul>
-        </div>
-    </main>
-    <main id="doc">
-        <div class="content" name="contributorsDoc">
-            <h2>OpenWhisk Contributors</h2>
-            <!--p>
-                    includes testing, reviewing PRs, etc.
-                    how to become a Contributor (reference CWIKI, duplicate info as needed)
-                    how to become a Committer (reference CWIKI, duplicate info as needed)
-                    Link to Community (i.e., "dev" list, Slack, GitHub issues.
-            </p-->
         </div>
     </main>
 </section>
