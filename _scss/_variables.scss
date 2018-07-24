@@ -1,8 +1,12 @@
 /*
+ * # Responsive
+ */
+ $media-size-tablet-start: 900px;
+ $media-size-desktop-start: 1000px;
+
+/*
  * # Sizing
  */
- $media-size-tablet-start: 800px;
- $media-size-desktop-start: 1000px;
 
  // Allow for a fixed top banner on all content pages
  $whisk-header-padding-top: 80px;
@@ -84,13 +88,3 @@
  $font-weight-default: 300;
  $font-weight-bold: 700;
  $font-weight-black: 900;
-
- /*
-  * # Responsive
-  */
-// XXX - unused? use in tablet/desktop ?
- $breakpoint-sm: 456px;
- $breakpoint-md: 750px;
- $breakpoint-lg: 1025px;
- $breakpoint-ex-lg: 1300px;
-
