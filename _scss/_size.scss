@@ -40,7 +40,9 @@ section, header {
 }
 
 #whiskHeader {
-    padding-top: $whisk-header-padding-top;
+    //padding-top: $whisk-header-padding-top;
+    // TODO: make variable
+    padding-top: 170px;
 }
 
 #docs {

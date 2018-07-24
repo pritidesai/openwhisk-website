@@ -78,7 +78,9 @@ p {
   z-index: 8888;
   top: 0;
   width: 100%;
-  height: $header-height;
+  // TODO: make a variable
+  height: 100px;
+  padding-bottom: 10px;
 
   // Assure that menu items have white foreground and proper spacing
   a {
@@ -94,26 +96,25 @@ p {
 
 .header-section-logo {
     display: block;
+    //display: table-header-group;
     position: relative;
     width: $logo-width;
     height: $logo-height;
     padding: 0px;
     background-color: $color-header-bg-section-logo;
     background-image: url(/images/apache-openwhisk.svg);
-    background-size: contain;
+    //background-size: auto;
+    background-size: 300px 100px;
     // Note: this is how we provide the left margin on the header
-    background-position: 10px center;
+    //background-position: center center;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     border: none !important;
-
-    // XXX - table-cell causes img to shrink when window shrinks
-    // block does not, but need to see if we can then block other 2 menu
-    // Use 'min-width' if we attempt to use table-cell again
-    // display: table-cell
 }
 
 .header-section-text-links {
-    display: table-cell;
+    //display: table-cell;
+    display: table-row-group;
     background: $color-header-bg-section-menu-text;
     width: 33%;
     min-width: 280px;
@@ -123,8 +124,9 @@ p {
 }
 
 .header-section-social-icons {
-    display: table-cell;
-    background: $color-header-bg-section-menu-icons;
+    //display: table-cell;
+    display: table-footer-group;
+    background-color: $color-header-bg-section-menu-icons;
     width: 33%;
     vertical-align: middle;
 
@@ -134,7 +136,10 @@ p {
 
 .header-row-text-links {
     // TODO: shrink text link row (div) height to have no padding/margin top & bottom
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -143,12 +148,13 @@ p {
 .header-row-social-icons {
     display: flex;
     flex-direction: row-reverse;
-    padding-left: 10px;  // has some affect... for flex
-    padding-right: 20px; // has some affect... for flex
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .header-button-icon {
-    display: inline-block;
+    flex: 0 0 auto;
     background-color: $color-header-icon-bg;
     border: 1px solid $color-header-icon-border;
     border-radius: 4px;
@@ -159,9 +165,9 @@ p {
 }
 
 .header-text-link {
-    display:inline;
+    flex: 0 0 auto;
     background-color: $color-header-icon-bg;
-    height:20px;
+    margin: 3px;
 }
 
 .header-icon-image {
@@ -280,15 +286,36 @@ footer {
     ul, li {
         padding-left: 20px;
         padding-bottom: 10px;
-        padding-top: 10px;
         list-style: disc;
     }
     a {
         font-weight: bold;
     }
-    .code {
-        color: $color-white;
-        background: $color-header-icon-bg;
-    }
 }
 
+.main-content__columns{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-bottom:-3.25rem;
+}
+
+.main-content__column--3-across{
+    max-width:30%;min-width:261px
+}
+
+.main-content__column--gray-light{
+    background-color:#f0f8fd
+}
+
+.main-content__columns--reverse {
+    flex-direction:row-reverse;
+}
+
+.main-content__columns--vertical-center{
+    align-items:center;
+}
+
+.main-content__column+.main-content__column{
+    margin-top:2rem
+}
