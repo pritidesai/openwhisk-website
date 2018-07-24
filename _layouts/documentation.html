@@ -10,18 +10,45 @@ layout: default
 <section id="whiskNodes">
     <main id="doc">
         <div class="content">
-            <h1>OpenWhisk Documentation</h1>
+            <h1 id="index">OpenWhisk Documentation</h1>
             <p>
                 <strong>What is OpenWhisk?</strong>
                 OpenWhisk is a cloud-first distributed event-based programming service.
                 It provides a programming model to upload event handlers to a cloud service,
                 and register the handlers to respond to various events.
             </p>
+            <p>
+                <strong>How is the OpenWhisk documentation organized on this page?</strong>
+                OpenWhisk documentation is organized into three sections based on three seperate roles:
+            </p>
+            <ul>
+                <li><a href="#operators">Operators</a></li>
+                <li><a href="#developers">Developers</a></li>
+                <li><a href="#contributors">Contributors</a></li>
+            </ul>
+            <p>
+                <strong>What is the definition of Operators?</strong>
+                <a href="#operators">Operators</a> are defined as the group of users
+                deploying, configurting, and hosting the Apache OpenWhisk Function-as-a-Service platform
+                for development and/or production.
+            </p>
+            <p>
+                <strong>What is the definition of Developers?</strong>
+                <a href="#developers">Developers</a> are also defined as end users
+                developing functions/actions, creating packages, feeds, and feed provider services along with supported tooling.
+            </p>
+            <p>
+                <strong>What is the definition of Contributors?</strong>
+                <a href="#contributors">Contributors</a> are backend/platform developers
+                designing and developing backend architectural components that comprise the
+                OpenWhisk platform.
+            </p>
         </div>
     </main>
     <main id="doc">
         <div class="content">
-            <h2>OpenWhisk Deployment Options</h2>
+            <h2 id="operators">Operators</h2>
+            <h4>OpenWhisk Deployment Options</h4>
             <p>
                 The following deployment guides support different installation methods for core OpenWhisk components.
                 Please choose one of the following deployment methods based on your platform:
@@ -111,9 +138,7 @@ layout: default
                 <ul>
                     <li style="list-style: circle">Create a file named hello.js:</li>
                     <div class="code"><pre><code>
-                    function main() {
-                        return { msg: 'Hello World' };
-                    }
+{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-wskdeploy/master/tests/src/integration/helloworld/actions/hello.js %}
                     </code></pre></div>
                     <li style="list-style: circle">Create an action called hello using hello.js:</li>
                     <div class="code"><pre><code>
