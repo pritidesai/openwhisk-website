@@ -1,17 +1,9 @@
-$blue: #3371e3;
-$light-grey: #f7f7f7;
-$dark-grey: #303030;
-$medium-grey: #4c4c4c;
-$white: #ffffff;
-
-$base-font: "Roboto", sans-serif;
-$mono-font: "Roboto Mono", monospace;
 
 * {
     box-sizing: border-box;
-    font-family: $base-font;
+    font-family: $font-family-default;
     background: none;
-    margin: 0;
+    //margin: 0;
     border: 0
 }
 
@@ -43,13 +35,41 @@ $mono-font: "Roboto Mono", monospace;
     top:2px;}
 
 body {
-    font-family: $base-font;
+    font-family: $font-family-default;
 }
 
-h1, h2, h5, p {
-    font-weight: 600;
+h1, h2, h3, h4, h5 {
+    font-weight: $font-weight-bold;
+    margin: 0;
 }
 
-h3, h4 {
-    font-weight: 600;
+h1 {
+    font-size: $h1-font-size;
+    line-height: $h1-line-height;
 }
+
+h2 {
+    font-size: $h2-font-size;
+    line-height: $h2-line-height;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+}
+
+h4 {
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    line-height: $h5-line-height;
+}
+
+p {
+    font-size: $p-font-size;
+    line-height: $p-line-height;
+}
+
