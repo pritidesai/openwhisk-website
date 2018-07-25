@@ -1,37 +1,8 @@
+/*
+ * Base stylesheet for small form factors
+ */
 
-h1 {
-    font-size: $h1-font-size;
-    line-height: $h1-line-height;
-}
-
-h2 {
-    font-size: $h2-font-size;
-    line-height: $h2-line-height;
-}
-
-h3 {
-    font-size: $h3-font-size;
-    line-height: $h3-line-height;
-}
-
-h4 {
-    font-size: $h4-font-size;
-    line-height: $h4-line-height;
-}
-
-h5 {
-    font-size: $h5-font-size;
-    line-height: $h5-line-height;
-}
-
-p {
-    font-size: $p-font-size;
-    line-height: $p-line-height;
-    margin-top: 0px;
-    margin-bottom: 12px;
-}
-
-// header
+// Adjust header values
 $full-width-paddingX: 10px;
 $main-width: 100%;
 $main-max-width: 100%;
@@ -67,6 +38,11 @@ section, header {
     }
 }
 
+p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
 body {
     background-color: $color-white;
 }
@@ -82,10 +58,7 @@ section, header, footer {
         margin: auto;
     }
 }
-p {
-    font-size: 14px;
-    font-weight: 400;
-}
+
 .button {
 	display: inline-block;
 	border-radius: 6px;
@@ -114,8 +87,8 @@ p {
   top: 0;
   width: 100%;
   // TODO: make a variable
-  height: 100px;
-  padding-bottom: 10px;
+  height: 80px;
+  padding-bottom: 0px;
 
   // Assure that menu items have white foreground and proper spacing
   a {
@@ -356,11 +329,12 @@ footer {
 }
 
 .main-content__column--3-across{
-    max-width:30%;min-width:261px
+    max-width:30%;
+    min-width:261px
 }
 
 .main-content__column--gray-light{
-    background-color:#f0f8fd
+    background-color:#f0f8fd;
 }
 
 .main-content__columns--reverse {
@@ -372,5 +346,5 @@ footer {
 }
 
 .main-content__column+.main-content__column{
-    margin-top:2rem
+    margin-top:2rem;
 }

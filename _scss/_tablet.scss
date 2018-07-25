@@ -21,6 +21,12 @@
         display: table-cell;
     }
 
+    footer {
+        nav {
+            text-align: center;
+        }
+    }
+
     #whiskHeader {
         padding-top: $whisk-header-padding-top;
         // TODO: make variable
@@ -54,9 +60,5 @@
 
         }
     }
-    footer {
-        nav {
-            text-align: center;
-        }
-    }
+
 }
