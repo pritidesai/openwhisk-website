@@ -48,25 +48,94 @@ layout: default
     <main id="doc">
         <div class="content">
             <h2 id="operators">Operators</h2>
-            <h4>OpenWhisk Deployment Options</h4>
+            <h3>Operator Index</h3>
+            <div id="toc_container">
+                <p class="toc_title">Index</p>
+                <ul>
+                    <li><a href="#openwhisk_deployment">OpenWhisk Deployment</a></li>
+                    <ul>
+                        <li><a href="#deploy_kubernetes">Kubernetes</a></li>
+                        <li><a href="#deploy_docker_compose">Docker Compose</a></li>
+                        <li><a href="#deploy_mesps">Mesos</a></li>
+                        <li><a href="#deploy_openshift">OpenShift</a></li>
+                        <li><a href="#deploy_ansible">Ansible</a></li>
+                        <li><a href="#deploy_vagrant">Vagrant</a></li>
+                    </ul>
+                    <li><a href="#deployment_admin">Administrative Operations</a></li>
+                    <li><a href="#deployment_other_resources">Other Resources</a></li>
+                </ul>
+            </div>
+            <h3 id="openwhisk_deployment">OpenWhisk Deployment</h3>
             <p>
-                The following deployment guides support different installation methods for core OpenWhisk components.
-                Please choose one of the following deployment methods based on your platform:
+                <img src="https://cdn.thenewstack.io/media/2017/02/2ae03e6a-ow-arch-2.png">
+                The above diagram depicts the high-level architecture of OpenWhisk. From Nginx to Kafka to Docker,
+                multiple technologies are powering Apache OpenWhisk - Open Source Serverless Cloud Platform.
+                OpenWhisk supports different installation methods for core OpenWhisk components.
+                You can choose one of the following deployment methods based on your platform:
             </p>
-            <ul>
-                <li><a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a></li>
-                <li><a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">Setup OpenWhisk with Docker Compose</a></li>
-                <li><a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Deploy OpenWhisk to a Mesos Cluster</a></li>
-                <li><a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">Deploy OpenWhisk on OpenShift</a></li>
-                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md">Deploying OpenWhisk using Ansible</a></li>
-                <li><a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">Deploying OpenWhisk using Vagrant</a></li>
-            </ul>
+            <h4 id="deploy_kubernetes">Kubernetes</h4>
+            <p>
+                OpenWhisk can be installed on Minikube, or on a managed Kubernetes cluster provisioned from a public cloud provider,
+                or on a Kubernetes cluster you manage yourself. Please refer to 
+                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a>
+                for detailed deployment instructions.
+            </p>
+            <h4 id="deploy_docker_compose">Docker Compose</h4>
+            <p>
+                The easiest way to start deploying OpenWhisk is to get Docker installed on Mac, Windows or Linux.
+                This does not give you a production deployment but gives you enough of the pieces to start writing functions and seeing them executing.
+                <div></div>
+                <div class="code"><pre><code>
+git clone https://github.com/apache/incubator-openwhisk-devtools.git
+cd incubator-openwhisk-devtools/docker-compose
+make quick-start
+                </code></pre></div>
+                For more detailed instructions, see the
+                <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
+            </p>
+            <h4 id="deploy_mesos">Mesos</h4>
+            <p>
+                <a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Deploy OpenWhisk to a Mesos Cluster</a>
+                is under active development. 
+            </p>
+            <h4 id="deploy_openshift">OpenShift</h4>
+            <p>
+                <a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">Here</a>
+                are the instructions and details on how to deploy OpenWhisk on OpenShift.
+            </p>
+            <h4 id="deploy_ansible">Ansible</h4>
+            <p>
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md">Deploying OpenWhisk using Ansible</a>
+                is generally done for creating a development environment. Most of the OpenWhisk tools follow this method of deployment in their
+                CI/CD (Travis) pipeline. The OpenWhisk playbooks are structured such that it allows cleaning, deploying, or re-deploying a single
+                component as well as the entire OpenWhisk stack.
+            </p>
+            <h4 id="deploy_vagrant">Vagrant</h4>
+            <p>
+                A Vagrant machine is also available to run OpenWhisk on Mac, Windows PC or GNU/Linux.
+                Downloading and install VirtualBox and Vagrant for your operating system and architecture.
+                You can follow the steps under
+                <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">Vagrant Setup</a>
+                to run your first OpenWhisk action using Vagrant.
+            </p>
             <p>
                 There are many different deployment methods available but we recommend
                 <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a>
                 as its the most easy and quickest way of getting OpenWhisk deployed.
             </p>
-        </div>
+            <h3 id="deployment_admin">Administrative Operations</h3>
+            <ul>
+                <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
+            </ul>
+            <h3 id="deployment_other_resources">Other Resources</h3>
+            <ul>
+                <li><a href="https://medium.com/openwhisk/five-minute-intro-to-open-source-serverless-development-with-openwhisk-328b0ebfa160">Five minute intro to open source serverless development with OpenWhisk</a></li>
+                <li><a href="https://thenewstack.io/behind-scenes-apache-openwhisk-serverless-platform/">An Architectural View of Apache OpenWhisk</a></li>
+                <li><a href="https://medium.com/@rabbah/the-state-of-openwhisk-ae8c129e8a48">The State of OpenWhisk</a></li>
+                <li><a href="https://medium.com/openwhisk/starting-openwhisk-in-sixty-seconds-9288bfb4863d">Starting OpenWhisk in Sixty Seconds</a></li>
+                <li><a href="https://medium.com/openwhisk/deploying-openwhisk-on-kubernetes-3f55f781fbab">Deploying OpenWhisk on Kubernetes</a></li>
+                <li><a href="https://medium.com/openwhisk/uncovering-the-magic-how-serverless-platforms-really-work-3cb127b05f71">Uncovering the magic: How serverless platforms really work!</a></li>
+            </div>
     </main>
     <main id="doc">
         <div class="content">
@@ -76,7 +145,7 @@ layout: default
             <h4>Developer Index</h4>
             <div id="toc_container">
                 <p class="toc_title">Index</p>
-                <ul class="toc_list">
+                <ul>
                     <li><a href="#pre-requisites">Pre-requisites</a></li>
                     <li><a href="#using-openwhisk">Using OpenWhisk</a></li>
                     <ul>
