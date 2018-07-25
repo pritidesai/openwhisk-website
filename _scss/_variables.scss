@@ -1,5 +1,5 @@
 /*
- * # Responsive
+ * # Responsive layouts
  */
  $media-size-tablet-start: 900px;
  $media-size-desktop-start: 1000px;
@@ -8,10 +8,10 @@
  * # Sizing
  */
 
- // Allow for a fixed top banner on all content pages
- $whisk-header-padding-top: 80px;
+// Allow for a fixed top banner on all content pages
+$whisk-header-padding-top: 80px;
 
- /*
+/*
   * # Colors
   */
  $color-blue-light: #ebf1f9;
@@ -80,6 +80,7 @@
  $color-header-icon-border: pink;
  $color-header-icon-bg-image: orange;
 */
+
  /*
   * # Fonts
   */
@@ -88,3 +89,21 @@
  $font-weight-default: 300;
  $font-weight-bold: 700;
  $font-weight-black: 900;
+
+ $h1-font-size: 32px;
+ $h1-line-height: 40px;
+
+ $h2-font-size: 28px;
+ $h2-line-height: 60px;
+
+ $h3-font-size: 24px;
+ $h3-line-height: 32px;
+
+ $h4-font-size: 20px;
+ $h4-line-height: 40px;
+
+ $h5-font-size: 16px;
+ $h5-line-height: inherit;
+
+ $p-font-size: 14px;
+ $p-line-height: 22px;

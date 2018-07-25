@@ -1,22 +1,35 @@
-@import "reset";
 
-$h1-font-size: 32px;
-$h1-line-height: 40px;
+h1 {
+    font-size: $h1-font-size;
+    line-height: $h1-line-height;
+}
 
-$h2-font-size: 28px;
-$h2-line-height: 60px;
+h2 {
+    font-size: $h2-font-size;
+    line-height: $h2-line-height;
+}
 
-$h3-font-size: 24px;
-$h3-line-height: 32px;
+h3 {
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+}
 
-$h4-font-size: 20px;
-$h4-line-height: 40px;
+h4 {
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+}
 
-$h5-font-size: 16px;
-$h5-line-height: inherit;
+h5 {
+    font-size: $h5-font-size;
+    line-height: $h5-line-height;
+}
 
-$p-font-size: 14px;
-$p-line-height: 22px;
+p {
+    font-size: $p-font-size;
+    line-height: $p-line-height;
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
 
 // header
 $full-width-paddingX: 10px;
@@ -26,11 +39,33 @@ $header-height: 80px;
 $logo-width: 330px;
 $logo-height: 80px;
 
-@import "size";
-
 // Adjust this value to control spacing between <main> content sections
 $whisk-nodes-padding-Y: 30px;
 $whisk-nodes-h3-margin-bottom: 30px;
+
+section, header {
+    padding-left: $full-width-paddingX;
+    padding-right: $full-width-paddingX;
+    main {
+        width: $main-width;
+        max-width: $main-max-width;
+    }
+}
+
+#whiskHeader {
+    //padding-top: $whisk-header-padding-top;
+    // TODO: make variable
+    padding-top: 170px;
+}
+
+#docs {
+    #whiskHeader {
+        h1, h5 {
+            padding-left: $full-width-paddingX;
+            padding-right: $full-width-paddingX;
+        }
+    }
+}
 
 body {
     background-color: $color-white;
