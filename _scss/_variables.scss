@@ -5,6 +5,10 @@
 $media-size-tablet-start: 900px;
 $media-size-desktop-start: 1000px;
 
+// Allow for a fixed top banner on all content pages
+$whisk-header-base-padding-top: 180px;
+$whisk-header-tablet-padding-top: 80px;
+
 /*
  * Colors
  */
@@ -89,7 +93,7 @@ $font-weight-default: 400;
 $font-weight-bold: 600;
 
 /*
- * Headers
+ * Text
  */
 
 $h1-font-size: 32px;
@@ -102,19 +106,10 @@ $h3-font-size: 24px;
 $h3-line-height: 32px;
 
 $h4-font-size: 20px;
-$h4-line-height: 40px;
+$h4-line-height: 28px;
 
 $h5-font-size: 16px;
 $h5-line-height: inherit;
 
 $p-font-size: 14px;
 $p-line-height: 22px;
-
-/*
- * Content header
- */
-
-// Allow for a fixed top banner on all content pages
-$whisk-header-padding-top: 80px;
-
-

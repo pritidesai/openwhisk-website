@@ -24,9 +24,7 @@ section, header {
 }
 
 #whiskHeader {
-    //padding-top: $whisk-header-padding-top;
-    // TODO: make variable
-    padding-top: 170px;
+    padding-top: $whisk-header-base-padding-top;
 }
 
 #docs {

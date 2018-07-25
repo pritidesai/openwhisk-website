@@ -2,7 +2,6 @@
     p {
         font-size: 16px;
         line-height: 24px;
-        letter-spacing: 0.1px;
     }
     .header {
         height: $header-height;
@@ -28,9 +27,7 @@
     }
 
     #whiskHeader {
-        padding-top: $whisk-header-padding-top;
-        // TODO: make variable
-        //padding-top: 170px;
+        padding-top: $whisk-header-tablet-padding-top;
     }
 
     #whiskNodes {
