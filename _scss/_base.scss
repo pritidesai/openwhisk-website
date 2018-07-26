@@ -126,7 +126,7 @@ section, header, footer {
     vertical-align: middle;
 }
 
-// TODO: shrink text link row (div) height to have no padding/margin top and bottom
+// TODO: change row (div) height to have no padding/margin top and bottom
 .header-row-text-links {
     display: flex;
     flex-direction: row;
@@ -172,30 +172,43 @@ section, header, footer {
     float: middle;
 }
 
-pre, code {
-    white-space: pre;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
-}
-
-code {
-    white-space: pre;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
+// Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
+// Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
+pre {
+    // Effectively changing "pre" to "preline" collapsing extra TABs/spaces
+    white-space: pre-line;
+    display: inline;
+    margin: 0px;
 }
 
 .terminal {
+    background: $color-terminal-bg;
+    color: $color-terminal-fg;
+    border: 1px solid $color-terminal-border;
     font-family: $font-family-code;
     font-weight: 300;
     font-size: 14px;
     line-height: 140%;
-    border: 1px solid red;
-    padding-left: 8px;
-    background: $color-body-code-bg;
-    color: $color-body-code-fg;
+    // top right bottom left
+    padding: 4px 4px 4px 8px;
     width: 700px;
+    margin-bottom: 10px;
+
+//  &::before {
+//    content: "\2022 \2022 \2022";  // 3 circle dots
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: $terminal-window-height;
+//    margin: 0;
+//    padding: (0.5 * $terminal-window-height) 0;
+//    background: mix($base-color, #fff, 25%);
+//    color: mix($base-color, #fff, 50%);
+//    font-size: (2 * $terminal-window-height);
+//    line-height: 0;
+//    text-indent: (0.5 * $terminal-window-height);
+//  }
 }
 
 #whiskHeader {
