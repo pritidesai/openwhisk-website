@@ -2,18 +2,6 @@
  * Base stylesheet for small form factors
  */
 
-// Adjust header values
-$full-width-paddingX: 10px;
-$main-width: 100%;
-$main-max-width: 100%;
-$header-height: 80px;
-$logo-width: 330px;
-$logo-height: 80px;
-
-// Adjust this value to control spacing between <main> content sections
-$whisk-nodes-padding-Y: 30px;
-$whisk-nodes-h3-margin-bottom: 30px;
-
 section, header {
     padding-left: $full-width-paddingX;
     padding-right: $full-width-paddingX;
@@ -84,9 +72,8 @@ section, header, footer {
   z-index: 8888;
   top: 0;
   width: 100%;
-  // TODO: make a variable
-  height: 80px;
-  padding-bottom: 0px;
+  height: $header-height;
+  padding-bottom: 2px;
 
   // Assure that menu items have white foreground and proper spacing
   a {
@@ -100,26 +87,28 @@ section, header, footer {
   }
 }
 
+// Note: ideally, we should use table-cell, but using an anchor to display
+// the logo has implication on layout we should look at later
+// Note: the use if !important may be superfluous
+// Note: use of a fixed .PNG seems to be more reliable than .SVG
+// where different browsers tend to stretch SVG despite layout properties
 .header-section-logo {
     display: block;
-    //display: table-header-group;
     position: relative;
-    width: $logo-width;
-    height: $logo-height;
+    width: $logo-width !important;
+    height: $logo-height !important;
+    border: 0px;
     padding: 0px;
     background-color: $color-header-bg-section-logo;
-    background-image: url(/images/apache-openwhisk.svg);
-    //background-size: auto;
-    background-size: 300px 100px;
-    // Note: this is how we provide the left margin on the header
-    //background-position: center center;
-    background-position: 50% 50%;
+    background-image: url(/images/apache-openwhisk.png);
+    background-size: $logo-width $logo-height !important;
+    background-position: center center;
     background-repeat: no-repeat;
     border: none !important;
+    background-position: left top;
 }
 
 .header-section-text-links {
-    //display: table-cell;
     display: table-row-group;
     background: $color-header-bg-section-menu-text;
     width: 33%;
@@ -129,19 +118,16 @@ section, header, footer {
     vertical-align: middle;
 }
 
+// TODO: explore min-width had no effect for some reason...
 .header-section-social-icons {
-    //display: table-cell;
     display: table-footer-group;
     background-color: $color-header-bg-section-menu-icons;
     width: 33%;
     vertical-align: middle;
-
-    // XXX - min-width had no effect for some reason...
-    //min-width: 280px;
 }
 
+// TODO: change row (div) height to have no padding/margin top and bottom
 .header-row-text-links {
-    // TODO: shrink text link row (div) height to have no padding/margin top & bottom
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -184,6 +170,45 @@ section, header, footer {
 
 .footer-buttons {
     float: middle;
+}
+
+// Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
+// Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
+pre {
+    // Effectively changing "pre" to "preline" collapsing extra TABs/spaces
+    white-space: pre-line;
+    display: inline;
+    margin: 0px;
+}
+
+.terminal {
+    background: $color-terminal-bg;
+    color: $color-terminal-fg;
+    border: 1px solid $color-terminal-border;
+    font-family: $font-family-code;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+    // top right bottom left
+    padding: 4px 4px 4px 8px;
+    width: 700px;
+    margin-bottom: 10px;
+
+//  &::before {
+//    content: "\2022 \2022 \2022";  // 3 circle dots
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: $terminal-window-height;
+//    margin: 0;
+//    padding: (0.5 * $terminal-window-height) 0;
+//    background: mix($base-color, #fff, 25%);
+//    color: mix($base-color, #fff, 50%);
+//    font-size: (2 * $terminal-window-height);
+//    line-height: 0;
+//    text-indent: (0.5 * $terminal-window-height);
+//  }
 }
 
 #whiskHeader {
@@ -297,12 +322,6 @@ footer {
     a {
         font-weight: bold;
     }
-    .code {
-        color: $color-white;
-        background: $color-header-icon-bg;
-        padding-left: 5px;
-        width: auto;
-    }
 }
 
 #toc_container {
@@ -319,6 +338,9 @@ footer {
     text-align: center;
 }
 
+// ------------
+// experimental
+// ------------
 .main-content__columns{
     display:flex;
     flex-wrap:wrap;
