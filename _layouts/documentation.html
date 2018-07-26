@@ -160,26 +160,26 @@ make quick-start
                         <li><a href="#nodejs">NodeJS</a></li>
                         <ul>
                             <li><a href="#nodejs-actions">Creating and Invoking Sample Action</a></li>
-                            <li><a href="#nodejs-runtime">Runtime</a></li>
+                            <li><a href="#nodejs-runtime">NodeJS Runtime</a></li>
                             <li><a href="#nodejs-other-resources">Other Resources</a></li>
                         </ul>
-                        <li>Python</li>
+                        <li><a href="#python">Python</a></li>
                         <ul>
-                            <li>Creating and Invoking Sample Action</li>
-                            <li>Runtime</li>
-                            <li>Other Resources</li>
+                            <li><a href="#python-actions">Creating and Invoking Sample Action</a></li>
+                            <li><a href="#python-runtime">Python Runtime</a></li>
+                            <li><a href="#python-other-resources">Other Resources</a></li>
                         </ul>
-                        <li>Docker</li>
+                        <li><a href="#docker">Docker</a></li>
                         <ul>
                             <li>Zip Action</li>
                             <li>SDK (Writing Your Own Runtime)</li>
                             <li>Other Resources</li>
                         </ul>
-                        <li>Go</li>
+                        <li><a href="#go">Go</a></li>
                         <ul>
-                            <li>Creating and Invoking Action</li>
-                            <li>Runtime</li>
-                            <li>Other Resources</li>
+                            <li><a href="#go-actions">Creating and Invoking Action</a></li>
+                            <li><a href="#go-runtime">Go Runtime</a></li>
+                            <li><a href="#go-other-resources">Other Resources</a></li>
                         </ul>
                         <li>Java</li>
                         <ul>
@@ -288,108 +288,162 @@ make quick-start
                 An action may be created from a function programmed using any of the supported languages
                 and runtimes, or from a binary-compatible executable, or even executables packages as Docker containers.
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
-                is the list of supported programming languages by OpenWhisk, you can follow language-specific tutorials
-                to find out how to write an action in your favorite language. Let's look at how to write an Hello World function
-                in different languages.
+                is the list of supported runtimes by OpenWhisk:
+                <ul>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">NodeJS</a></li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a></li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a></li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a></li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a></li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a></li>
+                </ul>
+                You can follow language-specific tutorials to find out how to write an action in your favorite language.
+                Let's look at how to write an Hello World function in different languages.
             </p>
             <h4 id="nodejs">NodeJs</h4>
-            <h5 id="nodejs-actions"><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions:</a></h5>
-            <ul>
-                <li style="list-style: circle">Create a file named hello.js:</li>
+            <p></p>
+            <h5 id="nodejs-actions">Creating and Invoking NodeJS actions</h5>
+            <p>
+                Let's look at how to write a sample hello world action in NodeJS. You can visit
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions</a>
+                page for further details.
+            </p>
+            <ol>
+                <li style="list-style-type: decimal">Create a file named hello.js:</li>
                 <div class="code"><pre><code>
-{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-wskdeploy/master/tests/src/integration/helloworld/actions/hello.js %}
+{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-catalog/master/packages/samples/hello/javascript/hello.js %}
                 </code></pre></div>
-                <li style="list-style: circle">Create an action called hello using hello.js:</li>
+                <li style="list-style-type: decimal">Create an action called hello using hello.js:</li>
                 <div class="code"><pre><code>
 wsk action create hello hello.js
 ok: created action hello
                 </code></pre></div>
-                <li style="list-style: circle">Invoke an action hello:</li>
+                <li style="list-style-type: decimal">Invoke an action hello:</li>
                 <div class="code"><pre><code>
 wsk action invoke hello --blocking --result
 {
     msg: 'Hello World'
 }
                 </code></pre></div>
-            </ul>
-            <h5 id="nodejs-runtime">Runtime</h5>
-            <p>If you wish to learn more about the runtime that runs these actions along with
+            </ol>
+            <h5 id="nodejs-runtime">OpenWhisk Runtime for NodeJS</h5>
+            <p>
+                OpenWhisk supports <strong>Node.js 6</strong> and <strong>Node.js 8</strong> runtimes where Node.js 6 being default pick by wsk CLI and Whisk Deploy.
+                If you wish to learn more about NodeJS runtime along with
                 the libraries that are supported or "built-in" by default, please visit
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">NodeJS Runtime Repository</a>.
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">NodeJS Runtime GitHub Repository</a>.
             </p>
             <h5 id="nodejs-other-resources">Other Resources</h5>
-            <ul>
-                <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
-                <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
-                <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
-            </ul>
+            <p>
+                <ul>
+                    <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
+                    <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
+                    <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
+                </ul>
+            </p>
             <h4 id="python">Python</h4>
-            <ul>
-                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-python.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a></li>
-                <ul style="list-style: circle">
-                    <li style="list-style: circle">Create a file named hello.py:</li>
-                    <div class="code"><pre><code>
-{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-wskdeploy/master/tests/src/integration/helloworld/actions/hello.py %}
-                    </code></pre></div>
-                    <li style="list-style: circle">Create an action called hello using hello.py:</li>
-                    <div class="code"><pre><code>
-                    wsk action create hello hello.py
-                    ok: created action hello
-                    </code></pre></div>
-                    <li style="list-style: circle">Invoke an action hello:</li>
-                    <div class="code"><pre><code>
-                    wsk action invoke hello --blocking --result --param name World
-                    {
-                        "greeting": "Hello World!"
-                    }
-                    </code></pre></div>
+            <p></p>
+            <h5 id="python-actions">Creating And Invoking Python actions</h5>
+            <p>
+                Let's look at how to write a sample hello world action in Python. You can visit
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a>
+                page for further details.
+            </p>
+            <ol>
+                <li style="list-style-type: decimal">Create a file named hello.py:</li>
+                <div class="code"><pre><code>
+{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-catalog/master/packages/samples/hello/python/hello.py %}
+                </code></pre></div>
+                <li style="list-style-type: decimal">Create an action called hello using hello.py:</li>
+                <div class="code"><pre><code>
+wsk action create hello hello.py
+ok: created action hello
+                </code></pre></div>
+                <li style="list-style-type: decimal">Invoke an action hello:</li>
+                <div class="code"><pre><code>
+wsk action invoke hello --blocking --result --param name World
+{
+    "greeting": "Hello World!"
+}
+                </code></pre></div>
+            </ol>
+            <h5 id="python-runtime">OpenWhisk Runtime for Python</h5>
+            <p>
+                OpenWhisk supports <strong>Python 2</strong> and <strong>Python 3</strong> runtimes where Python 2 being default pick by wsk CLI and Whisk Deploy.
+                If you wish to learn more about Python runtime along with
+                the libraries that are supported or "built-in" by default, please visit
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python Runtime GitHub Repository</a>.
+            </p>
+            <h5 id="python-other-resources">Other Resources</h5>
+            <p>
+                <ul>
+                    <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
                 </ul>
-                <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a></li>
-                <ul style="list-style: circle">
-                    <li style="list-style: circle">Create a file named hello.go:</li>
-                    <div class="code"><pre><code>
-                    package main
+            </p>
+            <h4 id="go">Go</h4>
+            <p></p>
+            <h5 id="go-actions">Creating And Invoking Go actions</h5>
+            <p>
+                Let's look at how to write a sample hello world action in Go. You can visit
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a>
+                page for further details.
+            </p>
+            <ol>
+                <li style="list-style-type: decimal">Create a file named hello.go:</li>
+                <div class="code"><pre><code>
+package main
 
-                    import "encoding/json"
-                    import "fmt"
-                    import "os"
+import "encoding/json"
+import "fmt"
+import "os"
 
-                    func main() {
-                        //program receives one argument: the JSON object as a string
-                        arg := os.Args[1]
+func main() {
+    //program receives one argument: the JSON object as a string
+    arg := os.Args[1]
 
-                        // unmarshal the string to a JSON object
-                        var obj map[string]interface{}
-                        json.Unmarshal([]byte(arg), &obj)
+    // unmarshal the string to a JSON object
+    var obj map[string]interface{}
+    json.Unmarshal([]byte(arg), &obj)
 
-                        // can optionally log to stdout (or stderr)
-                        fmt.Println("hello Go action")
+    // can optionally log to stdout (or stderr)
+    fmt.Println("hello Go action")
 
-                        name, ok := obj["name"].(string)
-                        if !ok { name = "Stranger" }
+    name, ok := obj["name"].(string)
+    if !ok { name = "Stranger" }
 
-                        // last line of stdout is the result JSON object as a string
-                        msg := map[string]string{"msg": ("Hello, " + name + "!")}
-                        res, _ := json.Marshal(msg)
-                        fmt.Println(string(res))
-                    }
+    // last line of stdout is the result JSON object as a string
+    msg := map[string]string{"msg": ("Hello, " + name + "!")}
+    res, _ := json.Marshal(msg)
+    fmt.Println(string(res))
+}
                     </code></pre></div>
-                    <li style="list-style: circle">Create an executable called exec using hello.go:</li>
+                    <li style="list-style-type: decimal">Create an executable called exec using hello.go:</li>
                     <div class="code"><pre><code>
-                    GOOS=linux GOARCH=amd64 go build -o exec
-                    zip exec.zip exec
-                    wsk action create hello --native exec.zip
+GOOS=linux GOARCH=amd64 go build -o exec
+zip exec.zip exec
+wsk action create hello --native exec.zip
                     </code></pre></div>
-                    <li style="list-style: circle">Invoke an action hello:</li>
+                    <li style="list-style-type: decimal">Invoke an action hello:</li>
                     <div class="code"><pre><code>
-                    wsk action invoke helloGo -r -p name gopher
-                    {
-                        "msg": "Hello, gopher!"
-                    }
+wsk action invoke helloGo -r -p name gopher
+{
+    "msg": "Hello, gopher!"
+}
                     </code></pre></div>
+            </ol>
+            <h5 id="go-runtime">OpenWhisk Runtime for Go</h5>
+            <p>
+                If you wish to learn more about Go runtime along with
+                the libraries that are supported or "built-in" by default, please visit
+                <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go Runtime GitHub Repository</a>.
+            </p>
+            <h5 id="go-other-resources">Other Resources</h5>
+            <p>
+                <ul>
+                    <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
                 </ul>
-
-            </ul>
+            </p>
             <p>
                 Similarly, you can follow language-specific tutorials for the following list of supported programming languages:
             </p>
