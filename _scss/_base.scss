@@ -129,7 +129,7 @@ section, header, footer {
     vertical-align: middle;
 }
 
-// TODO: explore why min-width had no effect...
+// TODO: explore min-width had no effect for some reason...
 .header-section-social-icons {
     display: table-footer-group;
     background-color: $color-header-bg-section-menu-icons;
@@ -137,9 +137,8 @@ section, header, footer {
     vertical-align: middle;
 }
 
-// TODO: shrink text link row (div) height to have no padding/margin top
+// TODO: shrink text link row (div) height to have no padding/margin top and bottom
 .header-row-text-links {
-    & bottom
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
