@@ -7,8 +7,6 @@ $full-width-paddingX: 10px;
 $main-width: 100%;
 $main-max-width: 100%;
 $header-height: 80px;
-$logo-width: 330px;
-$logo-height: 80px;
 
 // Adjust this value to control spacing between <main> content sections
 $whisk-nodes-padding-Y: 30px;
@@ -85,8 +83,8 @@ section, header, footer {
   top: 0;
   width: 100%;
   // TODO: make a variable
-  height: 80px;
-  padding-bottom: 0px;
+  height: $header-height;
+  padding-bottom: 2px;
 
   // Assure that menu items have white foreground and proper spacing
   a {
@@ -100,26 +98,28 @@ section, header, footer {
   }
 }
 
+// Note: ideally, we should use table-cell, but using an anchor to display
+// the logo has implication on layout we should look at later
+// Note: the use if !important may be superfluous
+// Note: use of a fixed .PNG seems to be more reliable than .SVG
+// where different browsers tend to stretch SVG despite layout properties
 .header-section-logo {
     display: block;
-    //display: table-header-group;
     position: relative;
-    width: $logo-width;
-    height: $logo-height;
+    width: $logo-width !important;
+    height: $logo-height !important;
+    border: 0px;
     padding: 0px;
     background-color: $color-header-bg-section-logo;
-    background-image: url(/images/apache-openwhisk.svg);
-    //background-size: auto;
-    background-size: 300px 100px;
-    // Note: this is how we provide the left margin on the header
-    //background-position: center center;
-    background-position: 50% 50%;
+    background-image: url(/images/apache-openwhisk.png);
+    background-size: $logo-width $logo-height !important;
+    background-position: center center;
     background-repeat: no-repeat;
     border: none !important;
+    background-position: left top;
 }
 
 .header-section-text-links {
-    //display: table-cell;
     display: table-row-group;
     background: $color-header-bg-section-menu-text;
     width: 33%;
@@ -129,19 +129,17 @@ section, header, footer {
     vertical-align: middle;
 }
 
+// TODO: explore why min-width had no effect...
 .header-section-social-icons {
-    //display: table-cell;
     display: table-footer-group;
     background-color: $color-header-bg-section-menu-icons;
     width: 33%;
     vertical-align: middle;
-
-    // XXX - min-width had no effect for some reason...
-    //min-width: 280px;
 }
 
+// TODO: shrink text link row (div) height to have no padding/margin top
 .header-row-text-links {
-    // TODO: shrink text link row (div) height to have no padding/margin top & bottom
+    & bottom
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -184,6 +182,32 @@ section, header, footer {
 
 .footer-buttons {
     float: middle;
+}
+
+pre, code {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
+code {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
+.terminal {
+    font-family: $font-family-code;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+    border: 1px solid red;
+    padding-left: 8px;
+    background: $color-body-code-bg;
+    color: $color-body-code-fg;
+    width: 700px;
 }
 
 #whiskHeader {
@@ -297,12 +321,6 @@ footer {
     a {
         font-weight: bold;
     }
-    .code {
-        color: $color-white;
-        background: $color-header-icon-bg;
-        padding-left: 5px;
-        width: auto;
-    }
 }
 
 #toc_container {
@@ -319,6 +337,9 @@ footer {
     text-align: center;
 }
 
+// ------------
+// experimental
+// ------------
 .main-content__columns{
     display:flex;
     flex-wrap:wrap;

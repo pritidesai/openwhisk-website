@@ -48,7 +48,7 @@ $color-bg-tablet-content-border: 11px solid ghostwhite;
 //$color-bg-tablet-image-wrapper-border: 8px solid $color-logo-deeper-aquamarine;
 $color-bg-tablet-image-wrapper-border: 8px solid white;
 $color-bg-desktop-main: white;
-
+/*
 $color-header-bg: $color-blue-dark;
 $color-header-bg-section-logo: transparent;
 $color-header-bg-section-menu-text: transparent;
@@ -58,6 +58,9 @@ $color-header-icon-bg: $color-blue-gray-dark;
 $color-header-icon-border: $color-logo-deeper-aquamarine;
 $color-header-icon-border: white;
 $color-header-icon-bg-image: transparent;
+*/
+$color-body-code-bg: #001a33;
+$color-body-code-fg: white;
 
 /*
  * Layout Colors (DEBUG)
@@ -72,7 +75,7 @@ $color-bg-tablet-main: magenta;
 $color-bg-tablet-content-border: 11px solid orange;
 $color-bg-tablet-image-wrapper-border: 11px solid $color-logo-deeper-aquamarine;
 $color-bg-desktop-main: darkviolet;
-
+*/
 $color-header-bg: gold;
 $color-header-bg-section-logo: darkred;
 $color-header-bg-section-menu-text: forestgreen;
@@ -81,7 +84,7 @@ $color-header-fg: white;
 $color-header-icon-bg: slategray;
 $color-header-icon-border: pink;
 $color-header-icon-bg-image: orange;
-*/
+
 
 /*
  * Fonts
@@ -89,6 +92,7 @@ $color-header-icon-bg-image: orange;
 
 $font-family-heading: "Roboto", sans-serif;
 $font-family-default: sans-serif;
+$font-family-code: "Courier New", Courier, monospace;
 $font-weight-default: 400;
 $font-weight-bold: 600;
 
@@ -109,7 +113,16 @@ $h4-font-size: 20px;
 $h4-line-height: 28px;
 
 $h5-font-size: 16px;
-$h5-line-height: inherit;
+$h5-line-height: 28px;
 
 $p-font-size: 14px;
 $p-line-height: 22px;
+
+/*
+ * Logo
+ */
+
+// Note: this is the actual size of the .PNG file which has built-in spacing
+// so we do not need to add any margins/padding/borders.
+$logo-width: 320px;
+$logo-height: 80px;

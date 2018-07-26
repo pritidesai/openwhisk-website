@@ -80,12 +80,13 @@ layout: default
             <p>
                 The easiest way to start deploying OpenWhisk is to get Docker installed on Mac, Windows or Linux.
                 This does not give you a production deployment but gives you enough of the pieces to start writing functions and seeing them executing.
-                <div></div>
-                <div class="code"><pre><code>
+                <div class="terminal">
+                    <pre><code>
 git clone https://github.com/apache/incubator-openwhisk-devtools.git
 cd incubator-openwhisk-devtools/docker-compose
 make quick-start
-                </code></pre></div>
+                    </code></pre>
+                </div>
                 For more detailed instructions, see the
                 <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
             </p>
@@ -296,16 +297,16 @@ make quick-start
             <h5 id="nodejs-actions"><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions:</a></h5>
             <ul>
                 <li style="list-style: circle">Create a file named hello.js:</li>
-                <div class="code"><pre><code>
+                <div class="terminal"><pre><code>
 {% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-wskdeploy/master/tests/src/integration/helloworld/actions/hello.js %}
                 </code></pre></div>
                 <li style="list-style: circle">Create an action called hello using hello.js:</li>
-                <div class="code"><pre><code>
+                <div class="terminal"><pre><code>
 wsk action create hello hello.js
 ok: created action hello
                 </code></pre></div>
                 <li style="list-style: circle">Invoke an action hello:</li>
-                <div class="code"><pre><code>
+                <div class="terminal"><pre><code>
 wsk action invoke hello --blocking --result
 {
     msg: 'Hello World'
@@ -328,16 +329,16 @@ wsk action invoke hello --blocking --result
                 <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-python.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a></li>
                 <ul style="list-style: circle">
                     <li style="list-style: circle">Create a file named hello.py:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
 {% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-wskdeploy/master/tests/src/integration/helloworld/actions/hello.py %}
                     </code></pre></div>
                     <li style="list-style: circle">Create an action called hello using hello.py:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                     wsk action create hello hello.py
                     ok: created action hello
                     </code></pre></div>
                     <li style="list-style: circle">Invoke an action hello:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                     wsk action invoke hello --blocking --result --param name World
                     {
                         "greeting": "Hello World!"
@@ -347,7 +348,7 @@ wsk action invoke hello --blocking --result
                 <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a></li>
                 <ul style="list-style: circle">
                     <li style="list-style: circle">Create a file named hello.go:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                     package main
 
                     import "encoding/json"
@@ -375,13 +376,13 @@ wsk action invoke hello --blocking --result
                     }
                     </code></pre></div>
                     <li style="list-style: circle">Create an executable called exec using hello.go:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                     GOOS=linux GOARCH=amd64 go build -o exec
                     zip exec.zip exec
                     wsk action create hello --native exec.zip
                     </code></pre></div>
                     <li style="list-style: circle">Invoke an action hello:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                     wsk action invoke helloGo -r -p name gopher
                     {
                         "msg": "Hello, gopher!"
@@ -458,11 +459,11 @@ wsk action invoke hello --blocking --result
             </p>
             <ul>
                 <li>Get a list of packages:</li>
-                <div class="code"><pre><code>
+                <div class="terminal"><pre><code>
                 wsk package list /whisk.system
                 </code></pre></div>
                 <li>Get a list of entities in a package:</li>
-                <div class="code"><pre><code>
+                <div class="terminal"><pre><code>
                 wsk package get --summary /whisk.system/&lt;package-name&gt;
                 </code></pre></div>
             </ul>
@@ -476,20 +477,20 @@ wsk action invoke hello --blocking --result
                 <li>Invoking an action from a public package:</li>
                 <ul>
                     <li style="list-style: circle">Get a description of the /whisk.system/samples/greeting action:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                 wsk action get --summary /whisk.system/samples/greeting
                     action /whisk.system/samples/greeting: Returns a friendly greeting
                         (parameters: name, place)
                     </code></pre></div>
                     <li style="list-style: circle">Invoking action in a package:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                 wsk action invoke --result /whisk.system/samples/greeting
                 {
                     "payload": "Hello, stranger from somewhere!"
                 }
                     </code></pre></div>
                     <li style="list-style: circle">Invoke the action with parameters:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                 wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont
                 {
                     "payload": "Hello, Bernie from Vermont!"
@@ -499,12 +500,12 @@ wsk action invoke hello --blocking --result
                 <li>Creating package binding and invoking action from the binding:</li>
                 <ul>
                     <li style="list-style: circle">Creating and using package bindings:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                 wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
                 ok: created binding valhallaSamples
                     </code></pre></div>
                     <li style="list-style: circle">Invoke an action in the package binding:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                 wsk action invoke --result valhallaSamples/greeting --param name Odin
                 {
                     "payload": "Hello, Odin from Valhalla!"
@@ -577,11 +578,11 @@ wsk action invoke hello --blocking --result
                 <strong>How to create and fire triggers?</strong>
                 <ul>
                     <li >Create a trigger to send user location updates:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                     wsk trigger create locationUpdate
                     </code></pre></div>
                     <li>Check you have created the trigger by listing the set of triggers:</li>
-                    <div class="code"><pre><code>
+                    <div class="terminal"><pre><code>
                     wsk trigger list
                     triggers
                     /someNamespace/locationUpdate                            private
