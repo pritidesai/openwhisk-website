@@ -2,7 +2,7 @@
  * Responsive layouts
  */
 
-$media-size-tablet-start: 900px;
+$media-size-tablet-start: 920px;
 $media-size-desktop-start: 1000px;
 
 // Allow for a fixed top banner on all content pages
@@ -48,7 +48,7 @@ $color-bg-tablet-content-border: 11px solid ghostwhite;
 //$color-bg-tablet-image-wrapper-border: 8px solid $color-logo-deeper-aquamarine;
 $color-bg-tablet-image-wrapper-border: 8px solid white;
 $color-bg-desktop-main: white;
-/*
+
 $color-header-bg: $color-blue-dark;
 $color-header-bg-section-logo: transparent;
 $color-header-bg-section-menu-text: transparent;
@@ -58,7 +58,7 @@ $color-header-icon-bg: $color-blue-gray-dark;
 $color-header-icon-border: $color-logo-deeper-aquamarine;
 $color-header-icon-border: white;
 $color-header-icon-bg-image: transparent;
-*/
+
 $color-body-code-bg: #001a33;
 $color-body-code-fg: white;
 
@@ -75,7 +75,7 @@ $color-bg-tablet-main: magenta;
 $color-bg-tablet-content-border: 11px solid orange;
 $color-bg-tablet-image-wrapper-border: 11px solid $color-logo-deeper-aquamarine;
 $color-bg-desktop-main: darkviolet;
-*/
+
 $color-header-bg: gold;
 $color-header-bg-section-logo: darkred;
 $color-header-bg-section-menu-text: forestgreen;
@@ -84,7 +84,7 @@ $color-header-fg: white;
 $color-header-icon-bg: slategray;
 $color-header-icon-border: pink;
 $color-header-icon-bg-image: orange;
-
+*/
 
 /*
  * Fonts
@@ -119,10 +119,28 @@ $p-font-size: 14px;
 $p-line-height: 22px;
 
 /*
- * Logo
+ * Layout: Logo
  */
 
 // Note: this is the actual size of the .PNG file which has built-in spacing
 // so we do not need to add any margins/padding/borders.
 $logo-width: 320px;
 $logo-height: 80px;
+
+/*
+ * Layout: Header
+ */
+
+$header-height: 80px;
+
+/*
+ * Layout: Body
+ */
+
+$full-width-paddingX: 10px;
+$main-width: 100%;
+$main-max-width: 100%;
+
+// Adjust this value to control spacing between <main> content sections
+$whisk-nodes-padding-Y: 30px;
+$whisk-nodes-h3-margin-bottom: 30px;

@@ -2,16 +2,6 @@
  * Base stylesheet for small form factors
  */
 
-// Adjust header values
-$full-width-paddingX: 10px;
-$main-width: 100%;
-$main-max-width: 100%;
-$header-height: 80px;
-
-// Adjust this value to control spacing between <main> content sections
-$whisk-nodes-padding-Y: 30px;
-$whisk-nodes-h3-margin-bottom: 30px;
-
 section, header {
     padding-left: $full-width-paddingX;
     padding-right: $full-width-paddingX;
@@ -82,7 +72,6 @@ section, header, footer {
   z-index: 8888;
   top: 0;
   width: 100%;
-  // TODO: make a variable
   height: $header-height;
   padding-bottom: 2px;
 

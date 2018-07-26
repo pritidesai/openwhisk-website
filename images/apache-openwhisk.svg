@@ -14,7 +14,10 @@
    version="1.1"
    id="svg4829"
    sodipodi:docname="apache-openwhisk.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:export-filename="/Users/Matt/openwhisk/release/openwhisk-website/images/apache-openwhisk.png"
+   inkscape:export-xdpi="72"
+   inkscape:export-ydpi="72">
   <metadata
      id="metadata4833">
     <rdf:RDF>
@@ -42,7 +45,7 @@
      showgrid="false"
      showguides="false"
      inkscape:zoom="2"
-     inkscape:cx="139.45691"
+     inkscape:cx="138.20691"
      inkscape:cy="21.32511"
      inkscape:window-x="40"
      inkscape:window-y="30"
@@ -69,7 +72,9 @@
      height="80"
      x="0"
      y="0"
-     inkscape:label="bg" />
+     inkscape:label="bg"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
   <defs
      id="defs4816">
     <color-profile
