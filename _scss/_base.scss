@@ -175,8 +175,7 @@ section, header, footer {
 // Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
 // Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
 pre {
-    // Effectively changing "pre" to "preline" collapsing extra TABs/spaces
-    white-space: pre-line;
+    white-space: pre;
     display: inline;
     margin: 0px;
 }
@@ -338,33 +337,25 @@ footer {
     text-align: center;
 }
 
-// ------------
-// experimental
-// ------------
-.main-content__columns{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    margin-bottom:-3.25rem;
+/*
+ * Supporter logos
+ */
+
+.flow-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-.main-content__column--3-across{
-    max-width:30%;
-    min-width:261px
+.flow-item-container {
+    width: 260px;
+    background: yellow;
+    margin: 10px;
 }
 
-.main-content__column--gray-light{
-    background-color:#f0f8fd;
-}
-
-.main-content__columns--reverse {
-    flex-direction:row-reverse;
-}
-
-.main-content__columns--vertical-center{
-    align-items:center;
-}
-
-.main-content__column+.main-content__column{
-    margin-top:2rem;
+.flow-item-image {
+    border-image-width: 0px;
+    max-width: 240px;
+    width: 240px;
 }
