@@ -89,9 +89,9 @@ layout: default
                 The easiest way to start deploying OpenWhisk is to get Docker installed on Mac, Windows or Linux.
                 This does not give you a production deployment but gives you enough of the pieces to start writing functions and seeing them executing.
                 <div class="terminal">
-                <pre>git clone https://github.com/apache/incubator-openwhisk-devtools.git
-                    cd incubator-openwhisk-devtools/docker-compose
-                    make quick-start</pre>
+<pre>git clone https://github.com/apache/incubator-openwhisk-devtools.git
+cd incubator-openwhisk-devtools/docker-compose
+make quick-start</pre>
                 </div>
                 For more detailed instructions, see the
                 <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
@@ -402,25 +402,31 @@ layout: default
                     page for further details.
                 </p>
                 <ol>
-                    <li style="list-style-type: decimal">Create a file named hello.js:</li>
+                    <li style="list-style-type: decimal">Create a file named <i>hello.js</i>:</li>
                     <div class="terminal">
-                        <pre>{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-catalog/master/packages/samples/hello/javascript/hello.js %}</pre>
+<pre>function main() {
+    return {payload: 'Hello world'};
+}</pre>
                     </div>
-                    <li style="list-style-type: decimal">Create an action called hello using hello.js:</li>
+                    <li style="list-style-type: decimal">Create an action called <i>helloJS</i> using <i>hello.js</i>:</li>
                     <div class="terminal">
-                        <pre>wsk action create hello hello.js</pre>
-                    </div>
-                    <div class="terminal">
-                        <pre>ok: created action hello</pre>
-                    </div>
-                    <li style="list-style-type: decimal">Invoke an action hello:</li>
-                    <div class="terminal">
-                        <pre>wsk action invoke hello --blocking --result</pre>
+                        <pre>wsk action create helloJS hello.js</pre>
                     </div>
                     <div class="terminal">
-                        <pre>{
-                            msg: 'Hello World'
-                        }</pre>
+                        <pre>ok: created action helloJS</pre>
+                    </div>
+                    <li style="list-style-type: decimal">Invoke the <i>helloJS</i> action as a blocking activation:</li>
+                    <div class="terminal">
+                        <pre>wsk action invoke helloJS --blocking</pre>
+                    </div>
+                    <div class="terminal">
+<pre>{
+"result": {
+    "payload": "Hello world"
+},
+"status": "success",
+"success": true
+}</pre>
                     </div>
                 </ol>
                 <h5 id="nodejs-runtime">OpenWhisk Runtime for NodeJS</h5>
@@ -453,25 +459,33 @@ layout: default
                     page for further details.
                 </p>
                 <ol>
-                    <li style="list-style-type: decimal">Create a file named hello.py:</li>
+                    <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:</li>
                     <div class="terminal">
-                        <pre>{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-catalog/master/packages/samples/hello/python/hello.py %}</pre>
+<pre>import sys
+def main(dict):
+    if 'name' in dict:
+        name = dict['name']
+    else:
+        name = "stranger"
+    greeting = "Hello " + name + "!"
+    print(greeting)
+    return {"greeting": greeting}</pre>
                     </div>
-                    <li style="list-style-type: decimal">Create an action called hello using hello.py:</li>
+                    <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:</li>
                     <div class="terminal">
-                        <pre>wsk action create hello hello.py</pre>
+<pre>wsk action create hello hello.py</pre>
                     </div>
                     <div class="terminal">
-                        <pre>ok: created action hello</pre>
+<pre>ok: created action helloPy</pre>
                     </div>
-                    <li style="list-style-type: decimal">Invoke an action hello:</li>
+                    <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:</li>
                     <div class="terminal">
-                        <pre>wsk action invoke hello --blocking --result --param name World</pre>
+<pre>wsk action invoke hello --blocking --param name World</pre>
                     </div>
                     <div class="terminal">
-                        <pre>{
-                            "greeting": "Hello World!"
-                        }</pre>
+<pre>{
+    "greeting": "Hello World!"
+}</pre>
                     </div>
                 </ol>
                 <h5 id="python-runtime">OpenWhisk Runtime for Python</h5>
@@ -502,9 +516,10 @@ layout: default
                     page for further details.
                 </p>
                 <ol>
-                    <li style="list-style-type: decimal">Create a file named hello.go:</li>
+                    <li style="list-style-type: decimal">Create a file named <i>hello.go</i>:</li>
                     <div class="terminal">
-                        <pre>package main
+<pre>package main
+
 import "encoding/json"
 import "fmt"
 import "os"
@@ -529,21 +544,23 @@ func main() {
     fmt.Println(string(res))
 }</pre>
                     </div>
-                    <li style="list-style-type: decimal">Create an executable called exec using hello.go:</li>
+                    <li style="list-style-type: decimal">Create an executable called <i>exec</i> using <i>hello.go</i>:</li>
                     <div class="terminal">
-                        <pre>GOOS=linux GOARCH=amd64 go build -o exec
-                            zip exec.zip exec
-                            wsk action create hello --native exec.zip</pre>
+<pre>GOOS=linux GOARCH=amd64 go build -o exec
+zip exec.zip exec</pre>
                     </div>
-                    <li style="list-style-type: decimal">Invoke an action hello:</li>
+                    <li style="list-style-type: decimal">Create an action <i>helloGo</i>:</li>
                     <div class="terminal">
-                        <pre>wsk action invoke helloGo -r -p name gopher</pre>
+<pre>wsk action create helloGo --native exec.zip</pre>
+                    </div>
+                    <li style="list-style-type: decimal">Invoke an action <i>helloGo</i>:</li>
+                    <div class="terminal">
+<pre>wsk action invoke helloGo -r -p name gopher</pre>
                     </div>
                     <div class="terminal">
-                        <pre>{
-                            "msg": "Hello, gopher!" 
-                            }
-                        </pre>
+<pre>{
+    "msg": "Hello, gopher!" 
+}</pre>
                     </div>
                 </ol>
                 <h5 id="go-runtime">OpenWhisk Runtime for Go</h5>
@@ -573,30 +590,48 @@ func main() {
                     page for further details.
                 </p>
                 <ol>
-                    <li style="list-style-type: decimal">Create a file named Hello.java:</li>
+                    <li style="list-style-type: decimal">Create a file named <i>Hello.java</i>:</li>
                     <div class="terminal">
-                        <pre>{% remote_markdown https://raw.githubusercontent.com/apache/incubator-openwhisk-catalog/master/packages/samples/hello/java/src/main/java/hello/Hello.java %}</pre>
+<pre>package hello;
+
+import com.google.gson.JsonObject;
+
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name;
+
+        try {
+            name = args.getAsJsonPrimitive("name").getAsString();
+        } catch(Exception e) {
+            name = "stranger";
+        }
+
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}</pre>
                     </div>
-                    <li style="list-style-type: decimal">Compile Hello.Java into a JAR file hello.jar as follows</li>
+                    <li style="list-style-type: decimal">Compile <i>Hello.Java</i> into a JAR file <i>hello.jar</i> as follows</li>
                     <div class="terminal">
-                        <pre>javac Hello.java
-                            jar cvf hello.jar Hello.class</pre>
+<pre>javac Hello.java
+jar cvf hello.jar Hello.class</pre>
                     </div>
-                    <li style="list-style-type: decimal">Create an action called hello using hello.jar:</li>
+                    <li style="list-style-type: decimal">Create an action called <i>helloJava</i> using <i>hello.jar</i>:</li>
                     <div class="terminal">
-                        <pre>wsk action create hello hello.jar --main Hello</pre>
-                    </div>
-                    <div class="terminal">
-                        <pre>ok: created action hello</pre>
-                    </div>
-                    <li style="list-style-type: decimal">Invoke an action hello:</li>
-                    <div class="terminal">
-                        <pre>wsk action invoke hello --blocking --result</pre>
+<pre>wsk action create helloJava hello.jar --main Hello</pre>
                     </div>
                     <div class="terminal">
-                        <pre>{
-                            "greeting": "Hello stranger!"
-                            }</pre>
+<pre>ok: created action helloJava</pre>
+                    </div>
+                    <li style="list-style-type: decimal">Invoke an action <i>helloJava</i>:</li>
+                    <div class="terminal">
+<pre>wsk action invoke helloJava --blocking --result</pre>
+                    </div>
+                    <div class="terminal">
+<pre>{
+"greeting": "Hello stranger!"
+}</pre>
                     </div>
                 </ol>
                 <h5 id="java-runtime">OpenWhisk Runtime for Java</h5>
