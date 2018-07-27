@@ -324,11 +324,10 @@ make quick-start</pre>
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">incubator-openwhisk</a>.
                 </p>
                 <p>
-                    <strong>Which programming language can OpenWhisk action be created in?</strong>
-                    An action may be created from a function programmed using any of the supported languages
-                    and runtimes, or from a binary-compatible executable, or even executables packages as Docker containers.
+                    <strong>Which programming language can I use to write an OpenWhisk action?</strong>
+                    An action can be created from a function written using any of the supported runtimes.
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
-                    is the list of supported runtimes by OpenWhisk:
+                    is the list of runtimes supported by OpenWhisk:
                     <ul>
                         <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">NodeJS</a></li>
                         <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></li>
@@ -338,30 +337,11 @@ make quick-start</pre>
                         <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a></li>
                         <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a></li>
                     </ul>
-                    You can follow language-specific tutorials to find out how to write an action in your favorite language.
-                    Let's look at how to write an Hello World function in different languages.
                 </p>
-                <p>
-                    Similarly, you can follow language-specific tutorials for the following list of supported programming languages:
-                </p>
-                <ul>
-                    <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Docker</a></li>
-                    <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-java.md#creating-and-invoking-java-actions">Java</a></li>
-                    <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-php.md#creating-and-invoking-php-actions">PHP</a></li>
-                    <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-swift.md#creating-and-invoking-swift-actions">Swift</a></li>
-                </ul>
-                <!--ul>
-                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></li>
-                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a></li>
-                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a></li>
-                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a></li>
-                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a></li>
-                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a></li>
-                </ul-->
                 <p>
                     While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
                     invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
-                    specified in Using OpenWhisk section supports action management on OpenWhisk platform.
+                    specified in <a href="#using-openwhisk">Using OpenWhisk</a> section supports action management on OpenWhisk platform.
                 </p>
                 <p>
                     <strong>What if your preferred language/runtime is not supported by OpenWhisk?</strong>
@@ -649,6 +629,7 @@ jar cvf hello.jar Hello.class</pre>
                 </p>
             </div>
         </main>
+
         <main id="doc">
             <div class="content">
                 <h4 id="docker">Docker</h4>
