@@ -329,13 +329,13 @@ make quick-start</pre>
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
                     is the list of runtimes supported by OpenWhisk:
                     <ul>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">NodeJS</a></li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a></li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a></li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a></li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a></li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a></li>
+                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
+                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docer</a> - OpenWhisk runtime for Docker Actions using SDK</li>
+                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a> - OpenWhisk runtime for Go lang</li>
+                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
+                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
+                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
+                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a> - OpenWhisk runtime for Java 8</li>
                     </ul>
                 </p>
                 <p>
@@ -408,6 +408,35 @@ make quick-start</pre>
 "success": true
 }</pre>
                     </div>
+                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
+                        <p></p>
+                        <ol>
+                            <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
+                            <div class="terminal">
+<pre>packages:
+    helloworld:
+        actions:
+            helloJS:
+                function: hello.js</pre>
+                            </div>
+                            Or
+                            <p></p>
+                            <div class="terminal">
+<pre>packages:
+    helloworld:
+        actions:
+            helloJS:
+                code: |
+                    function main() {
+                        return {payload: 'Hello world'};
+                    }
+                runtime: nodejs:6</pre>
+                            </div>
+                            <li>Run deployment with <i>wskdeploy</i>:</li>
+                            <div class="terminal">
+<pre>wskdeploy -m manifest.yaml</pre>
+                            </div>
+                        </ol>
                 </ol>
                 <h5 id="nodejs-runtime">OpenWhisk Runtime for NodeJS</h5>
                 <p>
@@ -453,20 +482,55 @@ def main(dict):
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:</li>
                     <div class="terminal">
-<pre>wsk action create hello hello.py</pre>
+<pre>wsk action create helloPy hello.py</pre>
                     </div>
                     <div class="terminal">
 <pre>ok: created action helloPy</pre>
                     </div>
                     <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:</li>
                     <div class="terminal">
-<pre>wsk action invoke hello --blocking --param name World</pre>
+<pre>wsk action invoke helloPy --blocking --param name World</pre>
                     </div>
                     <div class="terminal">
 <pre>{
     "greeting": "Hello World!"
 }</pre>
                     </div>
+                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
+                        <p></p>
+                        <ol>
+                            <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
+                            <div class="terminal">
+<pre>packages:
+    helloworld:
+        actions:
+            helloPy:
+                function: hello.py</pre>
+                            </div>
+                            Or
+                            <p></p>
+                            <div class="terminal">
+<pre>packages:
+    helloworld:
+        actions:
+            helloPy:
+                code: |
+                    import sys
+                    def main(dict):
+                        if 'name' in dict:
+                            name = dict['name']
+                        else:
+                            name = "stranger"
+                        greeting = "Hello " + name + "!"
+                        print(greeting)
+                        return {"greeting": greeting}    
+                runtime: python:2</pre>
+                            </div>
+                            <li>Run deployment with <i>wskdeploy</i>:</li>
+                            <div class="terminal">
+<pre>wskdeploy -m manifest.yaml</pre>
+                            </div>
+                        </ol>
                 </ol>
                 <h5 id="python-runtime">OpenWhisk Runtime for Python</h5>
                 <p>
@@ -577,7 +641,7 @@ zip exec.zip exec</pre>
 import com.google.gson.JsonObject;
 
 public class Hello {
-    public static JsonObject main(JsonObject args) {
+    public static JsonObject main(JsonObject args) 
         String name;
 
         try {
@@ -624,7 +688,122 @@ jar cvf hello.jar Hello.class</pre>
                 <h5 id="java-other-resources">Other Resources</h5>
                 <p>
                     <ul>
-                        <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
+                        <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</a></li>
+                    </ul>
+                </p>
+            </div>
+        </main>
+
+        <!--main id="doc">
+            <div class="content">
+                <h4 id="docker">Docker</h4>
+                <p></p>
+                <h5 id="docker_actions">Creating and Invoking Docker actions</h5>
+                <p>
+                    OpenWhisk provides a base image for Docker actions called openwhisk/dockerskeleton. This image is based on Alpine Linux 3.4 and includes Python v2.7.12 but not much else. (For reference, the image is based on python:2.7.12-alpine).
+                    From this base image, you can create and run an OpenWhisk action: 
+                    Let's look at how to write a sample hello world action in Docker. You can visit
+                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
+                    page for further details.
+                </p>
+                <h5 id="docker-runtime">OpenWhisk Runtime for Docker</h5>
+                <p>
+
+                </p>
+                <h5 id="docker-other-resources">Other Resources</h5>
+                <p>
+                    <ul>
+                        <li><a href="http://jamesthom.as/blog/2017/01/16/openwhisk-docker-actions/">OpenWhisk Docker Actions</a></li>
+                        <li><a href="https://www.ibm.com/blogs/bluemix/2017/01/docker-bluemix-openwhisk/">Understanding and using Docker actions in IBM Bluemix OpenWhisk</a></li>
+                    </ul>
+                </p>
+            </div>
+        </main-->
+        
+        <main id="doc">
+            <div class="content">
+                <h4 id="php">PHP</h4>
+                <p></p>
+                <h5 id="php_actions">Creating and Invoking PHP actions</h5>
+                <p>
+                    Let's look at how to write a sample hello world action in PHP. You can visit
+                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-php.md#creating-and-invoking-php-actions">Creating and Invoking PHP actions</a>
+                    page for further details.
+                </p>
+                <ol>
+                    <li style="list-style-type: decimal">Create a file named <i>hello.php</i>:</li>
+                    <div class="terminal">
+<pre>&lt;?php
+function main(array $args) : array
+{
+    $name = $args["name"] ?? "stranger";
+    $greeting = "Hello $name!";
+    echo $greeting;
+    return ["greeting" => $greeting];
+}</pre>
+                    </div>
+                    <li style="list-style-type: decimal">Create an action called <i>helloPHP</i> using <i>hello.php</i>:</li>
+                    <div class="terminal">
+<pre>wsk action create helloPHP hello.php</pre>
+                    </div>
+                    <div class="terminal">
+<pre>ok: created action helloPHP</pre>
+                    </div>
+                    <li style="list-style-type: decimal">Invoke an action <i>helloPHP</i>:</li>
+                    <div class="terminal">
+<pre>wsk action invoke helloPHP --blocking --result --param name World</pre>
+                    </div>
+                    <div class="terminal">
+<pre>{
+    "greeting": "Hello World!"
+}</pre>
+                    </div>
+                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
+                    <p></p>
+                    <ol>
+                        <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
+                        <div class="terminal">
+<pre>packages:
+    helloworld:
+        actions:
+            helloPHP:
+                function: hello.php</pre>
+                        </div>
+                        Or
+                        <p></p>
+                        <div class="terminal">
+<pre>packages:
+    helloworld:
+        actions:
+            helloPHP:
+                code: |
+                    &lt;?php
+                    function main(array $args) : array
+                    {
+                        $name = $args["name"] ?? "stranger";
+                        $greeting = "Hello $name!";
+                        echo $greeting;
+                        return ["greeting" => $greeting];
+                    }
+                runtime: php:7.1</pre>
+                        </div>
+                        <li>Run deployment with <i>wskdeploy</i>:</li>
+                        <div class="terminal">
+<pre>wskdeploy -m manifest.yaml</pre>
+                        </div>
+                    </ol>
+                </ol>
+                <h5 id="php-runtime">OpenWhisk Runtime for PHP</h5>
+                <p>
+                    OpenWhisk supports <strong>PHP 7.2</strong> and <strong>PHP 7.1</strong> runtimes where PHP 7.2 being default pick by wsk CLI and Whisk Deploy.
+                    If you wish to learn more about PHP runtime, please visit
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP Runtime GitHub Repository</a>.
+                </p>
+                <h5 id="php-other-resources">Other Resources</h5>
+                <p>
+                    <ul>
+                        <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
+                        <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
                     </ul>
                 </p>
             </div>
@@ -632,18 +811,19 @@ jar cvf hello.jar Hello.class</pre>
 
         <main id="doc">
             <div class="content">
-                <h4 id="docker">Docker</h4>
+                <h4 id="swift">Swift</h4>
                 <p></p>
-                <h5 id="docker_actions">Creating and Invoking Docker actions</h5>
+                <h5 id="swift_actions">Creating and Invoking Swift actions</h5>
                 <p>
-                    Let's look at how to write a sample hello world action in Docker. You can visit
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
-                    page for further details.
+                    Let's look at how to write a sample hello world action in Swift.
                 </p>
+                <h5 id="swift-runtime">OpenWhisk Runtime for Swift</h5>
+                <p></p>
+                <h5 id="swift-other-resources">Other Resources</h5>
+                <p></p>
             </div>
         </main>
-        
-        
+
         <!-- Managing Actions with OpenWhisk Packages -->
         <main id="doc">
             <div class="content">
