@@ -9,6 +9,13 @@ $media-size-desktop-start: 1000px;
 $whisk-header-base-padding-top: 180px;
 $whisk-header-tablet-padding-top: 80px;
 
+// Adjust this value to control spacing around "whiskNodes" sections
+$whisk-nodes-padding-base-Y: 30px;
+$whisk-nodes-padding-base-X: 10px;
+$whisk-nodes-padding-tablet-X: 20px;
+
+$whisk-nodes-h3-margin-bottom: 30px;
+
 /*
  * Colors
  */
@@ -145,9 +152,6 @@ $full-width-paddingX: 10px;
 $main-width: 100%;
 $main-max-width: 100%;
 
-// Adjust this value to control spacing between <main> content sections
-$whisk-nodes-padding-Y: 30px;
-$whisk-nodes-h3-margin-bottom: 30px;
 
 /*
  * Terminal

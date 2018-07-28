@@ -2,25 +2,38 @@
  * Base stylesheet for small form factors
  */
 
+body {
+    background-color: $color-white;
+}
+
 section, header {
     padding-left: $full-width-paddingX;
     padding-right: $full-width-paddingX;
+
     main {
         width: $main-width;
         max-width: $main-max-width;
     }
 }
 
-#whiskHeader {
-    padding-top: $whisk-header-base-padding-top;
+section, header, footer {
+    main {
+        position: relative;
+        margin: auto;
+    }
 }
 
-#docs {
-    #whiskHeader {
-        h1, h5 {
-            padding-left: $full-width-paddingX;
-            padding-right: $full-width-paddingX;
-        }
+section {
+    position: relative;
+    background-color: $color-white;
+}
+
+footer {
+    width: 100%;
+    background-color: $color-blue-dark;
+    margin: 20px 0;
+    main {
+        padding: 20px 10px;
     }
 }
 
@@ -29,20 +42,12 @@ p {
     font-weight: 400;
 }
 
-body {
-    background-color: $color-white;
-}
-
-section {
-    position: relative;
-    background-color: $color-white;
-}
-
-section, header, footer {
-    main {
-        position: relative;
-        margin: auto;
-    }
+// Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
+// Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
+pre {
+    white-space: pre;
+    display: inline;
+    margin: 0px;
 }
 
 .button {
@@ -93,7 +98,7 @@ section, header, footer {
 // Note: use of a fixed .PNG seems to be more reliable than .SVG
 // where different browsers tend to stretch SVG despite layout properties
 .header-section-logo {
-    display: block;
+    display: table-cell;
     position: relative;
     width: $logo-width !important;
     height: $logo-height !important;
@@ -102,10 +107,9 @@ section, header, footer {
     background-color: $color-header-bg-section-logo;
     background-image: url(/images/apache-openwhisk.png);
     background-size: $logo-width $logo-height !important;
-    background-position: center center;
     background-repeat: no-repeat;
     border: none !important;
-    background-position: left top;
+    background-position: 50% 50%;
 }
 
 .header-section-text-links {
@@ -172,14 +176,6 @@ section, header, footer {
     float: middle;
 }
 
-// Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
-// Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
-pre {
-    white-space: pre;
-    display: inline;
-    margin: 0px;
-}
-
 // TODO: move sizes to variables.
 .terminal {
     background: $color-terminal-bg;
@@ -203,18 +199,28 @@ pre {
 //    height: 24px;
 //    margin: 0;
 //    padding: 8px;
-//    background: silver;
-//    color: black;
+//    background: mediumgray;
+//    color: darkgray;
 //    font-size: 18px;
 //    line-height: 0;
 //    text-indent: 20px;
 //  }
 }
 
+//#docs {
+//    #whiskHeader {
+//        h1, h5 {
+//            padding-left: $full-width-paddingX;
+//            padding-right: $full-width-paddingX;
+//        }
+//    }
+//}
+
 #whiskHeader {
     background-color: $color-blue-dark;
     color: $color-white;
     text-align: center;
+    padding-top: $whisk-header-base-padding-top;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
@@ -233,13 +239,15 @@ pre {
 }
 
 #whiskNodes {
-    padding-top: $whisk-nodes-padding-Y;
-    padding-bottom: $whisk-nodes-padding-Y;
+    padding-top: $whisk-nodes-padding-base-Y;
+    padding-bottom: $whisk-nodes-padding-base-Y;
+    padding-left: $whisk-nodes-padding-base-X;
+    padding-right: $whisk-nodes-padding-base-X;
     color: $color-blue-dark;
 
     main {
         background: $color-bg-base-main;
-        margin-bottom: $whisk-nodes-padding-Y;
+        margin-bottom: $whisk-nodes-padding-base-Y;
         min-height: 200px;
         display: table;
     }
@@ -272,10 +280,6 @@ pre {
     }
 }
 
-section {
-    background-color: $color-white;
-}
-
 #whiskHeader {
 	background-color: $color-blue-dark;
 	h5 {
@@ -284,15 +288,6 @@ section {
         margin-bottom: 0px;
         // This affects the margin below the apparent blue area
         //line-height: 38px;
-    }
-}
-
-footer {
-	width: 100%;
-    background-color: $color-blue-dark;
-    margin: 20px 0;
-	main {
-        padding: 20px 0;
     }
 }
 
@@ -372,9 +367,7 @@ footer {
     cursor: pointer;  /// finger shown to let ppl know you can click it
     padding: 2px;
     width: 100%;
-    text-align: left;
     outline: none;
-    //font-size: 15px;
 }
 
 .active, .collapsible:hover {
@@ -395,4 +388,15 @@ a.indexable {
     visibility: hidden;
 }
 
+/*
+ * Index
+ */
 
+.indexed-content {
+    margin-left: $index-menu-width;
+}
+
+#whiskIndex {
+    background-color: lightgray;
+    width: $index-menu-width;
+}

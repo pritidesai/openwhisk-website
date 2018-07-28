@@ -10,7 +10,8 @@
         background-size: contain;
     }
     .header-section-logo {
-        display: table-cell;
+        //display: table-cell;
+            display: block;
     }
     .header-section-text-links {
         display: table-cell;
@@ -31,6 +32,10 @@
     }
 
     #whiskNodes {
+
+        padding-left: $whisk-nodes-padding-tablet-X;
+        padding-right: $whisk-nodes-padding-tablet-X;
+
         h3 {
             text-align: left;
             margin-bottom: 18px;
