@@ -11,15 +11,6 @@ button {
     cursor: pointer;
 }
 
-ul, li {
-    list-style: none;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
 a {
     text-decoration: none;
 }
@@ -28,22 +19,6 @@ a {
 .clear {
     display: block;
     clear: both;
-}
-
-.light-text {
-    color: $color-white;
-}
-
-.right {
-    float: right;
-}
-
-.left {
-    float: left;
-}
-
-.center {
-    text-align: center;
 }
 
 //mixins

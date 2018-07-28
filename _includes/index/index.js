@@ -17,3 +17,12 @@ function applyCollapsible() {
       });
     }
 }
+
+function openIndex() {
+          console.log("openIndex")
+  document.getElementById("index").style.display = "block";
+}
+function closeIndex() {
+            console.log("closeIndex")
+  document.getElementById("index").style.display = "none";
+}

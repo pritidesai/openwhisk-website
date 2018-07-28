@@ -39,6 +39,7 @@ $color-logo-deeper-aquamarine: #6eedd8;
  * Layout Colors
  */
 
+$color-fg-base-light-text: ghostwhite;
 $color-bg-base-main: white;
 $color-bg-base-image-wrapper: white;
 $color-bg-base-content: ghostwhite;
@@ -58,6 +59,12 @@ $color-header-icon-bg: $color-blue-gray-dark;
 $color-header-icon-border: $color-logo-deeper-aquamarine;
 $color-header-icon-border: white;
 $color-header-icon-bg-image: transparent;
+
+$color-menu-collapsible-fg: white;
+$color-menu-collapsible-bg: #4d0000;
+$color-menu-collapsible-border: orange; // #1a0000;
+$color-menuitem-collapsible-bg: #eedddd;
+$color-menuitem-collapsible-border: 1px solid yellow;
 
 /*
  * Layout Colors (DEBUG)
