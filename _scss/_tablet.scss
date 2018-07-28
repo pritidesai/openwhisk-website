@@ -40,16 +40,16 @@
             margin-bottom: 18px;
         }
         main {
-            background: $color-bg-tablet-main;
-            position: relative;
             clear: both;
             display: table;
+            background: $color-bg-tablet-main;
+            position: relative;
 
             .content {
                 display: table-cell;
-                // Margins do not work on table-cell types, must use border
-                border: $color-bg-tablet-content-border;
                 position: relative;
+                // top, right, bottom, left
+                padding: 10px 20px 10px 20px;
                 align: center;
                 width: 50%;
             }

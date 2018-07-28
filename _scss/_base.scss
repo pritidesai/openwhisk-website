@@ -237,20 +237,24 @@ pre {
     color: $color-blue-dark;
 
     main {
+        display: table;
         background: $color-bg-base-main;
         margin-bottom: $whisk-nodes-padding-base-Y;
+        // TODO: explore why we need this value still
         min-height: 200px;
-        display: table;
     }
     .content {
         background: $color-bg-base-content;
-        margin: 10px 10px 10px 10px;
+        // Provide for space around content's text
+        padding: 10px 10px 10px 10px;
+        // Provide a space between image and content
+        margin-top: 20px;
         height: 100%;
     }
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
         display:table-header-group;
-        top: 0;
+        margin: 10px 10px 10px 10px;
         img {
             width: 100%;
             height: 100%;
