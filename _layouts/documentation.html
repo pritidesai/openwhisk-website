@@ -70,19 +70,16 @@ layout: default
     <main id="doc">
         <div class="content">
             <h3 id="openwhisk_deployment">OpenWhisk Deployment</h3>
-            <img src="https://cdn.thenewstack.io/media/2017/02/2ae03e6a-ow-arch-2.png">
+            <img src="https://raw.githubusercontent.com/apache/incubator-openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png" alt="OpenWhisk Architecture"/>
             <p>
                 The above diagram depicts the high-level architecture of OpenWhisk. From Nginx to Kafka to Docker,
                 multiple technologies are powering Apache OpenWhisk - Open Source Serverless Cloud Platform.
+                You can read about the list of OpenWhisk components and its internal flow of processing
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">here</a>.
+            </p>
+            <p>
                 OpenWhisk supports different installation methods for core OpenWhisk components.
                 You can choose one of the following deployment methods based on your platform:
-            </p>
-            <h4 id="deploy_kubernetes">Kubernetes</h4>
-            <p>
-                OpenWhisk can be installed on Minikube, or on a managed Kubernetes cluster provisioned from a public cloud provider,
-                or on a Kubernetes cluster you manage yourself. Please refer to
-                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a>
-                for detailed deployment instructions.
             </p>
             <h4 id="deploy_docker_compose">Docker Compose</h4>
             <p>
@@ -95,6 +92,13 @@ make quick-start</pre>
                 </div>
                 For more detailed instructions, see the
                 <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
+            </p>
+            <h4 id="deploy_kubernetes">Kubernetes</h4>
+            <p>
+                OpenWhisk can be installed on Minikube, or on a managed Kubernetes cluster provisioned from a public cloud provider,
+                or on a Kubernetes cluster you manage yourself. Please refer to
+                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a>
+                for detailed deployment instructions.
             </p>
             <h4 id="deploy_mesos">Mesos</h4>
             <p>
@@ -133,9 +137,12 @@ make quick-start</pre>
     <main id="doc">
         <div class="content">
             <h3 id="deployment_admin">Administrative Operations</h3>
-            <ul>
-                <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
-            </ul>
+            <p>
+                This section contains a list of resources which can be utilized to administer the running OpenWhisk instance.
+                <ul>
+                    <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
+                </ul>
+            </p>
         </div>
     </main>
 
@@ -191,12 +198,12 @@ make quick-start</pre>
                             <li><a href="#python-runtime">Python Runtime</a></li>
                             <li><a href="#python-other-resources">Other Resources</a></li>
                         </ul>
-                        <li><a href="#docker">Docker</a></li>
+                        <!--li><a href="#docker">Docker</a></li>
                         <ul>
                             <li>Zip Action</li>
                             <li>SDK (Writing Your Own Runtime)</li>
                             <li>Other Resources</li>
-                        </ul>
+                        </ul-->
                         <li><a href="#go">Go</a></li>
                         <ul>
                             <li><a href="#go-actions">Creating and Invoking Action</a></li>
@@ -235,7 +242,10 @@ make quick-start</pre>
     <main id="doc">
         <div class="content">
             <h4 id="pre-requisites">Developers Pre-requisites</h4>
-            <p>pre-requisite goes</p>
+            <p>Please make sure you have access to working instance of OpenWhisk. If not, refer to
+            <a href="#openwhisk_deployment">OpenWhisk Deployment</a>
+            for detailed instructions on how to install and configure OpenWhisk.
+            </p>
         </div>
     </main>
 
@@ -244,45 +254,35 @@ make quick-start</pre>
         <div class="content">
             <h4 id="using-openwhisk">Using OpenWhisk</h4>
             <p></p>
+            <h5 id="wsk-cli">Configure the wsk CLI</h5>
+            <p>
+                OpenWhisk offers wsk Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
+            </p>
             <ul>
-                <!--li>
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">How to write an action?</a>
-                </li-->
-                <li id="wsk-cli">
-                    <strong>Configure the wsk CLI</strong>
-                    With Apache OpenWhisk you can easily create and run actions, or connect to other actions. Use the
-                    <a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/README.md">OpenWhisk Command Line Interface (CLI)</a>,
-                    target your Apache OpenWhisk instance, and run your first action in seconds.
+                <li>
+                    <strong>Download the wsk CLI:</strong>
+                    Download wsk binary for your local environment into a location in your shell path from
+                    <a href="https://github.com/apache/incubator-openwhisk-cli/releases">here</a>.
                 </li>
-                <!--li>
-                    <strong>OpenWhisk API V1 Swagger:</strong>
-                    <a href="https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json">Here</a>
-                    is the swagger file for OpenWhisk API V1.
-                </li-->
-                <li id="wskdeploy">
-                    <strong>Whisk Deploy:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
+                <li>To get the CLI command help, execute the following command:</li>
+                <div class="terminal">
+<pre>wsk --help</pre>
+                </div>
+                <li>Authenticate wsk CLI</li>
+                You can configure wsk CLI to use your OpenWhisk credentials in few different ways:
+            </ul>
+            <h5 id="wskdeploy">Whisk Deploy</h5>
+                <p>
+                <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
                     is an utility to help deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command.
-                </li>
-                <li id="rest-api">
-                   <strong>OpenWhisk REST API</strong>
-                    After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
+                </p>
+                <h5 id="rest-api">OpenWhisk REST API</h5>
+                <p>
+                After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
                     For more details about the APIs for actions, activations, packages, rules, and triggers, see the
                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
                    documentation.
-                </li>
-                <!--li>
-                    <strong>API Gateway:</strong>
-                    OpenWhisk supports
-                    <a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/README.md">API Gateway</a>
-                    based on OpenResty and Nginx.
-                </li>
-                <li>
-                    <strong>OpenWhisk Catalog:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/README.md">OpenWhisk Catalog</a>
-                    maintains the package catalog of openwhisk. OpenWhisk package catalog gives you an easy way to enhance your app with useful capabilities,
-                    and to access external services in the ecosystem.
-                </li-->
+                </p>
                 <li id="openwhisk-clients"><strong>OpenWhisk Clients:</strong></li>
                 <ul>
                     <li id="javascript-client">
