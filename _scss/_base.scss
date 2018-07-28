@@ -207,15 +207,6 @@ pre {
 //  }
 }
 
-//#docs {
-//    #whiskHeader {
-//        h1, h5 {
-//            padding-left: $full-width-paddingX;
-//            padding-right: $full-width-paddingX;
-//        }
-//    }
-//}
-
 #whiskHeader {
     background-color: $color-blue-dark;
     color: $color-white;
@@ -229,11 +220,11 @@ pre {
 #home {
 	#whiskHeader {
         // TODO: explore the value of these styles for spacing
-		margin-bottom: 0;
-		padding-bottom: 1px;
+		//margin-bottom: 10px;
+		//padding-bottom: 1px;
 		main {
-			padding: 0 10px;
-            margin-bottom: 10px;
+			//padding: 0 10px;
+            //margin-bottom: 10px;
         }
     }
 }
@@ -291,6 +282,8 @@ pre {
     }
 }
 
+// TODO: change this name to be something descriptive based on usage
+// (i.e., footer text) and/or style that does not use "mice"
 #miceType {
 	clear: both;
 	font-size: 11px;
@@ -381,19 +374,19 @@ pre {
     background-color: #f1f1f1;
 }
 
-a.indexable {
-    display: block;
-    position: relative;
-    top: -100px;
-    visibility: hidden;
-}
-
 /*
  * Index
  */
 
 .indexed-content {
     margin-left: $index-menu-width;
+}
+
+a.indexable {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
 }
 
 #whiskIndex {
