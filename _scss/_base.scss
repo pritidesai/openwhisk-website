@@ -353,6 +353,7 @@ pre {
     cursor: pointer;  // finger shown to let ppl know you can click it
     width: 100%;
     outline: none;
+    padding-left: 10px;
 }
 
 .collapsible-toggle:hover {
@@ -369,10 +370,6 @@ pre {
 /*
  * Index
  */
-
-.indexed-content {
-    margin-left: $index-menu-width;
-}
 
 // Need to create custom anchors that are aware of our fixed header
 // (i.e., position below it on click)
@@ -445,5 +442,7 @@ a.indexable {
         margin-left: 4px;
     }
 
-
+    li.collapsible-content {
+    background-color: green;
+    }
 }
