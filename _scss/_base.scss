@@ -58,17 +58,6 @@ pre {
     text-decoration: none;
 }
 
-//.footer-button {
-//	display: inline-block;
-//	border-radius: 6px;
-//	padding: 0 20px;
-//	line-height: 40px;
-//	color: $color-blue-dark;
-//	background-color: $color-white;
-//	text-decoration: none;
-//    font-weight: 600;
-//}
-
 .header {
   display: table;
   background-color: $color-header-bg;
@@ -449,9 +438,8 @@ a.indexable {
     }
 
     li {
-        background-color: $color-menuitem-collapsible-bg;
+        background-color: $color-index-item-bg;
         font-size: 9pt;
-        //height: 40px;
         border: $index-item-border;
         padding-left: 4px;
         margin-left: 4px;

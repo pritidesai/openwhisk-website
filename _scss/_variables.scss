@@ -166,10 +166,21 @@ $color-terminal-fg: white;
 
 $index-menu-width: 200px;
 
+$color-index-bg: white;
+$color-index-fg: inherit;
+$color-index-border: transparent;
+$color-index-list-bg: transparent;
+$color-index-list-border: transparent;
+$color-index-item-bg: transparent;
+$color-index-item-border: transparent;
+
+$index-border: 0px solid $color-index-list-border;
+$index-item-border: 0px solid $color-index-item-border;
+
+/*
 $color-index-bg: SlateGrey;
 $color-index-fg: darkgray;
 $color-index-border: green;
-
 $color-index-list-bg: pink;
 $color-index-list-border: SpringGreen;
 $color-index-item-bg: ghostwhite;
@@ -177,4 +188,5 @@ $color-index-item-border: red;
 
 $index-border: 1px solid $color-index-list-border;
 $index-item-border: 1px solid $color-index-item-border;
+*/
 
