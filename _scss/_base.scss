@@ -224,20 +224,19 @@ pre {
         display: table;
         background: $color-bg-base-main;
         margin-bottom: $whisk-nodes-padding-base-Y;
-        // TODO: explore why we need this value still
-        min-height: 200px;
     }
     .content {
         background: $color-bg-base-content;
         // Provide for space around content's text
         padding: 10px 10px 10px 10px;
-        // Provide a space between image and content
+        // Provide a space between image and content when vertical
         margin-top: 20px;
         height: 100%;
     }
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
         display:table-header-group;
+        // TODO: make variables
         margin: 10px 10px 10px 10px;
         img {
             width: 100%;
@@ -249,8 +248,10 @@ pre {
         display: block;
         margin-left: auto;
         margin-right: auto;
+
         // These values prevent uneven scaling of images sizes based upon max. sizes
         // of the image-wrapper container
+        // TODO: Make variables
         max-height: 220px;
         max-width: 556px;
     }
@@ -417,6 +418,7 @@ a.indexable {
 
     ul {
         background-color: $color-index-list-bg;
+        font-size: $index-menu-font-size;
 
         //list-style-type: square;
         //list-style-position: inside;
@@ -436,13 +438,18 @@ a.indexable {
 
     li {
         background-color: $color-index-item-bg;
-        font-size: 9pt;
         border: $index-item-border;
         padding-left: 4px;
+        padding-top: 2px;
+        padding-bottom: 2px;
         margin-left: 4px;
     }
 
-    li.collapsible-content {
-    background-color: green;
+    a {
+        text-decoration: none;
     }
+
+    a:visited {color:$color-index-fg;}  /* visited link */
+    a:hover {color: $color-index-fg;}  /* mouse over link */
+    a:active {color: $color-index-fg;}  /* selected link */
 }

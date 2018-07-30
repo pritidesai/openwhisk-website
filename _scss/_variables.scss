@@ -6,7 +6,7 @@ $media-size-tablet-start: 920px;
 $media-size-desktop-start: 1000px;
 
 // Allow for a fixed top banner on all content pages
-$whisk-header-base-padding-top: 180px;
+$whisk-header-base-padding-top: 160px;
 $whisk-header-tablet-padding-top: 80px;
 
 // Adjust this value to control spacing around "whiskNodes" sections
@@ -165,9 +165,10 @@ $color-terminal-fg: white;
  */
 
 $index-menu-width: 200px;
+$index-menu-font-size: 10pt;
 
 $color-index-bg: white;
-$color-index-fg: inherit;
+$color-index-fg: mediumgray;
 $color-index-border: transparent;
 $color-index-list-bg: transparent;
 $color-index-list-border: transparent;
@@ -176,6 +177,10 @@ $color-index-item-border: transparent;
 
 $index-border: 0px solid $color-index-list-border;
 $index-item-border: 0px solid $color-index-item-border;
+
+/*
+ * Index Colors (DEBUG)
+ */
 
 /*
 $color-index-bg: SlateGrey;
@@ -189,4 +194,3 @@ $color-index-item-border: red;
 $index-border: 1px solid $color-index-list-border;
 $index-item-border: 1px solid $color-index-item-border;
 */
-
