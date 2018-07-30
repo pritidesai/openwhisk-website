@@ -12,49 +12,59 @@ layout: default
         </div>
     </main>
 </section>
-<!--
-<div id="whiskIndex" class="index">
-  <ul id="menu">
-    <li><a href="#community">Community</a></li>
 
-    <li><a href="#social">Social Media</a>
-    <ul class="">
-      <li><a href="#">Slack</a></li>
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">YouTube</a></li>
-    </ul>
+<div id="whiskIndexedLayout">
 
-    </li>
-      <li><a href="#mailing-lists">Mailing Lists</a></li>
-      <ul class="">
-        <li><a href="#">3.1 Developer</a></li>
-        <li><a href="#">3.2 Private</a></li>
+  <!-- ********** -->
+  <!-- page index -->
+  <!-- ********** -->
+  <div id="whiskIndex">
+    <ul>
+      <li><a href="#community">Community</a></li>
+
+      <!-- Social Media -->
+      <li class="collapsible-toggle"><a href="#social">Social Media</a></li>
+      <ul class="collapse-content">
+        <li><a href="#">Slack</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">YouTube</a></li>
       </ul>
-    </li>
 
-    <li><a href="#wiki">Wiki</a>
-    <ul class="">
-      <li><a href="#">3.1 Contributing</a></li>
-      <li><a href="#">3.2 Proposals</a></li>
+      <!-- Mailing lists -->
+      <li class="collapsible-toggle"><a href="#mailing-lists">Mailing Lists</a></li>
+      <ul class="collapse-content">
+        <li><a href="#">Developer</a></li>
+        <li><a href="#">Private</a></li>
+      </ul>
+
+      <!-- Project Wiki -->
+      <li class="collapsible-toggle"><a href="#wiki">Project Wiki</a></li>
+      <ul class="collapse-content">
+        <li><a href="#">Contributing</a></li>
+        <li><a href="#">Proposals</a></li>
+      </ul>
+
+      <!-- Supporters -->
+      <li class="collapsible-toggle"><a href="#supporters">Supporters</a></li>
+      <ul class="collapse-content">
+        <li><a href="#">Providers</a></li>
+        <li><a href="#">Supporters</a></li>
+      </ul>
+
     </ul>
-    </li>
+  </div>
 
-    <li><a href="#supporters">Supporters</a>
-    <ul class="">
-      <li><a href="#">4.1 Providers</a></li>
-      <li><a href="#">4.2 Supporters</a></li>
-    </ul>
-    </li>
-  </ul>
-</div>
--->
-
-<!-- style="indexed-content" class="collapsible" -->
 <section id="whiskNodes">
-    <h2 >Community</h2>
-    <div>
-      <p>The Apache OpenWhisk community attempts to engage its users and developers in as many channels as we are able. Please find and subscribe to the ones that are right for you!</p>
+
+    <div class="content">
+      <a class="indexable" id="community"></a>
+      <h2>Community</h2>
+      <!-- <h2 class="collapsible-toggle">Community</h2> -->
+      <div class="collapsible-content">
+        <p>The Apache OpenWhisk community attempts to engage its users and developers in as many channels as we are able. Please find and subscribe to the ones that are right for you!</p>
+      </div>
     </div>
+
     <main id="doc">
         <div class="content">
             <a class="indexable" id="social"></a>
@@ -75,7 +85,8 @@ layout: default
         </div>
     </main>
     <main id="doc">
-        <div class="content" id="mailing-lists">
+        <div class="content">
+            <a class="indexable" id="mailing-lists"></a>
             <h4>Mailing Lists</h4>
             <br>
             <h5>How to join the Apache OpenWhisk mailing list<h5>
@@ -92,7 +103,8 @@ layout: default
         </div>
     </main>
     <main id="doc">
-        <div class="content" id="wiki">
+        <div class="content">
+            <a class="indexable" id="wiki"></a>
             <h4>Project Wiki</h4>
             <p>The project maintains a <a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki">Confluence Wiki</a> site that provides the community a place to share their thoughts about and collaborate around any aspect of the project; whether it's about the platform architecture, an existing or planned feature or about its use cases and integrations. Examples include:</p>
             <ul>
@@ -109,7 +121,8 @@ layout: default
     </main>
 
     <main id="doc">
-        <div class="content" id="supporters">
+        <div class="content">
+            <a class="indexable" id="supporters"></a>
             <h4>Supporters</h4>
             <p>The following companies and organizations have acknowledged support of the Apache OpenWhisk project as contributors or users of the technology.</p>
             <div class="flow-columns">
@@ -230,6 +243,8 @@ layout: default
     </main>
 
 </section>
+
+</div>
 
 <!-- contact us to let us know of events, blah
 <p>The Apache Software Foundation does not endorse listed events. Get in touch with us to suggest event listings. See social media https://openwhisk.apache.org/social</p>

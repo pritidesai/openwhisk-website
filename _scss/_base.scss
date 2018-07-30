@@ -57,16 +57,6 @@ pre {
 	background-color: $color-blue-dark;
     text-decoration: none;
 }
-.footer-button {
-	display: inline-block;
-	border-radius: 6px;
-	padding: 0 20px;
-	line-height: 40px;
-	color: $color-blue-dark;
-	background-color: $color-white;
-	text-decoration: none;
-    font-weight: 600;
-}
 
 .header {
   display: table;
@@ -234,20 +224,19 @@ pre {
         display: table;
         background: $color-bg-base-main;
         margin-bottom: $whisk-nodes-padding-base-Y;
-        // TODO: explore why we need this value still
-        min-height: 200px;
     }
     .content {
         background: $color-bg-base-content;
         // Provide for space around content's text
         padding: 10px 10px 10px 10px;
-        // Provide a space between image and content
+        // Provide a space between image and content when vertical
         margin-top: 20px;
         height: 100%;
     }
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
         display:table-header-group;
+        // TODO: make variables
         margin: 10px 10px 10px 10px;
         img {
             width: 100%;
@@ -259,8 +248,10 @@ pre {
         display: block;
         margin-left: auto;
         margin-right: auto;
+
         // These values prevent uneven scaling of images sizes based upon max. sizes
         // of the image-wrapper container
+        // TODO: Make variables
         max-height: 220px;
         max-width: 556px;
     }
@@ -356,18 +347,18 @@ pre {
  * Expandable/Collapsible
  */
 
-.collapsible {
-    background-color: $color-menu-collapsible-bg;
+.collapsible-toggle {
     color: $color-menu-collapsible-fg;
-    border: $color-menuitem-collapsible-border;
-    cursor: pointer;  /// finger shown to let ppl know you can click it
-    padding: 2px;
+    background-color: $color-menu-collapsible-bg;
+    border: 1px solid $color-menuitem-collapsible-border;
+    cursor: pointer;  // finger shown to let ppl know you can click it
     width: 100%;
     outline: none;
+    padding-left: 10px;
 }
 
-.active, .collapsible:hover {
-    background-color: #555;
+.collapsible-toggle:hover {
+    background-color: $color-menu-collapsible-hover-bg;
 }
 
 .collapse-content {
@@ -381,10 +372,8 @@ pre {
  * Index
  */
 
-.indexed-content {
-    margin-left: $index-menu-width;
-}
-
+// Need to create custom anchors that are aware of our fixed header
+// (i.e., position below it on click)
 a.indexable {
     display: block;
     position: relative;
@@ -392,7 +381,75 @@ a.indexable {
     visibility: hidden;
 }
 
+#whiskIndexedLayout {
+    display: table;
+    // Note: Padding is coming from #doc ??
+    //padding-top: $whisk-nodes-padding-base-Y;
+
+    #whiskIndex {
+        vertical-align: top;
+
+        // TEST
+        display: float;
+        position: fixed;
+        top: 80px;
+        left: 0px;
+        width: 200px;
+        border: $index-border;
+        z-index: 6888;
+
+        // Note: Cannot set height to 100% as it overlaps footer
+        //height: 100%;
+    }
+
+    #whiskNodes {
+       display: table-cell;
+       // NOTE: margin does not work here, must use left padding
+       padding-left: 220px;
+    }
+}
+
 #whiskIndex {
-    background-color: lightgray;
+    background-color: $color-index-bg;
+    color: $color-index-fg;
     width: $index-menu-width;
+    // Pad the overall index <ul> (and not all the nested <ul>s)
+    padding: 10px;
+
+    ul {
+        background-color: $color-index-list-bg;
+        font-size: $index-menu-font-size;
+
+        //list-style-type: square;
+        //list-style-position: inside;
+        //list-style-image: url('x.png')
+        //list-style: square inside url("sqpurple.gif");
+        list-style-type: none;
+        list-style-position: inside;
+
+        // Override <ul> defaults:
+        // default margin: 16px (top and bottom)
+        margin: 0px;
+        padding-left: 8px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    li {
+        background-color: $color-index-item-bg;
+        border: $index-item-border;
+        padding-left: 4px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-left: 4px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {color:$color-index-fg;}  /* visited link */
+    a:hover {color: $color-index-fg;}  /* mouse over link */
+    a:active {color: $color-index-fg;}  /* selected link */
 }
