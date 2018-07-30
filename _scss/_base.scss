@@ -356,7 +356,7 @@ pre {
  * Expandable/Collapsible
  */
 
-.collapsible {
+.collapsible-toggle {
     background-color: $color-menu-collapsible-bg;
     color: $color-menu-collapsible-fg;
     border: $color-menuitem-collapsible-border;
@@ -366,7 +366,7 @@ pre {
     outline: none;
 }
 
-.active, .collapsible:hover {
+.collapsible-toggle:hover {
     background-color: #555;
 }
 
@@ -385,6 +385,8 @@ pre {
     margin-left: $index-menu-width;
 }
 
+// Need to create custom anchors that are aware of our fixed header
+// (i.e., position below it on click)
 a.indexable {
     display: block;
     position: relative;
@@ -392,7 +394,67 @@ a.indexable {
     visibility: hidden;
 }
 
+#whiskIndexedLayout {
+    display: table;
+    // Note: Padding is coming from #doc ??
+    //padding-top: $whisk-nodes-padding-base-Y;
+
+    #whiskIndex {
+        //display: table-cell;
+        vertical-align: top;
+
+        // TEST
+        display: float;
+        position: fixed;
+        top: 80px;
+        left: 0px;
+        width: 200px;
+        border: 3px solid #73AD21;
+        z-index: 8888;
+    }
+
+    #whiskNodes {
+       display: table-cell;
+       background: lightgreen;
+    }
+}
+
 #whiskIndex {
-    background-color: lightgray;
+    background-color: yellow;
     width: $index-menu-width;
+    // Pad the overall index <ul> (and not all the nested <ul>s)
+    padding: 10px;
+
+    ul {
+        //list-style-type: square;
+        //list-style-position: inside;
+        //list-style-image: url('x.png')
+        //list-style: square inside url("sqpurple.gif");
+        list-style-type: none;
+        list-style-position: inside;
+        vertical-align: top;
+        background: pink;
+        // Override <ul> defaults:
+        // default margin: 16px (top and bottom)
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-botton: 0px;
+        padding-left: 14px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    li {
+        background: azure;
+        font-size: 9pt;
+        //height: 40px;
+        border: 1px solid red;
+        padding-left: 4px;
+        margin-left: 4px;
+
+    }
+
+
 }
