@@ -232,7 +232,10 @@ make quick-start</pre>
                     <li><a href="#managing_actions_with_openwhisk_packages">Managing Actions with OpenWhisk Packages</a></li>
                     <li><a href="#connecting_actions_to_event_sources">Connecting Actions to Event Sources</a></li>
                     <li><a href="#exposing_apis_from_actions">Exposing APIs from Actions</a></li>
-                    <li><a href="using_openwhisk_enabled_services">Using OpenWhisk Enabled Services</a></li>
+                    <li><a href="#using_openwhisk_enabled_services">Using OpenWhisk Enabled Services</a></li>
+                    <li><a href="#sample_openwhisk_applications">Sample OpenWhisk Applications</a></li>
+                    <li><a href="#tutorial_and_workshop">Tutorial And Workshop</a></li>
+                    <li><a href="#development_tools">Development Tools</a></li>
                 </ul>
             </div>
         </div>
@@ -291,45 +294,27 @@ wsk list</pre>
 
             </ul>
             <h5 id="wskdeploy">Whisk Deploy</h5>
-                <p>
-                <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
-                    is an utility to help deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command.
-                </p>
-                <h5 id="rest-api">OpenWhisk REST API</h5>
-                <p>
+            <p>
+            <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
+                is an utility to help deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command.
+            </p>
+            <h5 id="rest-api">OpenWhisk REST API</h5>
+            <p>
                 After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
-                    For more details about the APIs for actions, activations, packages, rules, and triggers, see the
-                   <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
-                   documentation.
-                </p>
-                <li id="openwhisk-clients"><strong>OpenWhisk Clients:</strong></li>
-                <ul>
-                    <li id="javascript-client">
-                        <strong>JavaScript Client:</strong>
-                        <a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md" style="font-weight:bold">incubator-openwhisk-client-js</a>
-                        is the JavaScript client library which Provides a wrapper around the OpenWhisk APIs.
-                    </li>
-                     <li id="go-client">
-                        <strong>Go Client:</strong>
-                        <a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">incubator-openwhisk-client-go</a>
-                        is a Go client library to access OpenWhisk API.
-                    </li>
-                    <li id="swift-client">
-                        <strong>Swift Client:</strong>
-                        <a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">incubator-openwhisk-client-swift</a>
-                        is a Swift based client SDK for OpenWhisk which can be used to connect to OpenWhisk.
-                        It partially implements the OpenWhisk REST API and allows you to invoke actions and fire triggers.
-                    </li>
-                    <li id="python-client">
-                        <strong>Python Client:</strong>
-                        There is no official Python client for OpenWhisk at the moment. However,
-                        <a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">incubator-openwhisk-client-python</a>
-                        shows an example of how OpenWhisk REST API can be used directly from Python.
-                    </li>
-                </ul>
+                For more details about the APIs for actions, activations, packages, rules, and triggers, see the
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
+                documentation.
+            </p>
+            <h5 id="openwhisk-clients">OpenWhisk Clients</h5>
+            <p>OpenWhisk provides a wrapper around the OpenWhisk APIs in multiple different languages.:</p>
+            <ul>
+                <li id="javascript-client"><a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md">JavaScript</a></li>
+                <li id="go-client"><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">Go</a></li>
+                <li id="swift-client"><a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">Swift</a></li>
+                <li id="python-client"><a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">Python</a></li>
             </ul>
-            </div>
-        </main>
+        </div>
+    </main>
 
         <!-- actions section -->
         <main id="doc">
@@ -1022,62 +1007,62 @@ function main(array $args) : array
     </main>
     <main id="doc">
         <div class="content">
-            <h4>Sample OpenWhisk Applications:</h4>
-            <ul>
-                <li>
-                    <strong>GitHub Slack Bot:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-GitHubSlackBot/blob/master/README.md">incubator-openwhisk-GitHubSlackBot</a>
-                    demonstrates integration of GitHub Pull Request management with Slack and using Alarms.
-                </li>
-                <li>
-                    <strong>Serverless Message Archiver To Object Storage (MATOS) Sample Application:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-sample-matos/blob/master/README.md">incubator-openwhisk-sample-matos</a>
-                    demonstrates an implementation of a simple pipeline that reads messages from a Message Hub topic and archives them in batches into an Object Storage folder.
-                </li>
-                <li>
-                    <strong>Slackbot for OpenWhisk:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-sample-slackbot/blob/master/README.md">incubator-openwhisk-sample-slackbot</a>
-                    a proof-of-concept Slackbot to invoke OpenWhisk actions.
-                </li>
-                <li>
-                    <strong>openwhisk-slackinvite:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-slackinvite/blob/master/README.md">incubator-openwhisk-slackinvite</a>
-                    implements invitations for Apache OpenWhisk Slack Community.
-                </li>
-            </ul>
-            <h4>Tutorial and Workshop:</h4>
-            <ul>
-                <li>
-                    <strong>OpenWhisk Tutorial:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-tutorial/blob/master/README.md">incubator-openwhisk-tutorial</a>
-                    contains an interactive tutorials for the OpenWhisk CLI.
-                </li>
-                <li>
-                    <strong>OpenWhisk Workshop:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-workshop/blob/master/README.md">incubator-openwhisk-workshop</a>
-                    provides a series of exercises to help you understand how to use OpenWhisk to build serverless applications.
-                </li>
-            </ul>
-            <h4>Development Tools:</h4>
-            <ul>
-                <li>
-                    <strong>The OpenWhisk Debugger:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-debugger/blob/master/client/README.md">incubator-openwhisk-debugger</a>
-                    supports debugging OpenWhisk actions. The debugger will arrange things so that the actions you wish to debug will be offloaded from the main OpenWhisk servers
-                    and instead run locally on your laptop. You can then, from within the debugger, inspect and modify values.
-                </li>
-            </ul>
+            <h4 id="sample_openwhisk_applications">Sample OpenWhisk Applications</h4>
+            <p></p>
+            <h5>GitHub Slack Bot</h5>
+            <p style="padding-left: 2em;">
+                <a href="https://github.com/apache/incubator-openwhisk-GitHubSlackBot/blob/master/README.md">incubator-openwhisk-GitHubSlackBot</a>
+                demonstrates integration of GitHub Pull Request management with Slack and using Alarms.
+            </p>
 
-            <!--p>
-                    Function (incl. packages)
-                    Integrators (database, log, plug-ins, etc.)
-                    Runtime
-                    SDK -> new runtimes
-                    Backend
-                    Controller (Load balancer, Invoker, Kafka, etc.)
-                    Tooling
-                    eskdeploy CLI/clients/etc.
-            </p-->
+            <h5>Serverless Message Archiver To Object Storage (MATOS) Sample Application</h5>
+            <p style="padding-left: 2em;">
+                <a href="https://github.com/apache/incubator-openwhisk-sample-matos/blob/master/README.md">incubator-openwhisk-sample-matos</a>
+                demonstrates an implementation of a simple pipeline that reads messages from a Message Hub topic and archives them in batches into an Object Storage folder.
+            </p>
+
+            <h5>Slackbot for OpenWhisk:</h5>
+            <p style="padding-left: 2em;">
+                <a href="https://github.com/apache/incubator-openwhisk-sample-slackbot/blob/master/README.md">incubator-openwhisk-sample-slackbot</a>
+                a proof-of-concept Slackbot to invoke OpenWhisk actions.
+            </p>
+
+            <h5>openwhisk-slackinvite:</h5>
+            <p style="padding-left: 2em;">
+                <a href="https://github.com/apache/incubator-openwhisk-slackinvite/blob/master/README.md">incubator-openwhisk-slackinvite</a>
+                implements invitations for Apache OpenWhisk Slack Community.
+            </p>
+        </div>
+    </main>
+
+    <main id="doc">
+        <div class="content">
+            <h4 id="tutorial_and_workshop">Tutorial and Workshop</h4>
+            <p></p>
+            <h5>OpenWhisk Tutorial</h5>
+            <p style="padding-left: 2em;">
+                <a href="https://github.com/apache/incubator-openwhisk-tutorial/blob/master/README.md">incubator-openwhisk-tutorial</a>
+                contains an interactive tutorials for the OpenWhisk CLI.
+            </p>
+
+            <h5>OpenWhisk Workshop</h5>
+            <p style="padding-left: 2em;">
+                <a href="https://github.com/apache/incubator-openwhisk-workshop/blob/master/README.md">incubator-openwhisk-workshop</a>
+                provides a series of exercises to help you understand how to use OpenWhisk to build serverless applications.
+            </p>
+        </div>
+    </main>
+
+    <main id="doc">
+        <div class="content">
+            <h4 id="development_tools">Development Tools</h4>
+            <p></p>
+            <h5>The OpenWhisk Debugger</h5>
+            <p style="padding-left: 2em;">
+                <a href="https://github.com/apache/incubator-openwhisk-debugger/blob/master/client/README.md">incubator-openwhisk-debugger</a>
+                supports debugging OpenWhisk actions. The debugger will arrange things so that the actions you wish to debug will be offloaded from the main OpenWhisk servers
+                and instead run locally on your laptop. You can then, from within the debugger, inspect and modify values.
+            </p>
         </div>
     </main>
 </section>
