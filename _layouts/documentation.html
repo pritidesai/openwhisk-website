@@ -279,7 +279,7 @@ make quick-start</pre>
                 </li>
 <pre class="terminal">wsk --help</pre>
                 <p></p>
-                <li><strong>Authenticate wsk CLI</strong></li>
+                <li id="authentication"><strong>Authenticate wsk CLI</strong></li>
                 <p>You can configure wsk CLI to use your OpenWhisk credentials in few different ways:</p>
                 <ul>
                     <li>With wsk property setup</li>
@@ -295,9 +295,38 @@ wsk list</pre>
             </ul>
             <h5 id="wskdeploy">Whisk Deploy</h5>
             <p>
-            <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
+                <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
                 is an utility to help deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command.
             </p>
+            <ul>
+                <li>
+                    Download the Whisk Deploy:
+                    Binaries of <i>wskdeploy</i> are available for download on the project's GitHub release page:
+                    <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases.</a>
+                </li>
+                <p></p>
+                <li>
+                    wskdeploy Help:
+                    Start by verifying the utility can display the command line help:
+                </li>
+                <pre class="terminal">wskdeploy --help</pre>
+                <p></p>
+                <li>
+                    Create Package Manifest File <i>manifest.yaml</i>:
+                    Please refer to the
+                    <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
+                    for all manifest file grammar and syntax. This programming guide has step-by-step instructions for deploying OpenWhisk applications
+                    using wskdeploy.
+                </li>
+                <p></p>
+                <li>Deploy your Application:</li>
+                <ul>
+                    <li><strong>Note:</strong> Before you proceed with the deployment, please make sure you have the authentication setup as described
+                    <a href="#authentication">here</a>.</li>
+                    <li>Deploying an OpenWhisk Manifest file:</li>
+                    <pre class="terminal">wskdeploy -m manifest.yaml</pre>
+                </ul>
+            </ul>
             <h5 id="rest-api">OpenWhisk REST API</h5>
             <p>
                 After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
