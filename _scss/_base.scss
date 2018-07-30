@@ -57,16 +57,17 @@ pre {
 	background-color: $color-blue-dark;
     text-decoration: none;
 }
-.footer-button {
-	display: inline-block;
-	border-radius: 6px;
-	padding: 0 20px;
-	line-height: 40px;
-	color: $color-blue-dark;
-	background-color: $color-white;
-	text-decoration: none;
-    font-weight: 600;
-}
+
+//.footer-button {
+//	display: inline-block;
+//	border-radius: 6px;
+//	padding: 0 20px;
+//	line-height: 40px;
+//	color: $color-blue-dark;
+//	background-color: $color-white;
+//	text-decoration: none;
+//    font-weight: 600;
+//}
 
 .header {
   display: table;
@@ -410,12 +411,17 @@ a.indexable {
         left: 0px;
         width: 200px;
         border: 3px solid #73AD21;
-        z-index: 8888;
+        z-index: 6888;
+
+        // Can not set height to 100% as it overlaps footer
+        //height: 100%;
     }
 
     #whiskNodes {
        display: table-cell;
-       background: lightgreen;
+       // DEBUG
+       //background-color: lightgreen;
+
        // NOTE: margin does not work here, must use left padding
        //margin-left: 200px;
        padding-left: 220px;
@@ -436,7 +442,7 @@ a.indexable {
         list-style-type: none;
         list-style-position: inside;
         vertical-align: top;
-        background: pink;
+
         // Override <ul> defaults:
         // default margin: 16px (top and bottom)
         margin-left: 0px;
@@ -447,10 +453,13 @@ a.indexable {
         padding-right: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
+
+        // DEBUG
+        background-color: pink;
     }
 
     li {
-        background: azure;
+        background-color: Ivory;
         font-size: 9pt;
         //height: 40px;
         border: 1px solid red;
