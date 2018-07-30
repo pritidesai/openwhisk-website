@@ -416,6 +416,9 @@ a.indexable {
     #whiskNodes {
        display: table-cell;
        background: lightgreen;
+       // NOTE: margin does not work here, must use left padding
+       //margin-left: 200px;
+       padding-left: 220px;
     }
 }
 
@@ -440,7 +443,7 @@ a.indexable {
         margin-right: 0px;
         margin-top: 0px;
         margin-botton: 0px;
-        padding-left: 14px;
+        padding-left: 8px;
         padding-right: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
