@@ -9,6 +9,13 @@ $media-size-desktop-start: 1000px;
 $whisk-header-base-padding-top: 180px;
 $whisk-header-tablet-padding-top: 80px;
 
+// Adjust this value to control spacing around "whiskNodes" sections
+$whisk-nodes-padding-base-Y: 30px;
+$whisk-nodes-padding-base-X: 10px;
+$whisk-nodes-padding-tablet-X: 20px;
+
+$whisk-nodes-h3-margin-bottom: 30px;
+
 /*
  * Colors
  */
@@ -39,13 +46,12 @@ $color-logo-deeper-aquamarine: #6eedd8;
  * Layout Colors
  */
 
+$color-fg-base-light-text: ghostwhite;
 $color-bg-base-main: white;
 $color-bg-base-image-wrapper: white;
 $color-bg-base-content: ghostwhite;
 $color-bg-base-img: transparent;
 $color-bg-tablet-main: white;
-$color-bg-tablet-content-border: 11px solid ghostwhite;
-//$color-bg-tablet-image-wrapper-border: 8px solid $color-logo-deeper-aquamarine;
 $color-bg-tablet-image-wrapper-border: 8px solid white;
 $color-bg-desktop-main: white;
 
@@ -59,6 +65,12 @@ $color-header-icon-border: $color-logo-deeper-aquamarine;
 $color-header-icon-border: white;
 $color-header-icon-bg-image: transparent;
 
+$color-menu-collapsible-fg: white;
+$color-menu-collapsible-bg: #4d0000;
+$color-menu-collapsible-border: orange; // #1a0000;
+$color-menuitem-collapsible-bg: #eedddd;
+$color-menuitem-collapsible-border: 1px solid yellow;
+
 /*
  * Layout Colors (DEBUG)
  */
@@ -69,8 +81,7 @@ $color-bg-base-content: ghostwhite;
 $color-bg-base-image-wrapper: green;
 $color-bg-base-img: yellow;
 $color-bg-tablet-main: magenta;
-$color-bg-tablet-content-border: 11px solid orange;
-$color-bg-tablet-image-wrapper-border: 11px solid $color-logo-deeper-aquamarine;
+$color-bg-tablet-image-wrapper-border: 8px solid $color-logo-deeper-aquamarine;
 $color-bg-desktop-main: darkviolet;
 
 $color-header-bg: gold;
@@ -138,9 +149,6 @@ $full-width-paddingX: 10px;
 $main-width: 100%;
 $main-max-width: 100%;
 
-// Adjust this value to control spacing between <main> content sections
-$whisk-nodes-padding-Y: 30px;
-$whisk-nodes-h3-margin-bottom: 30px;
 
 /*
  * Terminal
@@ -148,3 +156,10 @@ $whisk-nodes-h3-margin-bottom: 30px;
 $color-terminal-border: $color-blue-gray-light;
 $color-terminal-bg: #001a33;
 $color-terminal-fg: white;
+
+
+/*
+ * Index
+ */
+
+$index-menu-width: 200px;

@@ -10,7 +10,7 @@
         background-size: contain;
     }
     .header-section-logo {
-        display: table-cell;
+        display: block;
     }
     .header-section-text-links {
         display: table-cell;
@@ -21,9 +21,8 @@
     }
 
     footer {
-        nav {
-            text-align: center;
-        }
+        // top-bottom, left-right
+        padding: 0px 20px;
     }
 
     #whiskHeader {
@@ -31,21 +30,25 @@
     }
 
     #whiskNodes {
+
+        padding-left: $whisk-nodes-padding-tablet-X;
+        padding-right: $whisk-nodes-padding-tablet-X;
+
         h3 {
             text-align: left;
             margin-bottom: 18px;
         }
         main {
-            background: $color-bg-tablet-main;
-            position: relative;
             clear: both;
             display: table;
+            background: $color-bg-tablet-main;
+            position: relative;
 
             .content {
                 display: table-cell;
-                // Margins do not work on table-cell types, must use border
-                border: $color-bg-tablet-content-border;
                 position: relative;
+                // top, right, bottom, left
+                padding: 10px 20px 10px 20px;
                 align: center;
                 width: 50%;
             }

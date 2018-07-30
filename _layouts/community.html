@@ -2,35 +2,62 @@
 layout: default
 ---
 <!--
-#
-# Licensed to the Apache Software Foundation (ASF) under one or more
-# contributor license agreements.  See the NOTICE file distributed with
-# this work for additional information regarding copyright ownership.
-# The ASF licenses this file to You under the Apache License, Version 2.0
-# (the "License"); you may not use this file except in compliance with
-# the License.  You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
 -->
+
 <section id="whiskHeader" class="light-text bot-bar">
     <main>
         <div>
         </div>
     </main>
 </section>
+<!--
+<div id="whiskIndex" class="index">
+  <ul id="menu">
+    <li><a href="#community">Community</a></li>
 
+    <li><a href="#social">Social Media</a>
+    <ul class="">
+      <li><a href="#">Slack</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">YouTube</a></li>
+    </ul>
+
+    </li>
+      <li><a href="#mailing-lists">Mailing Lists</a></li>
+      <ul class="">
+        <li><a href="#">3.1 Developer</a></li>
+        <li><a href="#">3.2 Private</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#wiki">Wiki</a>
+    <ul class="">
+      <li><a href="#">3.1 Contributing</a></li>
+      <li><a href="#">3.2 Proposals</a></li>
+    </ul>
+    </li>
+
+    <li><a href="#supporters">Supporters</a>
+    <ul class="">
+      <li><a href="#">4.1 Providers</a></li>
+      <li><a href="#">4.2 Supporters</a></li>
+    </ul>
+    </li>
+  </ul>
+</div>
+-->
+
+<!-- style="indexed-content" class="collapsible" -->
 <section id="whiskNodes">
-    <h2>Community</h3>
-        <p>The Apache OpenWhisk community attempts to engage its users and developers in as many channels as we are able. Please find and subscribe to the ones that are right for you!</p>
+    <h2 >Community</h2>
+    <div>
+      <p>The Apache OpenWhisk community attempts to engage its users and developers in as many channels as we are able. Please find and subscribe to the ones that are right for you!</p>
+    </div>
     <main id="doc">
-        <div class="content" id="social">
+        <div class="content">
+            <a class="indexable" id="social"></a>
             <h4>Social Media</h4>
             <p>The Apache OpenWhisk project is active on several social media channels which aim to make it easier for users to get started, ask questions, stay informed and to interact with our community.</p>
             <p>Icons that link to each of the following channels are located in the header of our website and include:</p>
@@ -44,13 +71,14 @@ layout: default
                 <li><a href="https://stackoverflow.com/questions/tagged/openwhisk">Stack Overflow</a>: Ask questions and find answers about how to use OpenWhisk.</li>
                 <li><a href="https://www.slideshare.net/OpenWhisk">SlideShare</a>: Look over slides from many of the presentations from past events.</li>
             </ul>
-            <p>If you wish to engage our communities' Contributors and Committers around project architecture, design and source code, please subscribe to and participate in our developer mailing list as described below.</p>
+            <p>If you wish to engage our community's Contributors and Committers around project architecture, design and source code, please subscribe to and participate in our developer mailing list as described below.</p>
         </div>
     </main>
     <main id="doc">
-        <div class="content" id="Mailing Lists">
+        <div class="content" id="mailing-lists">
             <h4>Mailing Lists</h4>
-            <h5>How to join the Apache OpenWhisk mailing list.<h5>
+            <br>
+            <h5>How to join the Apache OpenWhisk mailing list<h5>
             <p>The Dev Mailing List is where we discuss the development of Apache OpenWhisk. It is <b><i>not</i></b> a place for technical support; if you're looking for help on the project, please try our <a style="font-weight:400;" href="/documentation.html">Documentation</a> page and engage with us on one of the Social Media channels listed above.</p>
             <p>: To subscribe, unsubscribe or post our developer list, send an email message to one of the following addresses:</p>
                 <ul>
@@ -64,7 +92,7 @@ layout: default
         </div>
     </main>
     <main id="doc">
-        <div class="content" id="cwiki">
+        <div class="content" id="wiki">
             <h4>Project Wiki</h4>
             <p>The project maintains a <a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki">Confluence Wiki</a> site that provides the community a place to share their thoughts about and collaborate around any aspect of the project; whether it's about the platform architecture, an existing or planned feature or about its use cases and integrations. Examples include:</p>
             <ul>
