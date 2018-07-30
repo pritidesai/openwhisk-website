@@ -66,9 +66,11 @@ $color-header-icon-border: white;
 $color-header-icon-bg-image: transparent;
 
 $color-menu-collapsible-fg: white;
-$color-menu-collapsible-bg: #4d0000;
-$color-menu-collapsible-border: orange; // #1a0000;
-$color-menuitem-collapsible-bg: #eedddd;
+$color-menu-collapsible-bg: $color-blue-dark;
+$color-menu-collapsible-hover-bg: $color-blue-gray-medium;
+$color-menu-collapsible-border: orange;
+
+$color-menuitem-collapsible-bg: ivory;
 $color-menuitem-collapsible-border: 1px solid yellow;
 
 /*
@@ -163,3 +165,16 @@ $color-terminal-fg: white;
  */
 
 $index-menu-width: 200px;
+
+$color-index-bg: SlateGrey;
+$color-index-fg: darkgray;
+$color-index-border: green;
+
+$color-index-list-bg: pink;
+$color-index-list-border: SpringGreen;
+$color-index-item-bg: ghostwhite;
+$color-index-item-border: red;
+
+$index-border: 1px solid $color-index-list-border;
+$index-item-border: 1px solid $color-index-item-border;
+

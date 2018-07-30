@@ -358,17 +358,16 @@ pre {
  */
 
 .collapsible-toggle {
-    background-color: $color-menu-collapsible-bg;
     color: $color-menu-collapsible-fg;
-    border: $color-menuitem-collapsible-border;
-    cursor: pointer;  /// finger shown to let ppl know you can click it
-    padding: 2px;
+    background-color: $color-menu-collapsible-bg;
+    border: 1px solid $color-menuitem-collapsible-border;
+    cursor: pointer;  // finger shown to let ppl know you can click it
     width: 100%;
     outline: none;
 }
 
 .collapsible-toggle:hover {
-    background-color: #555;
+    background-color: $color-menu-collapsible-hover-bg;
 }
 
 .collapse-content {
@@ -401,7 +400,6 @@ a.indexable {
     //padding-top: $whisk-nodes-padding-base-Y;
 
     #whiskIndex {
-        //display: table-cell;
         vertical-align: top;
 
         // TEST
@@ -410,62 +408,53 @@ a.indexable {
         top: 80px;
         left: 0px;
         width: 200px;
-        border: 3px solid #73AD21;
+        border: $index-border;
         z-index: 6888;
 
-        // Can not set height to 100% as it overlaps footer
+        // Note: Cannot set height to 100% as it overlaps footer
         //height: 100%;
     }
 
     #whiskNodes {
        display: table-cell;
-       // DEBUG
-       //background-color: lightgreen;
-
        // NOTE: margin does not work here, must use left padding
-       //margin-left: 200px;
        padding-left: 220px;
     }
 }
 
 #whiskIndex {
-    background-color: yellow;
+    background-color: $color-index-bg;
+    color: $color-index-fg;
     width: $index-menu-width;
     // Pad the overall index <ul> (and not all the nested <ul>s)
     padding: 10px;
 
     ul {
+        background-color: $color-index-list-bg;
+
         //list-style-type: square;
         //list-style-position: inside;
         //list-style-image: url('x.png')
         //list-style: square inside url("sqpurple.gif");
         list-style-type: none;
         list-style-position: inside;
-        vertical-align: top;
 
         // Override <ul> defaults:
         // default margin: 16px (top and bottom)
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
-        margin-botton: 0px;
+        margin: 0px;
         padding-left: 8px;
         padding-right: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
-
-        // DEBUG
-        background-color: pink;
     }
 
     li {
-        background-color: Ivory;
+        background-color: $color-menuitem-collapsible-bg;
         font-size: 9pt;
         //height: 40px;
-        border: 1px solid red;
+        border: $index-item-border;
         padding-left: 4px;
         margin-left: 4px;
-
     }
 
 
