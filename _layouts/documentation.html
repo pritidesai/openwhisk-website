@@ -254,6 +254,12 @@ make quick-start</pre>
         <div class="content">
             <h4 id="using-openwhisk">Using OpenWhisk</h4>
             <p></p>
+            <p>
+                <a href="#openwhisk_deployment">OpenWhisk Deployment</a>
+                has a guest account configured with the authentication key available at
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest</a>.
+                Also, use the <strong>192.168.33.13</strong> address as the whisk API host.
+            </p>
             <h5 id="wsk-cli">Configure the wsk CLI</h5>
             <p>
                 OpenWhisk offers wsk Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
@@ -264,12 +270,25 @@ make quick-start</pre>
                     Download wsk binary for your local environment into a location in your shell path from
                     <a href="https://github.com/apache/incubator-openwhisk-cli/releases">here</a>.
                 </li>
-                <li>To get the CLI command help, execute the following command:</li>
-                <div class="terminal">
-<pre>wsk --help</pre>
-                </div>
-                <li>Authenticate wsk CLI</li>
-                You can configure wsk CLI to use your OpenWhisk credentials in few different ways:
+                <li>
+                    <strong>CLI Help:</strong>
+                    To get the CLI command help, execute the following command:
+                </li>
+<pre class="terminal">wsk --help</pre>
+                <p></p>
+                <li><strong>Authenticate wsk CLI</strong></li>
+                <p>You can configure wsk CLI to use your OpenWhisk credentials in few different ways:</p>
+                <ul>
+                    <li>With wsk property setup</li>
+                    <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
+<pre class="terminal">wsk property set --apihost &lt;API_HOST&gt; --auth &lt;AUTH_KEY&gt; --namespace guest</pre>
+                    <p>Credentials are stored in <i>~/.wskprops</i>, which you can edit directly if needed.</p>
+                    <li>Environment Variables Setup</li>
+                    <p>Access credentials can be provided using properties file as environment variable:</p>
+<pre class="terminal">export WSK_CONFIG_FILE=&lt;your-config-file&gt;
+wsk list</pre>
+                </ul>
+
             </ul>
             <h5 id="wskdeploy">Whisk Deploy</h5>
                 <p>
