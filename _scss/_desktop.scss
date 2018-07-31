@@ -5,12 +5,11 @@
             background: $color-bg-desktop-main;
 
             .content {
-                width: $media-size-desktop-main-content-width;
+                width: $main-content-width-desktop;
             }
             .image-wrapper {
-                // Note: the image-wrapper will automatically consume the remaining %
+                // Note: the image-wrapper will automatically consume the remaining % (i.e., 40%)
                 // Do NOT set any values here or image scaling will be impacted.
-                //width: 40%
             }
         }
     }

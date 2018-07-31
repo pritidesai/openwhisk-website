@@ -215,7 +215,7 @@ pre {
 
         // NOTE: margin ONLY works in horz. layout and has no impact in vert. layout
         // margin: (top right bottom left)
-        margin: $whisk-nodes-main-image-wrapper-margin-base;
+        margin: $main-image-wrapper-margin-base;
 
         // NOTE: SVG files and the <img> tags do not work well together
         // Important! without this style, the image will not stretch and display properly

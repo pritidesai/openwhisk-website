@@ -46,7 +46,7 @@
                 display: table-cell;
                 vertical-align: top;
                 position: relative;
-                width: $media-size-tablet-main-content-width;
+                width: $main-content-width-tablet;
                 padding: $whisk-nodes-main-content-padding-tablet;
 
                 // No top margin needed when content & image-wrapper are horz.
@@ -56,6 +56,8 @@
                 // Alter to a 'block' display to get side-by-side layout
                 display: block;
                 position: relative;
+
+                // Note: we have a border in side-by-side layout, but do not in vertical layout.
                 border: $color-bg-tablet-image-wrapper-border;
             }
         }
