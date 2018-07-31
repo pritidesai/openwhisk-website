@@ -44,31 +44,21 @@
 
             .content {
                 display: table-cell;
+                vertical-align: top;
                 position: relative;
-                width: $media-size-tablet-main-content-width;
+                width: $main-content-width-tablet;
                 padding: $whisk-nodes-main-content-padding-tablet;
 
                 // No top margin needed when content & image-wrapper are horz.
                 margin-top: 0px;
             }
             .image-wrapper {
-                // Note: table-cell value does not seem to matter here
-                display: table-cell;
-                // Important! "absolute" forces the image-wrapper to appear side-by-side with content
-                position: absolute;
-                width: $media-size-tablet-main-image-wrapper-width;
+                // Alter to a 'block' display to get side-by-side layout
+                display: block;
+                position: relative;
+
+                // Note: we have a border in side-by-side layout, but do not in vertical layout.
                 border: $color-bg-tablet-image-wrapper-border;
-
-                // Fixup border in horz. layout
-                // TODO: see if we can appy this ONLY when image appears on the right side of content
-                border-right-width: 20px;
-            }
-
-            img{
-                // These values prevent uneven scaling of images sizes based upon max. sizes
-                // of the image-wrapper container
-                //max-height: 100px;
-                max-width: 400px;
             }
         }
         h3 {

@@ -1,20 +1,15 @@
 @media screen and (min-width: $media-size-desktop-start) {
 
-//    section, header, footer {
-//        main {
-//            max-width: $media-size-max-width;
-//        }
-//    }
-
     #whiskNodes{
         main {
             background: $color-bg-desktop-main;
 
             .content {
-                width: $media-size-desktop-main-content-width;
+                width: $main-content-width-desktop;
             }
             .image-wrapper {
-                width: media-size-desktop-main-image-wrapper-width;
+                // Note: the image-wrapper will automatically consume the remaining % (i.e., 40%)
+                // Do NOT set any values here or image scaling will be impacted.
             }
         }
     }
