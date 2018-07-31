@@ -105,8 +105,8 @@ layout: default
                     </ul>
                 <li><a href="#managing_actions_with_openwhisk_packages">Managing Actions with OpenWhisk Packages</a></li>
                 <li><a href="#connecting_actions_to_event_sources">Connecting Actions to Event Sources</a></li>
-                <!--li><a href="#exposing_apis_from_actions">Exposing APIs from Actions</a></li>
-                <li><a href="#using_openwhisk_enabled_services">Using OpenWhisk Enabled Services</a></li-->
+                <li><a href="#using_openwhisk_enabled_services">Using OpenWhisk Enabled Services</a></li>
+                <!--li><a href="#exposing_apis_from_actions">Exposing APIs from Actions</a></li-->
                 <li><a href="#sample_openwhisk_applications">Sample OpenWhisk Applications</a></li>
                 <li><a href="#tutorial_and_workshop">Tutorial And Workshop</a></li>
                 <li><a href="#development_tools">Development Tools</a></li>
@@ -1030,44 +1030,6 @@ function main(array $args) : array
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">OpenWhisk Packages</a>
                     for further details.
                 </p>
-            <!--ul>
-                <li>
-                    <strong>Using the Alarm Package:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
-                    is an Apache OpenWhisk alarm package that can be used to create periodic, time-based alarms.
-                </li>
-                <li>
-                    <strong>Using the Cloudant Package:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-package-cloudant/blob/master/README.md">incubator-openwhisk-package-cloudant</a>
-                    enables you to work with a Cloudant database.
-                </li>
-                <li>
-                    <strong>OpenWhisk Package for communication with Kafka:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-package-kafka/blob/master/README.md">incubator-openwhisk-package-kafka</a>
-                    allows you to communicate with Kafka or Message Hub instances for publishing and consuming messages
-                    using native high performance Kafka API.
-                </li>
-                <li>
-                    <strong>OpenWhisk RSS Package:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-package-rss/blob/master/README.md">incubator-openwhisk-package-rss</a>
-                    allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available.
-                </li>
-                <li>
-                    <strong>Using the Deploy Package:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-package-deploy/blob/master/README.md">incubator-openwhisk-package-deploy</a>
-                    offers a convenient way for you to describe and deploy any part of the OpenWhisk programming model using a Manifest file written in YAML.
-                </li>
-                <li>
-                    <strong>OpenWhisk Package Template:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-package-template/blob/master/README.md">incubator-openwhisk-package-template</a>
-                    is a template for Openwhisk Packages, it can be used to build, test and integrate new packages.
-                </li>
-                <li>
-                    <strong>OpenWhisk Package for Jira:</strong>
-                    <a href="https://github.com/apache/incubator-openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
-                    includes actions that interact with JIRA software software development tool used for issue tracking, and project management functions.
-                </li>
-            </ul-->
         </div>
     </main>
     <main id="doc">
@@ -1098,15 +1060,154 @@ function main(array $args) : array
                         <pre>wsk trigger list</pre>
                     </div>
                     <div class="terminal">
-                        <pre>triggers
-                            /someNamespace/locationUpdate                            private</pre>
+<pre>triggers
+/someNamespace/locationUpdate                            private</pre>
                     </div>
+                    <li>Fire the trigger by specifying its name and parameters:</li>
+                    <div class="terminal">
+<pre>wsk trigger fire locationUpdate --param name Bob --param place NYC</pre>
+                    </div>
+                    <div class="terminal">
+<pre>ok: triggered locationUpdate</pre>
+                    </div>
+                    <p>
+                        Firing a trigger like this currently does not do anything. We need to associate this trigger with an action.
+                        This kind of association is called a rule.
+                    </p>
+                </ul>
+            </p>
+            <p>
+                <strong>What are the rules?</strong>
+                Rules are used to associate a trigger with an action. After this kind of association is created, each time
+                a trigger event is fired, the action is invoked.
+                <ul>
+                    <li>Please make sure you have the <i>hello</i> action created. If not, you can follow instruction in the section
+                    <a href="#nodejs-actions">above</a> with the following <i>hello.js</i>.</li>
+                    <div class="terminal">
+<pre>
+function main(params) {
+    return {payload: 'Hello, ' + params.name + ' from ' + params.place};
+}</pre>
+                    </div>
+                    <div class="terminal">
+<pre>wsk action create hello hello.js</pre>
+                    </div>
+                    <div class="terminal">
+<pre>wsk action invoke --result hello --param name Bernie --param place Vermont</pre>
+                    </div>
+                    <div class="terminal">
+<pre>{
+    "payload": "Hello, Bernie from Vermont"
+}</pre>
+                    </div>
+                    <li>Create the rule:</li>
+                    <div class="terminal">
+<pre>wsk rule create myRule locationUpdate hello</pre>
+                    </div>
+                    <div class="terminal">
+<pre>ok: created rule myRule</pre>
+                    </div>
+                    <li>Fire the <i>locationUpdate</i> trigger:</li>
+                    <div class="terminal">
+<pre>wsk trigger fire locationUpdate --param name Bob --param place NYC</pre>
+                    </div>
+                    <div class="terminal">
+<pre>ok: triggered /_/locationUpdate with id abcd...</pre>
+                    </div>
+                    <li>Verify that the action was invoked by checking the activations list:</li>
+                    <div class="terminal">
+<pre>wsk activation list --limit 2</pre>
+                    </div>
+                    <div class="terminal">
+<pre>activations
+1234.... hello
+abcd.... locationUpdate
+</pre>
+                    </div>
+                    <li>Retrieving the trigger activation record:</li>
+                    <div class="terminal">
+<pre>wsk activation result 1234....</pre>
+                    </div>
+                    <div class="terminal">
+<pre>{
+    "payload": "Hello, Bob from NYC"
+}</pre>
+                    </div>
+                    You can see that the hello action received the event payload and returned the expected string.
                 </ul>
             </p>
             <p>
                 Please read
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md#creating-triggers-and-rules">Creating Triggers and Rules</a>
                 for further details.
+            </p>
+        </div>
+    </main>
+
+    <main id="doc">
+        <div class="content">
+            <a class="indexable" id="using_openwhisk_enabled_services"></a>
+            <h4>Using OpenWhisk Enabled Services</h4>
+            <p></p>
+            <p>
+                OpenWhisk offers a catalog of packages which gives you can easy way to enhance your application with
+                useful capabilities, and to access external services in the ecosystem.
+                Examples of external services which are OpenWhisk-enabled include Slack, GitHub, Alarms, etc.
+            </p>
+            <p>
+                The catalog is available as packages under <i>/whisk.system</i> namespace.
+                Using the following command, you can get a list of packages under <i>/whisk.system:</i></li>
+                <div class="terminal">
+<pre>wsk package list /whisk.system</pre>
+                </div>
+                <div class="terminal">
+<pre>packages
+/whisk.system/alarms                                shared
+/whisk.system/system                                shared
+/whisk.system/utils                                 shared
+/whisk.system/samples                               shared
+/whisk.system/slack                                 shared
+/whisk.system/github                                shared
+...
+</pre>
+                </div>
+            </p>
+            <p>
+                Each of the packages under
+                <a href="https://github.com/apache/incubator-openwhisk-catalog#openwhisk-catalog">OpenWhisk Catalog</a>
+                is hosted in a GitHub repo.
+                Please refer to these package repositories for further details:
+                <ul>
+                    <li>
+                        <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
+                        is an Apache OpenWhisk alarm package that can be used to create periodic, time-based alarms.
+                    </li>
+                    <li>
+                        <a href="https://github.com/apache/incubator-openwhisk-package-cloudant/blob/master/README.md">incubator-openwhisk-package-cloudant</a>
+                        enables you to work with a Cloudant database.
+                    </li>
+                    <li>
+                        <a href="https://github.com/apache/incubator-openwhisk-package-kafka/blob/master/README.md">incubator-openwhisk-package-kafka</a>
+                        allows you to communicate with Kafka or Message Hub instances for publishing and consuming messages
+                        using native high performance Kafka API.
+                    </li>
+                    <li>
+                        <a href="https://github.com/apache/incubator-openwhisk-package-rss/blob/master/README.md">incubator-openwhisk-package-rss</a>
+                        allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available.
+                    </li>
+                    <li>
+                        <a href="https://github.com/apache/incubator-openwhisk-package-deploy/blob/master/README.md">incubator-openwhisk-package-deploy</a>
+                        offers a convenient way for you to describe and deploy any part of the OpenWhisk programming model using a Manifest file written in YAML.
+                    </li>
+                    <li>
+                        <a href="https://github.com/apache/incubator-openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
+                        includes actions that interact with JIRA software software development tool used for issue tracking, and project management functions.
+                    </li>
+                    <li>
+                        <a href="https://github.com/apache/incubator-openwhisk-package-template/blob/master/README.md">incubator-openwhisk-package-template</a>
+                        is a template for Openwhisk Packages, it can be used to build, test and integrate new packages.
+                    </li>
+                </ul>
             </p>
         </div>
     </main>
