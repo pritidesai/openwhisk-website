@@ -186,11 +186,12 @@ pre {
 //    background: mediumgray;
 //    color: darkgray;
 //    font-size: 18px;
-//    line-height: 0;
 //    text-indent: 20px;
 //  }
 }
 
+// Header is only shown on the "home" page
+// TODO: add padding to title/tag line for small media
 #whiskHeader {
     background-color: $color-blue-dark;
     color: $color-white;
@@ -198,23 +199,11 @@ pre {
     padding-top: $whisk-header-base-padding-top;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 0;
-}
-
-#home {
-	#whiskHeader {
-        // TODO: explore the value of these styles for spacing
-		//margin-bottom: 10px;
-		//padding-bottom: 1px;
-		main {
-			//padding: 0 10px;
-            //margin-bottom: 10px;
-        }
-    }
+    margin-bottom: $whisk-nodes-padding-base-Y;
 }
 
 #whiskNodes {
-    padding-top: $whisk-nodes-padding-base-Y;
+    // Note: pad only the bottom for each "node" (so we do not double up)
     padding-bottom: $whisk-nodes-padding-base-Y;
     padding-left: $whisk-nodes-padding-base-X;
     padding-right: $whisk-nodes-padding-base-X;
@@ -229,15 +218,19 @@ pre {
         background: $color-bg-base-content;
         // Provide for space around content's text
         padding: 10px 10px 10px 10px;
+        height: 100%;
+
         // Provide a space between image and content when vertical
         margin-top: 20px;
-        height: 100%;
     }
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
         display:table-header-group;
         // TODO: make variables
+        // top right bottom left
         margin: 10px 10px 10px 10px;
+
+        // Important! without this, the image displays larger than 100% (i.e., to its SVG design size)
         img {
             width: 100%;
             height: 100%;
@@ -302,7 +295,7 @@ pre {
 }
 
 /*
- * Supporter logos
+ * TOC
  */
 
 // TODO: Verify we use these
@@ -365,7 +358,7 @@ pre {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 /*
@@ -383,6 +376,8 @@ a.indexable {
 
 #whiskIndexedLayout {
     display: table;
+
+    // TODO: Index needs same top margin as whiskNodes (align with top of first <main> section)
     // Note: Padding is coming from #doc ??
     //padding-top: $whisk-nodes-padding-base-Y;
 
@@ -405,6 +400,7 @@ a.indexable {
     #whiskNodes {
        display: table-cell;
        // NOTE: margin does not work here, must use left padding
+       // TODO: make a (dynamic) variable
        padding-left: 220px;
     }
 }
@@ -429,6 +425,7 @@ a.indexable {
 
         // Override <ul> defaults:
         // default margin: 16px (top and bottom)
+        // TODO: make variables
         margin: 0px;
         padding-left: 8px;
         padding-right: 0px;
@@ -439,6 +436,8 @@ a.indexable {
     li {
         background-color: $color-index-item-bg;
         border: $index-item-border;
+
+        // TODO: make variables
         padding-left: 4px;
         padding-top: 2px;
         padding-bottom: 2px;
