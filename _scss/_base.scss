@@ -12,7 +12,8 @@ section, header {
 
     main {
         width: $main-width;
-        max-width: $main-max-width;
+        // !Important.  Home page scrolls horz. without this width constraint (affected by SVG <img> issues)
+        max-width: $media-size-max-width;;
     }
 }
 
