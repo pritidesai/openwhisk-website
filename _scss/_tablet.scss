@@ -65,11 +65,11 @@
             }
 
             img{
-            // These values prevent uneven scaling of images sizes based upon max. sizes
-            // of the image-wrapper container
-            max-height: 100px;
-            max-width: 200px;
-    }
+                // These values prevent uneven scaling of images sizes based upon max. sizes
+                // of the image-wrapper container
+                //max-height: 100px;
+                //max-width: 200px;
+            }
         }
         h3 {
             text-align: left;

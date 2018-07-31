@@ -225,15 +225,15 @@ pre {
         }
     }
     img{
-            background: $color-bg-base-img;
-            display: table-cell;
-            margin-left: auto;
-            margin-right: auto;
+        background: $color-bg-base-img;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
 
-            // These values prevent uneven scaling of images sizes based upon max. sizes
-            // of the image-wrapper container
-            max-height: $whisk-nodes-main-image-max-height;
-            max-width: $whisk-nodes-main-image-max-width;
+        // These values prevent uneven scaling of images sizes based upon max. sizes
+        // of the image-wrapper container
+        max-height: $whisk-nodes-main-image-max-height;
+        max-width: $whisk-nodes-main-image-max-width;
     }
 
     h3 {
