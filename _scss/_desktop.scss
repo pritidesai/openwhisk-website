@@ -1,36 +1,21 @@
-// Max width of all content, overrides 100% in _base.scss
-$main-max-width: 1280px;
-$main-content-width: 60%;
-$main-image-wrapper-width: 40%;
-
 @media screen and (min-width: $media-size-desktop-start) {
 
-    section, header, footer {
-        main {
-            max-width: $main-max-width;
-        }
-    }
+//    section, header, footer {
+//        main {
+//            max-width: $media-size-max-width;
+//        }
+//    }
 
     #whiskNodes{
         main {
             background: $color-bg-desktop-main;
-            position: relative;
 
             .content {
-                width: $main-content-width;
+                width: $media-size-desktop-main-content-width;
             }
             .image-wrapper {
-                width: $main-image-wrapper-width
+                width: media-size-desktop-main-image-wrapper-width;
             }
-        }
-    }
-
-    // TODO: see if these values are redundant
-    footer {
-        width: 100%;
-        background-color: $color-blue-dark;
-        main {
-            padding: 20px 0;
         }
     }
 }

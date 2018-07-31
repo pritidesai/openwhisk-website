@@ -1,9 +1,11 @@
 @media screen and (min-width: $media-size-tablet-start) {
     p {
+        // TODO: make variables
         font-size: 16px;
         line-height: 24px;
     }
     .header {
+        // TODO: make variables
         height: $header-height;
         padding-bottom: 0px;
         background-position: 10px center;
@@ -22,7 +24,7 @@
 
     footer {
         // top-bottom, left-right
-        padding: 0px 20px;
+        padding: $whisk-footer-base-padding-tablet;
     }
 
     #whiskHeader {
@@ -34,10 +36,6 @@
         padding-left: $whisk-nodes-padding-tablet-X;
         padding-right: $whisk-nodes-padding-tablet-X;
 
-        h3 {
-            text-align: left;
-            margin-bottom: 18px;
-        }
         main {
             clear: both;
             display: table;
@@ -47,18 +45,35 @@
             .content {
                 display: table-cell;
                 position: relative;
-                // top, right, bottom, left
-                padding: 10px 20px 10px 20px;
-                align: center;
-                width: 50%;
+                width: $media-size-tablet-main-content-width;
+                padding: $whisk-nodes-main-content-padding-tablet;
+
+                // No top margin needed when content & image-wrapper are horz.
+                margin-top: 0px;
             }
             .image-wrapper {
+                // Note: table-cell value does not seem to matter here
+                display: table-cell;
+                // Important! "absolute" forces the image-wrapper to appear side-by-side with content
                 position: absolute;
+                width: $media-size-tablet-main-image-wrapper-width;
                 border: $color-bg-tablet-image-wrapper-border;
-                width: 50%;
+
+                // Fixup border in horz. layout
+                // TODO: see if we can appy this ONLY when image appears on the right side of content
+                border-right-width: 20px;
             }
 
+            img{
+                // These values prevent uneven scaling of images sizes based upon max. sizes
+                // of the image-wrapper container
+                //max-height: 100px;
+                max-width: 400px;
+            }
+        }
+        h3 {
+            text-align: left;
+            margin-bottom: 18px;
         }
     }
-
 }

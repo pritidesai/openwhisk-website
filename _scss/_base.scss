@@ -12,7 +12,8 @@ section, header {
 
     main {
         width: $main-width;
-        max-width: $main-max-width;
+        // !Important.  Home page scrolls horz. without this width constraint (affected by SVG <img> issues)
+        max-width: $media-size-max-width;;
     }
 }
 
@@ -31,8 +32,7 @@ section {
 footer {
     width: 100%;
     background-color: $color-blue-dark;
-    // top-bottom, left-right
-    padding: 20px 20px;
+    padding: $whisk-footer-base-padding-base
 }
 
 p {
@@ -173,24 +173,10 @@ pre {
     padding: 4px 4px 4px 8px;
     width: 700px;
     margin-bottom: 10px;
-
-// TODO: simulate a terminal window control bar
-//  &::before {
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    width: 100%;
-//    height: 24px;
-//    margin: 0;
-//    padding: 8px;
-//    background: mediumgray;
-//    color: darkgray;
-//    font-size: 18px;
-//    line-height: 0;
-//    text-indent: 20px;
-//  }
 }
 
+// Header is only shown on the "home" page
+// TODO: add padding to title/tag line for small media
 #whiskHeader {
     background-color: $color-blue-dark;
     color: $color-white;
@@ -198,23 +184,11 @@ pre {
     padding-top: $whisk-header-base-padding-top;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 0;
-}
-
-#home {
-	#whiskHeader {
-        // TODO: explore the value of these styles for spacing
-		//margin-bottom: 10px;
-		//padding-bottom: 1px;
-		main {
-			//padding: 0 10px;
-            //margin-bottom: 10px;
-        }
-    }
+    margin-bottom: $whisk-nodes-padding-base-Y;
 }
 
 #whiskNodes {
-    padding-top: $whisk-nodes-padding-base-Y;
+    // Note: pad only the bottom for each "node" (so we do not double up)
     padding-bottom: $whisk-nodes-padding-base-Y;
     padding-left: $whisk-nodes-padding-base-X;
     padding-right: $whisk-nodes-padding-base-X;
@@ -228,16 +202,24 @@ pre {
     .content {
         background: $color-bg-base-content;
         // Provide for space around content's text
-        padding: 10px 10px 10px 10px;
+        padding: $whisk-nodes-main-content-padding-base;
+        height: 100%;
+
         // Provide a space between image and content when vertical
         margin-top: 20px;
-        height: 100%;
     }
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
-        display:table-header-group;
-        // TODO: make variables
-        margin: 10px 10px 10px 10px;
+        display: table-header-group;
+
+        // NOTE: margin ONLY works in horz. layout and has no impact in vert. layout
+        // margin: (top right bottom left)
+        margin: $whisk-nodes-main-image-wrapper-margin-base;
+
+        // NOTE: SVG files and the <img> tags do not work well together
+        // Important! without this, the image displays larger than 100% (i.e., to its SVG design size)
+        // TODO: SVG have document sizes, you need to preserve the content's aspect ratio
+        // and have the drawing "scale to fit" using the viewBox style on an <svg> element.
         img {
             width: 100%;
             height: 100%;
@@ -246,15 +228,17 @@ pre {
     img{
         background: $color-bg-base-img;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        //margin-left: auto;
+        //margin-right: auto;
+        margin-left: 0px;
+        margin-right: 0px;
 
         // These values prevent uneven scaling of images sizes based upon max. sizes
         // of the image-wrapper container
-        // TODO: Make variables
-        max-height: 220px;
-        max-width: 556px;
+        max-height: $whisk-nodes-main-image-max-height;
+        max-width: $whisk-nodes-main-image-max-width;
     }
+
     h3 {
         margin-bottom: $whisk-nodes-h3-margin-bottom;
     }
@@ -263,17 +247,15 @@ pre {
 #whiskHeader {
 	background-color: $color-blue-dark;
 	h5 {
-        //background: yellow;
         margin-top: 0px;
         margin-bottom: 0px;
-        // This affects the margin below the apparent blue area
+        // TODO: why does this affect the margin below the apparent blue area
         //line-height: 38px;
     }
 }
 
-// TODO: change this name to be something descriptive based on usage
-// (i.e., footer text) and/or style that does not use "mice"
-#miceType {
+// Note: used in footer text
+#tinyType {
 	clear: both;
 	font-size: 11px;
 	line-height: 18px;
@@ -283,6 +265,7 @@ pre {
 #doc {
     position: relative;
     overflow: hidden;
+    // TODO: evaluate this value's effect
     padding-top: 10px;
     text-align: left;
     h1 {
@@ -292,6 +275,7 @@ pre {
         margin: 1%;
     }
     ul, li {
+        // TODO: evaluate
         padding-left: 20px;
         padding-bottom: 10px;
         list-style: disc;
@@ -302,7 +286,7 @@ pre {
 }
 
 /*
- * Supporter logos
+ * TOC
  */
 
 // TODO: Verify we use these
@@ -365,7 +349,7 @@ pre {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 /*
@@ -383,6 +367,8 @@ a.indexable {
 
 #whiskIndexedLayout {
     display: table;
+
+    // TODO: Index needs same top margin as whiskNodes (align with top of first <main> section)
     // Note: Padding is coming from #doc ??
     //padding-top: $whisk-nodes-padding-base-Y;
 
@@ -405,6 +391,7 @@ a.indexable {
     #whiskNodes {
        display: table-cell;
        // NOTE: margin does not work here, must use left padding
+       // TODO: make a (dynamic) variable
        padding-left: 220px;
     }
 }
@@ -429,6 +416,7 @@ a.indexable {
 
         // Override <ul> defaults:
         // default margin: 16px (top and bottom)
+        // TODO: make variables
         margin: 0px;
         padding-left: 8px;
         padding-right: 0px;
@@ -439,6 +427,8 @@ a.indexable {
     li {
         background-color: $color-index-item-bg;
         border: $index-item-border;
+
+        // TODO: make variables
         padding-left: 4px;
         padding-top: 2px;
         padding-bottom: 2px;

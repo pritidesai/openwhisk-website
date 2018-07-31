@@ -1,23 +1,54 @@
 /*
- * Responsive layouts
+ * Responsive media layouts
  */
 
 $media-size-tablet-start: 920px;
 $media-size-desktop-start: 1000px;
+$media-size-max-width: 1280px;
+
+
+// Max width of <main> content elements, overrides 100% in _base.scss
+$media-size-desktop-main-content-width: 60%;
+$media-size-desktop-main-image-wrapper-width: 40%;
+
+$media-size-tablet-main-content-width: 50%;
+$media-size-tablet-main-image-wrapper-width: 50%;
+
 
 // Allow for a fixed top banner on all content pages
 $whisk-header-base-padding-top: 160px;
 $whisk-header-tablet-padding-top: 80px;
 
+// padding (top-bottom, left-right)
+$whisk-footer-base-padding-base: 20px 20px;
+$whisk-footer-base-padding-tablet: 20px 20px;
+
+/*
+ * Main Content
+ */
+
 // Adjust this value to control spacing around "whiskNodes" sections
-$whisk-nodes-padding-base-Y: 30px;
+// TODO: only use -Y on "bottom" of each section, rename to "bottom"
+$whisk-nodes-padding-base-Y: 20px;
 $whisk-nodes-padding-base-X: 10px;
 $whisk-nodes-padding-tablet-X: 20px;
 
+// padding: (top, right, bottom, left)
+$whisk-nodes-main-content-padding-base: 10px 10px 10px 10px;
+$whisk-nodes-main-content-padding-tablet: 10px 20px 10px 20px;
+
+// margin: (top, right, bottom, left)
+$whisk-nodes-main-image-wrapper-margin-base: 10px 10px 10px 10px;
+
+// <img> heights/widths
+$whisk-nodes-main-image-max-height: 220px;
+$whisk-nodes-main-image-max-width: 556px;
+
+// TODO: see if we can eliminate this special case
 $whisk-nodes-h3-margin-bottom: 30px;
 
 /*
- * Colors
+ * Theme Colors
  */
 
 $color-blue-light: #ebf1f9;
