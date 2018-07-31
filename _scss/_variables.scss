@@ -9,14 +9,28 @@ $media-size-desktop-start: 1000px;
 $whisk-header-base-padding-top: 160px;
 $whisk-header-tablet-padding-top: 80px;
 
+// padding (top-bottom, left-right)
+$whisk-footer-base-padding-base: 20px 20px;
+$whisk-footer-base-padding-tablet: 0px 20px;
+
 // Adjust this value to control spacing around "whiskNodes" sections
-// TODO only use -Y on "bottom" of each section, rename to "bottom"
+// TODO: only use -Y on "bottom" of each section, rename to "bottom"
 $whisk-nodes-padding-base-Y: 20px;
 $whisk-nodes-padding-base-X: 10px;
 $whisk-nodes-padding-tablet-X: 20px;
 
 // TODO: see if we can eliminate this special case
 $whisk-nodes-h3-margin-bottom: 30px;
+
+// padding: (top, right, bottom, left)
+$whisk-nodes-main-content-padding-base: 10px 10px 10px 10px;
+$whisk-nodes-main-content-padding-tablet: 10px 20px 10px 20px;
+
+// margin: (top right bottom left)
+$whisk-nodes-main-image-wrapper-margin-base: 10px 10px 10px 10px;
+
+$whisk-nodes-main-image-max-height: 220px;
+$whisk-nodes-main-image-max-width: 556px;
 
 /*
  * Theme Colors

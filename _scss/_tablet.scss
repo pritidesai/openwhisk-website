@@ -24,9 +24,8 @@
     }
 
     footer {
-        // TODO: make variables
         // top-bottom, left-right
-        padding: 0px 20px;
+        padding: $whisk-footer-base-padding-tablet;
     }
 
     #whiskHeader {
@@ -51,9 +50,7 @@
             .content {
                 display: table-cell;
                 position: relative;
-                // TODO: make variables
-                // top, right, bottom, left
-                padding: 10px 20px 10px 20px;
+                padding: $whisk-nodes-main-content-padding-tablet;
                 width: 50%;
 
                 // No top margin needed when content & image-wrapper are horz.
@@ -68,12 +65,7 @@
                 // TODO: see if we can appy this ONLY when image appears on the right side of content
                 border-right-width: 20px;
 
-                img {
-                   // Note: attempt to do no special case styles here
-                }
             }
-
         }
     }
-
 }

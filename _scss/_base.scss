@@ -31,8 +31,7 @@ section {
 footer {
     width: 100%;
     background-color: $color-blue-dark;
-    // top-bottom, left-right
-    padding: 20px 20px;
+    padding: $whisk-footer-base-padding-base
 }
 
 p {
@@ -217,7 +216,7 @@ pre {
     .content {
         background: $color-bg-base-content;
         // Provide for space around content's text
-        padding: 10px 10px 10px 10px;
+        padding: $whisk-nodes-main-content-padding-base;
         height: 100%;
 
         // Provide a space between image and content when vertical
@@ -226,9 +225,9 @@ pre {
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
         display:table-header-group;
-        // TODO: make variables
-        // top right bottom left
-        margin: 10px 10px 10px 10px;
+
+        // margin: (top right bottom left)
+        margin: $whisk-nodes-main-image-wrapper-margin-base;
 
         // Important! without this, the image displays larger than 100% (i.e., to its SVG design size)
         img {
@@ -244,9 +243,8 @@ pre {
 
         // These values prevent uneven scaling of images sizes based upon max. sizes
         // of the image-wrapper container
-        // TODO: Make variables
-        max-height: 220px;
-        max-width: 556px;
+        max-height: $whisk-nodes-main-image-max-height;
+        max-width: $whisk-nodes-main-image-max-width;
     }
     h3 {
         margin-bottom: $whisk-nodes-h3-margin-bottom;
@@ -256,10 +254,9 @@ pre {
 #whiskHeader {
 	background-color: $color-blue-dark;
 	h5 {
-        //background: yellow;
         margin-top: 0px;
         margin-bottom: 0px;
-        // This affects the margin below the apparent blue area
+        // TODO: why does this affect the margin below the apparent blue area
         //line-height: 38px;
     }
 }
@@ -276,6 +273,7 @@ pre {
 #doc {
     position: relative;
     overflow: hidden;
+    // TODO: evaluate this value's effect
     padding-top: 10px;
     text-align: left;
     h1 {
@@ -285,6 +283,7 @@ pre {
         margin: 1%;
     }
     ul, li {
+        // TODO: evaluate
         padding-left: 20px;
         padding-bottom: 10px;
         list-style: disc;
