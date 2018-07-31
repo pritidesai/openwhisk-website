@@ -228,8 +228,10 @@ pre {
     img{
         background: $color-bg-base-img;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        //margin-left: auto;
+        //margin-right: auto;
+        margin-left: 0px;
+        margin-right: 0px;
 
         // These values prevent uneven scaling of images sizes based upon max. sizes
         // of the image-wrapper container

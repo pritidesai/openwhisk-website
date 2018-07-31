@@ -53,7 +53,7 @@
             }
             .image-wrapper {
                 // Note: table-cell value does not seem to matter here
-                //display: table-cell;
+                display: table-cell;
                 // Important! "absolute" forces the image-wrapper to appear side-by-side with content
                 position: absolute;
                 width: $media-size-tablet-main-image-wrapper-width;
@@ -68,7 +68,7 @@
                 // These values prevent uneven scaling of images sizes based upon max. sizes
                 // of the image-wrapper container
                 //max-height: 100px;
-                //max-width: 200px;
+                max-width: 400px;
             }
         }
         h3 {
