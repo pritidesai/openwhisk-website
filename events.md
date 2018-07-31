@@ -1,7 +1,7 @@
 ---
 layout: events
-title: Apache OpenWhisk Events
-lede: Presentations at conferences, meetups, and other events.
+title: OpenWhisk Events Archive
+lede: This is the list of historic events
 ---
 <!--
 # Licensed to the Apache Software Foundation (ASF) under one or more contributor
