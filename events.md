@@ -4,49 +4,36 @@ title: Apache OpenWhisk Events
 lede: Presentations at conferences, meetups, and other events.
 ---
 <!--
-#
-# Licensed to the Apache Software Foundation (ASF) under one or more
-# contributor license agreements.  See the NOTICE file distributed with
-# this work for additional information regarding copyright ownership.
-# The ASF licenses this file to You under the Apache License, Version 2.0
-# (the "License"); you may not use this file except in compliance with
-# the License.  You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
 -->
 
-The Apache Software Foundation does not endorse listed events. [Get in touch with us to suggest event listings](/social).
+### March 2018
 
-## Upcoming Events
+- [**IBM Think**](https://www.ibm.com/events/think/), March 19th–22rd, Las Vegas, USA<br/>Several talks on OpenWhisk and IBM Cloud Functions.
+- [**Voxxed Days Bristol**](https://voxxeddays.com/bristol/), March 15th, Bristol, UK<br/>James Thomas will talk about "Microservices Without Servers."
+
 
 ### February 2018
+
 - [**ServerlessConf Boston Meetup**](https://www.meetup.com/Serverless-Boston/events/245915761/), February 7th, Boston, US<br/>Paul Castro will be presenting on Apache OpenWhisk.
 - [**ServerlessConf NYC Meetup**](https://www.meetup.com/Serverless-NYC/events/245972003/), February 15th, NY, US<br/>Daniel Krook will be presenting on Apache OpenWhisk using IBM Cloud Functions.
 - [**Serverlessconf Paris**](http://paris.serverlessconf.io/), February 14th-15th, Paris, France<br/>A workshop and talk on OpenWhisk and IBM Cloud Functions.
 - [**JeffConf Hamburg**](https://hamburg.jeffconf.com/), February 15th-16th, Hamburg, Germany<br/>Several OpenWhisk members in attendance.
 - [**DevNexus Atlanta**](https://devnexus.com/speakers/), February 21st-23rd, Atlanta, US<br/>Raymond Camden will provide "A general introduction to serverless with Apache OpenWhisk."
 
-### March 2018
-- [**IBM Think**](https://www.ibm.com/events/think/), March 19th–22rd, Las Vegas, USA<br/>Several talks on OpenWhisk and IBM Cloud Functions.
-- [**Voxxed Days Bristol**](https://voxxeddays.com/bristol/), March 15th, Bristol, UK<br/>James Thomas will talk about "Microservices Without Servers."
-
-## Past Events
 
 ### January 2018
+
 - [**CodeMash**](https://akrabat.com/talks/serverless-apis-codemash/), January 9th-12th, Sandusky, US<br/>Rob Allen spoke about how to "Build a Delightful API with Serverless Technology."
+
 
 ### November 2017
 
 - [**µCon London**](https://skillsmatter.com/conferences/8549-con-2017-the-microservices-conference), November 6th-7th 2017, London, UK<br/>Rob Allen will give a talk on building serverless APIs in Swift
 - [**Devoxx Morocco**](https://devoxx.ma/), November 14th-16th 2017, Casablanca, Morocco<br/>James Thomas will give a talk on building serverless applications with OpenWhisk
 - [**UA Mobile**](http://uamobile.org/topics/serverless-swift-apache-openwhisk), November 25th 2017, Kiev, Ukraine<br/>James Thomas will give a talk on building mobile APIs with Swift on OpenWhisk
+
 
 ### October 2017
 
@@ -58,19 +45,19 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 - [**Going Serverless**](http://certifiedfreshevents.com/events/going-serverless/), October 20th 2017, Online Webinar<br/>James Thomas will give a talk on building multi-provider serverless applications with The Serverless Framework and OpenWhisk
 - [**BristolJS October**](https://www.meetup.com/BristolJS/events/242690371/), October 25th 2017, Bristol, England<br/>James Thomas will give a talk on serverless Node.js applications with OpenWhisk
 
+
 ### September 2017
 
 - [**APIDays Zurich**](http://www.apidays.io/events/zurich-2017), September 26th-27th 2017, Zurich, Switzerland<br/>Rob Allen will give a talk on building serverless APIs in Swift
 - [**Pixels Camp**](https://pixels.camp/jthomas), September 28th-30th 2017, Lisbon, Portugal<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
-
-### September 2017
-
 - [**SwiftConf Europe**](https://swiftconf.com/), September 6th-7th 2017, Cologne, Germany<br/>James Thomas will give a talk on Serverless Swift APIs using OpenWhisk
+
 
 ### June 2017
 
 - <a name="2017-06-21" href="#2017-06-21">**OpenWhisk Meetup Austin, TX**</a>, June 21st 2017, Austin, TX<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk, show demos, discuss latest features.<br>6:30PM - 8:00PM<br>IBM Bldg 908 Room: Texas Star<br>11501 BURNET RD<br>AUSTIN, TX 78758-3400, US
 - [**Acadiana Software Group**](https://www.facebook.com/events/1920692501553535/), June 14th 2017, Lafayette, USA<br/>Raymond Camden will give a talk on OpenWhisk
+
 
 ### May 2017
 
@@ -92,12 +79,12 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 - [**Meetup Serverless Boston**](https://www.meetup.com/Serverless-Boston/events/237480548/), April 5th 2017, Boston, USA<br/>Paul Castro and Perry Cheng will give a talk on OpenWhisk
 - [**O'Reilly Software Architecture Conference**](https://conferences.oreilly.com/software-architecture/sa-ny/public/schedule/grid/public/2017-04-05), April 5th 2017, New York, USA<br/>Daniel Krook will give a keynote and Ioana Baldini and Rodric Rabbah talks on OpenWhisk
 
+
 ### March 2017
 
 - [**Meetup Serverless Vienna**](https://www.meetup.com/Serverless-Vienna/events/238392790/), March 28th 2017, Vienna, Austria<br/>Coding on various Serverless systems, incl OpenWhisk.
 - [**CloudNativeCon and KubeCon Europe**](http://events.linuxfoundation.org/events/cloudnativecon-and-kubecon-europe), March 29th–30th 2017, Berlin, Germany<br/>Daniel Krook will give an OpenWhisk demo at the IBM booth, and will be on hand to answer any questions
 - [**Devoxx US**](https://devoxx.us/), March 21st–23rd 2017, Las Vegas, USA<br/>OpenWhisk team will attend
-
 - [**IBM InterConnect**](http://www.ibm.com/cloud-computing/us/en/interconnect/), March 19th–23rd 2017, Las Vegas, USA<br/>OpenWhisk team will attend
 <details><summary><strong>Ask Me Anything</strong></summary>
 <ul>
@@ -223,20 +210,24 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 - [**JS Remote Conf**](https://devchat.tv/conferences/js-remote-conf-2017), March 15th-16th 2017, Virtual<br/>James Thomas will give a talk on OpenWhisk and Serverless
 - [**ForwardJS**](https://forwardjs.com/), March 1st 2017, San Francisco, USA<br/>Raymond Camden will give a talk on OpenWhisk
 
+
 ### February 2017
 
 - [**TopConf Linz**](http://topconf.com/linz-2017/), February 28th-March 2nd 2017, Linz, Austria<br/>James Thomas gave a talk on building serverless applications using OpenWhisk
 - [**London Serverless**](https://www.twitch.tv/videos/119142073), February 1st 2017, London, UK<br/>James Thomas gave a talk on building OpenWhisk apps with The Serverless Framework
 
+
 ### December 2016
 
 - [**Build a cloud native app with OpenWhisk**](https://developer.ibm.com/tv/build-a-cloud-native-app-with-openwhisk-event-registration/), December 14th 2016, Virtual<br/>Daniel Krook presented an overview of serverless architectures and dive into the OpenWhisk programming model
+
 
 ### November 2016
 
 - [**GOTO Berlin**](https://gotocon.com/berlin-2016/), November 14th-15th 2016, Berlin, Germany<br/>Andreas Nauerz & Simon Moser gave a talk on OpenWhisk
 - [**CloudNativeCon 2016**](https://cnkc16.sched.org/event/8K4c), November 8th 2016, Seattle, USA<br/>Daniel Krook highlighted OpenWhisk in his keynote
 - [**ContainerDays NYC 2016**](http://dynamicinfradays.org/events/2016-nyc/), November 3rd-4th 2016, New York, USA<br/>Rodric Rabbah and Philippe Suter gave a talk on OpenWhisk
+
 
 ### October 2016
 
@@ -248,6 +239,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 - [**Serverless Seattle Meetup**](http://www.meetup.com/Serverless-Seattle/events/233807991/), October 12th 2016, Seattle, USA<br/>Megan Kostick gave a talk on OpenWhisk
 - [**New York City Bluemix Meetup**](http://www.meetup.com/nyc-bluemix/events/233968352/), October 12th 2016, New York, USA<br/>Daniel Krook gave a talk on OpenWhisk
 
+
 ### September 2016
 
 - [**ServerlessConf Tokyo**](http://tokyo.serverlessconf.io/), September 30th–October 1st 2016, Tokyo, Japan<br/>Andreas Nauerz & Markus Thömmes gave a talk on OpenWhisk
@@ -258,6 +250,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 - [**Serverless New York City Meetup**](http://www.meetup.com/Serverless-NYC/events/233736279/), September 15th 2016, New York, USA<br/>Philippe Suter gave a talk on OpenWhisk
 - [**JDay**](http://www.jday.com.ua/), September 3rd 2016, Lviv, Ukraine<br/>James Thomas gave a talk on OpenWhisk
 
+
 ### July 2016
 
 - [**Bluemix and IBM Cloud Meetup**](http://www.irishdev.com/Home/Events/1191-Bluemix-and-IBM-Cloud-Meetup.html), July 27th 2016, Dublin, Ireland<br/>Emmanuel Vregille gave a talk on OpenWhisk
@@ -265,10 +258,12 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 - [**Serverless Meetups London**](http://www.meetup.com/Serverless-London/), July 5th 2016, London, UK<br/>Nick O’Leary and James Thomas gave a talk on OpenWhisk
 - [**Serverless Meetup Sydney**](http://www.meetup.com/Sydney-Serverless-Meetup-Group/events/232020422/), July 5th 2016, Sydney, Australia<br/>Iwan Winoto gave a talk on OpenWhisk
 
+
 ### June 2016
 
 - [**Bluemix Developers in Cambridge Meetup**](http://www.meetup.com/Bluemix-Developers-in-Cambridge/events/231783149/), June 23rd 2016, Cambridge, USA<br/>Vatche Ishakia gave a talk on OpenWhisk
 - [**Silicon Valley Cloud Foundry User Group Meetup**](http://www.meetup.com/CloudFoundry/events/231791789/), June 14th 2016, Sunnyvale, USA<br/>Animesh Singh & Altoros gave a talk on OpenWhisk
+
 
 ### May 2016
 
@@ -278,6 +273,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 - [**OSCON Austin**](http://conferences.oreilly.com/oscon/open-source-us), May 18th-19th 2016, Austin, USA<br/>Daniel Krook gave a talk on OpenWhisk
 - [**Hursley Summit**](https://www-950.ibm.com/events/wwe/grp/grp004.nsf/v17_events?openform&lp=2016_hursley_landing_page&locale=en_US), May 16th-18th 2016, Hursley, UK<br/>Andreas Nauerz gave a talk on OpenWhisk
 - [**Codemotion Amsterdam**](http://amsterdam2016.codemotionworld.com/), May 9th-12th 2016, Amsterdam, Netherlands<br/>Andreas Nauerz gave a talk on OpenWhisk
+
 
 ### April 2016
 
