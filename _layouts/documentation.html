@@ -2,22 +2,8 @@
 layout: default
 ---
 <!--
-#
-# Licensed to the Apache Software Foundation (ASF) under one or more
-# contributor license agreements.  See the NOTICE file distributed with
-# this work for additional information regarding copyright ownership.
-# The ASF licenses this file to You under the Apache License, Version 2.0
-# (the "License"); you may not use this file except in compliance with
-# the License.  You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
 -->
 <section id="whiskHeader" class="light-text bot-bar">
     <main>
@@ -571,7 +557,7 @@ def main(dict):
                             name = "stranger"
                         greeting = "Hello " + name + "!"
                         print(greeting)
-                        return {"greeting": greeting}    
+                        return {"greeting": greeting}
                 runtime: python:2</pre>
                             </div>
                             <li>Run deployment with <i>wskdeploy</i>:</li>
@@ -655,7 +641,7 @@ zip exec.zip exec</pre>
                     </div>
                     <div class="terminal">
 <pre>{
-    "msg": "Hello, gopher!" 
+    "msg": "Hello, gopher!"
 }</pre>
                     </div>
                 </ol>
@@ -697,7 +683,7 @@ zip exec.zip exec</pre>
 import com.google.gson.JsonObject;
 
 public class Hello {
-    public static JsonObject main(JsonObject args) 
+    public static JsonObject main(JsonObject args)
         String name;
 
         try {
@@ -757,7 +743,7 @@ jar cvf hello.jar Hello.class</pre>
                 <h5 id="docker_actions">Creating and Invoking Docker actions</h5>
                 <p>
                     OpenWhisk provides a base image for Docker actions called openwhisk/dockerskeleton. This image is based on Alpine Linux 3.4 and includes Python v2.7.12 but not much else. (For reference, the image is based on python:2.7.12-alpine).
-                    From this base image, you can create and run an OpenWhisk action: 
+                    From this base image, you can create and run an OpenWhisk action:
                     Let's look at how to write a sample hello world action in Docker. You can visit
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
                     page for further details.
@@ -775,7 +761,7 @@ jar cvf hello.jar Hello.class</pre>
                 </p>
             </div>
         </main-->
-        
+
         <main id="doc">
             <div class="content">
                 <h4 id="php">PHP</h4>
