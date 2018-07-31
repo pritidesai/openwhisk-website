@@ -172,21 +172,6 @@ pre {
     padding: 4px 4px 4px 8px;
     width: 700px;
     margin-bottom: 10px;
-
-// TODO: simulate a terminal window control bar
-//  &::before {
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    width: 100%;
-//    height: 24px;
-//    margin: 0;
-//    padding: 8px;
-//    background: mediumgray;
-//    color: darkgray;
-//    font-size: 18px;
-//    text-indent: 20px;
-//  }
 }
 
 // Header is only shown on the "home" page
@@ -224,28 +209,33 @@ pre {
     }
     .image-wrapper {
         background: $color-bg-base-image-wrapper;
-        display:table-header-group;
+        display: table-header-group;
 
+        // NOTE: margin ONLY works in horz. layout and has no impact in vert. layout
         // margin: (top right bottom left)
         margin: $whisk-nodes-main-image-wrapper-margin-base;
 
+        // NOTE: SVG files and the <img> tags do not work well together
         // Important! without this, the image displays larger than 100% (i.e., to its SVG design size)
+        // TODO: SVG have document sizes, you need to preserve the content's aspect ratio
+        // and have the drawing "scale to fit" using the viewBox style on an <svg> element.
         img {
             width: 100%;
             height: 100%;
         }
     }
     img{
-        background: $color-bg-base-img;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+            background: $color-bg-base-img;
+            display: table-cell;
+            margin-left: auto;
+            margin-right: auto;
 
-        // These values prevent uneven scaling of images sizes based upon max. sizes
-        // of the image-wrapper container
-        max-height: $whisk-nodes-main-image-max-height;
-        max-width: $whisk-nodes-main-image-max-width;
+            // These values prevent uneven scaling of images sizes based upon max. sizes
+            // of the image-wrapper container
+            max-height: $whisk-nodes-main-image-max-height;
+            max-width: $whisk-nodes-main-image-max-width;
     }
+
     h3 {
         margin-bottom: $whisk-nodes-h3-margin-bottom;
     }
@@ -261,9 +251,8 @@ pre {
     }
 }
 
-// TODO: change this name to be something descriptive based on usage
-// (i.e., footer text) and/or style that does not use "mice"
-#miceType {
+// Note: used in footer text
+#tinyType {
 	clear: both;
 	font-size: 11px;
 	line-height: 18px;
