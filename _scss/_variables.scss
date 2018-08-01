@@ -40,7 +40,7 @@ $main-image-wrapper-margin-base: 10px 10px 10px 10px;
 $header-height: 80px;
 
 // Allow for a fixed top banner on all content pages
-$whisk-header-base-padding-top: 160px;
+$whisk-header-base-padding-top: 168px;
 $whisk-header-tablet-padding-top: $header-height;
 
 /*
@@ -178,7 +178,7 @@ $p-line-height: 22px;
 $index-menu-width: 200px;
 
 // position menu relative to header
-$index-menu-top-offset: $header-height + 10px;
+$index-menu-top-offset: $header-height + 18px;
 $index-menu-left-offset: 0px;
 $index-menu-font-size: 10pt;
 
