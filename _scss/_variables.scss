@@ -73,14 +73,13 @@ $logo-height: 80px;
 $color-blue-light: #ebf1f9;
 $color-blue-medium: #88addd;
 $color-blue-dark: #29558f;
-$color-blue-dark-text: #0b1828;
 $color-blue-black: #0b1828;
 $color-blue-hover: transparentize($color-blue-dark, 0.94);
 $color-blue-gray-light: #eff2f5;
-$color-blue-gray-medium: #afbdcf;
-$color-blue-gray-dark: #455973;
+$color-blue-gray-medium: #455973;
+$color-blue-gray-dark: #131920;
 $color-blue-gray-light-text: #9da6ab;
-$color-blue-dark-text: #233c5c;
+$color-blue-dark-text: #00091a;
 $color-white: #fff;
 
 /*
@@ -109,8 +108,7 @@ $color-header-bg-section-logo: transparent;
 $color-header-bg-section-menu-text: transparent;
 $color-header-bg-section-menu-icons: transparent;
 $color-header-fg: white;
-$color-header-icon-bg: $color-blue-gray-dark;
-$color-header-icon-border: $color-logo-deeper-aquamarine;
+$color-header-icon-bg: $color-blue-gray-medium;
 $color-header-icon-border: white;
 $color-header-icon-bg-image: transparent;
 
@@ -139,25 +137,27 @@ $color-header-icon-bg-image: orange;
 
 $color-bg-tablet-image-wrapper-border: 8px solid $color-logo-deeper-aquamarine;
 */
+
 /*
  * Fonts
  */
 
-$font-family-heading: "Roboto", sans-serif;
-$font-family-default: sans-serif;
+$font-family-default: 'Roboto', sans-serif;
 $font-family-code: "Courier New", Courier, monospace;
-$font-weight-default: 400;
-$font-weight-bold: 600;
+$font-size-default: 16px;
+$font-weight-default: 300;
+$font-weight-bold: 500;
+$line-height-default: 28px;
 
 /*
  * Text
  */
 
 $h1-font-size: 32px;
-$h1-line-height: 40px;
+$h1-line-height: normal;
 
 $h2-font-size: 28px;
-$h2-line-height: 60px;
+$h2-line-height: normal;
 
 $h3-font-size: 24px;
 $h3-line-height: 32px;
@@ -168,8 +168,33 @@ $h4-line-height: 28px;
 $h5-font-size: 16px;
 $h5-line-height: 28px;
 
-$p-font-size: 14px;
-$p-line-height: 22px;
+$p-font-size: $font-size-default;
+$p-font-weight: $font-weight-default;
+$p-line-height: $line-height-default;
+
+/*
+ * Header
+ */
+
+$header-tablet-h1-font-size: 36px;
+$header-tablet-h1-font-weight: 300;
+$header-tablet-h1-font-style: normal;
+$header-tablet-h1-line-height: 44px;
+
+$header-tablet-h5-font-size: 16px;
+$header-tablet-h5-font-weight: 300;
+$header-tablet-h5-font-style: normal;
+$header-tablet-h5-line-height: 28px;
+
+$header-base-h1-font-size: 32px;
+$header-base-h1-font-weight: $header-tablet-h1-font-weight;
+$header-base-h1-font-style: $header-tablet-h1-font-style;
+$header-base-h1-line-height: 42px;
+
+$header-base-h5-font-size: 14px;
+$header-base-h5-font-weight: $header-tablet-h5-font-weight;
+$header-base-h5-font-style: $header-tablet-h5-font-style;
+$header-base-h5-line-height: $header-tablet-h5-line-height;
 
 /*
  * Index
@@ -183,7 +208,7 @@ $index-menu-left-offset: 0px;
 $index-menu-font-size: 10pt;
 
 $color-index-bg: white;
-$color-index-fg: mediumgray;
+$color-index-fg: $color-blue-gray-dark;
 $color-index-border: transparent;
 $color-index-list-bg: transparent;
 $color-index-list-border: transparent;
@@ -192,23 +217,6 @@ $color-index-item-border: transparent;
 
 $index-border: 0px solid $color-index-list-border;
 $index-item-border: 0px solid $color-index-item-border;
-
-/*
- * Index Colors (DEBUG)
- */
-
-/*
-$color-index-bg: SlateGrey;
-$color-index-fg: red;
-$color-index-border: green;
-$color-index-list-bg: pink;
-$color-index-list-border: SpringGreen;
-$color-index-item-bg: ghostwhite;
-$color-index-item-border: red;
-
-$index-border: 1px solid $color-index-list-border;
-$index-item-border: 1px solid $color-index-item-border;
-*/
 
 /*
  * Expandable/Collapsible (WIP)

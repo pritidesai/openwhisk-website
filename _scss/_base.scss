@@ -35,27 +35,12 @@ footer {
     padding: $whisk-footer-base-padding-base
 }
 
-p {
-    font-size: 14px;
-    font-weight: 400;
-}
-
 // Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
 // Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
 pre {
     white-space: pre;
     display: inline;
     margin: 0px;
-}
-
-.button {
-	display: inline-block;
-	border-radius: 6px;
-	padding: 0 20px;
-	line-height: 40px;
-	color: $color-white;
-	background-color: $color-blue-dark;
-    text-decoration: none;
 }
 
 .header {
@@ -188,16 +173,22 @@ pre {
     margin-bottom: $whisk-nodes-padding-base-Y;
 
     h1 {
-        font-size: 18pt;
-        line-height: 24px;
+        font-size: $header-base-h1-font-size;
+        font-weight: $header-base-h1-font-weight;
+        font-style: $header-base-h1-font-style;
+        line-height: $header-base-h1-line-height;
         margin-bottom: 12px;
     }
     h5 {
-        font-size: 11.5pt;
-        line-height: 14px;
-        font-weight: 400;
-        font-style: italic;
+        font-size: $header-base-h5-font-size;
+        font-weight: $header-base-h5-font-weight;
+        font-style: $header-base-h5-font-style;
+        line-height: $header-base-h5-line-height;
         margin-bottom: 4px;
+    }
+
+    h1, h5 {
+        color: $color-white;
     }
 }
 
@@ -206,7 +197,7 @@ pre {
     padding-bottom: $whisk-nodes-padding-base-Y;
     padding-left: $whisk-nodes-padding-base-X;
     padding-right: $whisk-nodes-padding-base-X;
-    color: $color-blue-dark;
+    //color: $color-blue-dark;
 
     main {
         display: table;
@@ -246,14 +237,6 @@ pre {
     }
 }
 
-// Note: used in footer text
-#tinyType {
-	clear: both;
-	font-size: 11px;
-	line-height: 18px;
-    color: $color-fg-base-light-text;
-}
-
 #doc {
     position: relative;
     overflow: hidden;
@@ -275,25 +258,6 @@ pre {
     a {
         font-weight: bold;
     }
-}
-
-/*
- * TOC
- */
-
-// TODO: Verify we use these
-#toc_container {
-    border: 1px solid #aaa;
-    display: table;
-    font-size: 95%;
-    margin-bottom: 1em;
-    padding: 20px;
-    width: auto;
-}
-
-.toc_title {
-    font-weight: 700;
-    text-align: center;
 }
 
 /*
@@ -360,10 +324,7 @@ a.indexable {
 
 #whiskIndexedLayout {
     display: table;
-
-    // TODO: Index needs same top margin as whiskNodes (align with top of first <main> section)
-    // Note: Padding is coming from #doc ??
-    //padding-top: $whisk-nodes-padding-base-Y;
+    padding-top: $whisk-header-base-padding-top;
 
     #whiskIndex {
         vertical-align: top;
@@ -375,9 +336,6 @@ a.indexable {
         width: $index-menu-width;
         border: $index-border;
         z-index: 6888;
-
-        // Note: Cannot set height to 100% as it overlaps footer
-        //height: 100%;
     }
 
     #whiskNodes {
@@ -398,11 +356,12 @@ a.indexable {
     ul {
         background-color: $color-index-list-bg;
         font-size: $index-menu-font-size;
+        font-weight: 500;
 
         //list-style-type: square;
         //list-style-position: inside;
-        //list-style-image: url('x.png')
-        //list-style: square inside url("sqpurple.gif");
+        //list-style-image: url('abc.png')
+        //list-style: square inside url("abc.png");
         list-style-type: none;
         list-style-position: inside;
 
@@ -428,10 +387,11 @@ a.indexable {
     }
 
     a {
+        color: $color-index-fg;
         text-decoration: none;
     }
 
-    a:visited {color:$color-index-fg;}  /* visited link */
-    a:hover {color: $color-index-fg;}  /* mouse over link */
-    a:active {color: $color-index-fg;}  /* selected link */
+    a:visited {color:$color-index-fg;}
+    a:hover {color: $color-index-fg;}
+    a:active {color: $color-index-fg;}
 }
