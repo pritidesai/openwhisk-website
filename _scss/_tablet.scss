@@ -23,12 +23,38 @@
     }
 
     footer {
-        // top-bottom, left-right
         padding: $whisk-footer-base-padding-tablet;
     }
 
     #whiskHeader {
         padding-top: $whisk-header-tablet-padding-top;
+        h1 {
+            font-size: 32px;
+            line-height: 40px;
+        }
+        h5 {
+            font-size: 12pt;
+            line-height: 14px;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+    }
+
+    // "Turn on" left index in this profile, as we have width to support it
+    #whiskIndexedLayout {
+        padding-top: $whisk-header-tablet-padding-top;
+        // Show the index area
+        #whiskIndex {
+            display: block;
+        }
+
+        // Make room on left for the Index
+        #whiskNodes {
+            display: table-cell;
+            // NOTE: margin does not work here, must use left padding
+            padding-left: $index-menu-width;
+        }
     }
 
     #whiskNodes {
