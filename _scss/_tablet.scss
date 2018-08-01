@@ -1,9 +1,4 @@
 @media screen and (min-width: $media-size-tablet-start) {
-    p {
-        // TODO: make variables
-        font-size: 16px;
-        line-height: 24px;
-    }
     .header {
         // TODO: make variables
         height: $header-height;
@@ -29,16 +24,18 @@
     #whiskHeader {
         padding-top: $whisk-header-tablet-padding-top;
         h1 {
-            font-size: 32px;
-            line-height: 40px;
+            font-size: $header-tablet-h1-font-size;
+            font-weight: $header-tablet-h1-font-weight;
+            font-style: $header-tablet-h1-font-style;
+            line-height: $header-tablet-h1-line-height;
         }
         h5 {
-            font-size: 12pt;
-            line-height: 14px;
-            font-weight: 400;
-            font-style: italic;
-            margin-bottom: 4px;
+            font-size: $header-tablet-h5-font-size;
+            font-weight: $header-tablet-h5-font-weight;
+            font-style: $header-tablet-h5-font-style;
+            line-height: $header-tablet-h5-line-height;
         }
+
     }
 
     // "Turn on" left index in this profile, as we have width to support it
