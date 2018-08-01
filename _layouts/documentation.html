@@ -244,8 +244,10 @@ make quick-start</pre>
         <div class="content">
             <a class="indexable" id="developers"></a>
             <h2>Developers</h2>
-            The OpenWhisk project and programming model supports different kinds of developers that may wish
-            to user different runtimes and tooling. Here is the developer index to find the information you may need.
+            <p>
+                The OpenWhisk project and programming model supports different kinds of developers that may wish
+                to user different runtimes and tooling. Here is the developer index to find the information you may need.
+            </p>
         </div>
     </main>
 
@@ -288,19 +290,25 @@ make quick-start</pre>
                     <strong>CLI Help:</strong>
                     To get the CLI command help, execute the following command:
                 </li>
-<pre class="terminal">wsk --help</pre>
+                <div class="terminal">
+<pre>wsk --help</pre>
+                </div>
                 <p></p>
                 <li id="authentication"><strong>Authenticate wsk CLI</strong></li>
                 <p>You can configure wsk CLI to use your OpenWhisk credentials in few different ways:</p>
                 <ul>
                     <li>With wsk property setup</li>
                     <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
-<pre class="terminal">wsk property set --apihost &lt;API_HOST&gt; --auth &lt;AUTH_KEY&gt; --namespace guest</pre>
+                    <div class="terminal">
+<pre>wsk property set --apihost &lt;API_HOST&gt; --auth &lt;AUTH_KEY&gt; --namespace guest</pre>
+                    </div>
                     <p>Credentials are stored in <i>~/.wskprops</i>, which you can edit directly if needed.</p>
                     <li>Environment Variables Setup</li>
                     <p>Access credentials can be provided using properties file as environment variable:</p>
-<pre class="terminal">export WSK_CONFIG_FILE=&lt;your-config-file&gt;
+                    <div class="terminal">
+<pre>export WSK_CONFIG_FILE=&lt;your-config-file&gt;
 wsk list</pre>
+                    </div>
                 </ul>
 
             </ul>
@@ -321,7 +329,9 @@ wsk list</pre>
                     wskdeploy Help:
                     Start by verifying the utility can display the command line help:
                 </li>
-                <pre class="terminal">wskdeploy --help</pre>
+                <div class="terminal">
+<pre>wskdeploy --help</pre>
+                </div>
                 <p></p>
                 <li>
                     Create Package Manifest File <i>manifest.yaml</i>:
@@ -336,7 +346,9 @@ wsk list</pre>
                     <li><strong>Note:</strong> Before you proceed with the deployment, please make sure you have the authentication setup as described
                     <a href="#authentication">here</a>.</li>
                     <li>Deploying an OpenWhisk Manifest file:</li>
-                    <pre class="terminal">wskdeploy -m manifest.yaml</pre>
+                    <div class="terminal">
+<pre>wskdeploy -m manifest.yaml</pre>
+                    </div>
                 </ul>
             </ul>
             <a class="indexable" id="rest-api"></a>
