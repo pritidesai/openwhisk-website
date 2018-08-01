@@ -186,6 +186,10 @@ pre {
         line-height: $header-base-h5-line-height;
         margin-bottom: 4px;
     }
+
+    h1, h5 {
+        color: $color-white;
+    }
 }
 
 #whiskNodes {
@@ -233,14 +237,6 @@ pre {
     }
 }
 
-// Note: used in footer text
-#tinyType {
-	clear: both;
-	font-size: 11px;
-	line-height: 18px;
-    color: $color-fg-base-light-text;
-}
-
 #doc {
     position: relative;
     overflow: hidden;
@@ -262,25 +258,6 @@ pre {
     a {
         font-weight: bold;
     }
-}
-
-/*
- * TOC
- */
-
-// TODO: Verify we use these
-#toc_container {
-    border: 1px solid #aaa;
-    display: table;
-    font-size: 95%;
-    margin-bottom: 1em;
-    padding: 20px;
-    width: auto;
-}
-
-.toc_title {
-    font-weight: 700;
-    text-align: center;
 }
 
 /*
@@ -359,9 +336,6 @@ a.indexable {
         width: $index-menu-width;
         border: $index-border;
         z-index: 6888;
-
-        // Note: Cannot set height to 100% as it overlaps footer
-        //height: 100%;
     }
 
     #whiskNodes {
@@ -382,11 +356,12 @@ a.indexable {
     ul {
         background-color: $color-index-list-bg;
         font-size: $index-menu-font-size;
+        font-weight: 500;
 
         //list-style-type: square;
         //list-style-position: inside;
-        //list-style-image: url('x.png')
-        //list-style: square inside url("sqpurple.gif");
+        //list-style-image: url('abc.png')
+        //list-style: square inside url("abc.png");
         list-style-type: none;
         list-style-position: inside;
 
@@ -412,10 +387,11 @@ a.indexable {
     }
 
     a {
+        color: $color-index-fg;
         text-decoration: none;
     }
 
-    a:visited {color:$color-index-fg;}  /* visited link */
-    a:hover {color: $color-index-fg;}  /* mouse over link */
-    a:active {color: $color-index-fg;}  /* selected link */
+    a:visited {color:$color-index-fg;}
+    a:hover {color: $color-index-fg;}
+    a:active {color: $color-index-fg;}
 }

@@ -73,12 +73,11 @@ $logo-height: 80px;
 $color-blue-light: #ebf1f9;
 $color-blue-medium: #88addd;
 $color-blue-dark: #29558f;
-$color-blue-dark-text: #0b1828;
 $color-blue-black: #0b1828;
 $color-blue-hover: transparentize($color-blue-dark, 0.94);
 $color-blue-gray-light: #eff2f5;
-$color-blue-gray-medium: #afbdcf;
-$color-blue-gray-dark: #455973;
+$color-blue-gray-medium: #455973;
+$color-blue-gray-dark: #131920;
 $color-blue-gray-light-text: #9da6ab;
 $color-blue-dark-text: #00091a;
 $color-white: #fff;
@@ -109,8 +108,7 @@ $color-header-bg-section-logo: transparent;
 $color-header-bg-section-menu-text: transparent;
 $color-header-bg-section-menu-icons: transparent;
 $color-header-fg: white;
-$color-header-icon-bg: $color-blue-gray-dark;
-$color-header-icon-border: $color-logo-deeper-aquamarine;
+$color-header-icon-bg: $color-blue-gray-medium;
 $color-header-icon-border: white;
 $color-header-icon-bg-image: transparent;
 
@@ -150,7 +148,6 @@ $font-size-default: 16px;
 $font-weight-default: 300;
 $font-weight-bold: 500;
 $line-height-default: 28px;
-$font-color-default: $color-blue-dark-text;
 
 /*
  * Text
@@ -174,7 +171,6 @@ $h5-line-height: 28px;
 $p-font-size: $font-size-default;
 $p-font-weight: $font-weight-default;
 $p-line-height: $line-height-default;
-$p-text-color: $font-color-default;
 
 /*
  * Header
@@ -212,7 +208,7 @@ $index-menu-left-offset: 0px;
 $index-menu-font-size: 10pt;
 
 $color-index-bg: white;
-$color-index-fg: darkgray;
+$color-index-fg: $color-blue-gray-dark;
 $color-index-border: transparent;
 $color-index-list-bg: transparent;
 $color-index-list-border: transparent;
@@ -221,23 +217,6 @@ $color-index-item-border: transparent;
 
 $index-border: 0px solid $color-index-list-border;
 $index-item-border: 0px solid $color-index-item-border;
-
-/*
- * Index Colors (DEBUG)
- */
-
-/*
-$color-index-bg: SlateGrey;
-$color-index-fg: red;
-$color-index-border: green;
-$color-index-list-bg: pink;
-$color-index-list-border: SpringGreen;
-$color-index-item-bg: ghostwhite;
-$color-index-item-border: red;
-
-$index-border: 1px solid $color-index-list-border;
-$index-item-border: 1px solid $color-index-item-border;
-*/
 
 /*
  * Expandable/Collapsible (WIP)
