@@ -41,7 +41,7 @@ $header-height: 80px;
 
 // Allow for a fixed top banner on all content pages
 $whisk-header-base-padding-top: 160px;
-$whisk-header-tablet-padding-top: 80px;
+$whisk-header-tablet-padding-top: $header-height;
 
 /*
  * Layout: Footer
@@ -176,6 +176,10 @@ $p-line-height: 22px;
  */
 
 $index-menu-width: 200px;
+
+// position menu relative to header
+$index-menu-top-offset: $header-height + 10px;
+$index-menu-left-offset: 0px;
 $index-menu-font-size: 10pt;
 
 $color-index-bg: white;
@@ -195,7 +199,7 @@ $index-item-border: 0px solid $color-index-item-border;
 
 /*
 $color-index-bg: SlateGrey;
-$color-index-fg: darkgray;
+$color-index-fg: red;
 $color-index-border: green;
 $color-index-list-bg: pink;
 $color-index-list-border: SpringGreen;

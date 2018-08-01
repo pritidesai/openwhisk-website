@@ -43,8 +43,7 @@
         #whiskNodes {
             display: table-cell;
             // NOTE: margin does not work here, must use left padding
-            // TODO: make a (dynamic) variable
-            padding-left: 220px;
+            padding-left: $index-menu-width;
         }
     }
 
