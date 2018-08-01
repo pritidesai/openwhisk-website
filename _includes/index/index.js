@@ -9,10 +9,12 @@ function applyCollapsible() {
         this.classList.toggle("active");
         var sibling = this.nextElementSibling;
         console.log(sibling)
-        if (sibling.style.display === "block") {
-          sibling.style.display = "none";
-        } else {
-          sibling.style.display = "block";
+        if(sibling!==null){
+          if (sibling.style.display === "block") {
+            sibling.style.display = "none";
+          } else {
+            sibling.style.display = "block";
+          }
         }
       });
     }
