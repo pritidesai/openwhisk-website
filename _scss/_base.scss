@@ -378,13 +378,13 @@ a.indexable {
 
     #whiskNodes {
        display: table-cell;
-       // NOTE: margin does not work here, must use left padding
-       // TODO: make a (dynamic) variable
-       padding-left: 220px;
+       // Note: we do NOT make left padding for Index in for the 'base' media size (width too small)
     }
 }
 
 #whiskIndex {
+    // Note: we will turn this off for small/base media, allow other profiles to turn on.
+    display: none;
     background-color: $color-index-bg;
     color: $color-index-fg;
     width: $index-menu-width;
@@ -406,7 +406,7 @@ a.indexable {
         // default margin: 16px (top and bottom)
         // TODO: make variables
         margin: 0px;
-        padding-left: 8px;
+        padding-left: 10px;
         padding-right: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
