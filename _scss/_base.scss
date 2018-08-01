@@ -197,7 +197,6 @@ pre {
     padding-bottom: $whisk-nodes-padding-base-Y;
     padding-left: $whisk-nodes-padding-base-X;
     padding-right: $whisk-nodes-padding-base-X;
-    //color: $color-blue-dark;
 
     main {
         display: table;
@@ -243,21 +242,6 @@ pre {
     // TODO: evaluate this value's effect
     padding-top: 10px;
     text-align: left;
-    h1 {
-        text-align: center
-    }
-    .button {
-        margin: 1%;
-    }
-    ul, li {
-        // TODO: evaluate
-        padding-left: 20px;
-        padding-bottom: 10px;
-        list-style: disc;
-    }
-    a {
-        font-weight: bold;
-    }
 }
 
 /*
@@ -378,7 +362,8 @@ a.indexable {
     li {
         background-color: $color-index-item-bg;
         border: $index-item-border;
-
+        font-size: $index-menu-font-size;
+        font-weight: 500;
         // TODO: make variables
         padding-left: 4px;
         padding-top: 2px;

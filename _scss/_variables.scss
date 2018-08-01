@@ -114,6 +114,8 @@ $color-header-icon-bg-image: transparent;
 
 $color-bg-tablet-image-wrapper-border: 8px solid white;
 
+$color-anchors: #2955d7;
+
 /*
  * Layout Colors (DEBUG)
  */
@@ -144,10 +146,10 @@ $color-bg-tablet-image-wrapper-border: 8px solid $color-logo-deeper-aquamarine;
 
 $font-family-default: 'Roboto', sans-serif;
 $font-family-code: "Courier New", Courier, monospace;
-$font-size-default: 16px;
+$font-size-default: 14px;
 $font-weight-default: 300;
 $font-weight-bold: 500;
-$line-height-default: 28px;
+$line-height-default: 22px;
 
 /*
  * Text
@@ -207,7 +209,7 @@ $index-menu-top-offset: $header-height + 18px;
 $index-menu-left-offset: 0px;
 $index-menu-font-size: 10pt;
 
-$color-index-bg: white;
+$color-index-bg: $color-white;
 $color-index-fg: $color-blue-gray-dark;
 $color-index-border: transparent;
 $color-index-list-bg: transparent;
