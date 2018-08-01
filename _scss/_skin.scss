@@ -10,6 +10,10 @@ body {
     font-family: $font-family-default;
 }
 
+strong {
+    color: $color-blue-dark;
+}
+
 h1, h2, h3, h4, h5 {
     font-weight: $font-weight-bold;
     color: $color-blue-dark;
